@@ -45,12 +45,28 @@ function App() {
         'steering flare sprite', 'steering flare sound', 'thumbnail', 'source'
     ];
 
-    // Initialize visible columns once keys change
+    // Only these columns show up by default (if present in your data)
+    const defaultVisible = [
+        "name",
+        "cost",
+        "mass",
+        "outfit space",
+        "engine capacity",
+        "thrust",
+        "thrusting energy",
+        "thrusting heat",
+        "turn",
+        "turning energy",
+        "turning heat",
+        "reverse thrust",
+        "reverse thrusting energy",
+        "reverse thrusting heat",
+    ];
+
+    // Initialize visibleColumns once the data loads
     useEffect(() => {
-        const initial = [
-            ...defaultOrder.filter(k => allKeys.includes(k)),
-            ...allKeys.filter(k => !defaultOrder.includes(k))
-        ];
+        // only keep those defaults that actually exist
+        const initial = defaultVisible.filter(k => allKeys.includes(k));
         setVisibleColumns(initial);
     }, [allKeys]);
 
