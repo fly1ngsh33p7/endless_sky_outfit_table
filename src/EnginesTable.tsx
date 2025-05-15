@@ -37,11 +37,23 @@ export default function EnginesTable({ engines, visibleColumns }: { engines: Eng
                 header: () => <span>{toHeader(key)}</span>,
                 sortingFn: 'auto',
                 cell: info => {
-                    const val = info.getValue();
-                    return <span>{Array.isArray(val) ? val.join(', ') : String(val)}</span>;
+                    const val = info.getValue()
+
+                    // if no value, render nothing
+                    if (val == null) {
+                        return null
+                    }
+
+                    // arrays become comma-lists
+                    if (Array.isArray(val)) {
+                        return <span>{val.join(', ')}</span>
+                    }
+
+                    // everything else stringified
+                    return <span>{val}</span>
                 }
             } as ColumnDef<Engine>)
-    ), [visibleColumns]);
+        ), [visibleColumns]);
 
 
     // Sorting state

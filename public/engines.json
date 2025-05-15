@@ -66,8 +66,6 @@
     "reverse thrust": 310.8,
     "reverse thrusting energy": 15.2,
     "reverse thrusting heat": 39.6,
-    "reverse flare sprite": "effect/ion flare/huge",
-    "reverse flare sound": "ion huge",
     "turn": 17085,
     "turning energy": 24.8,
     "turning heat": 58.4,
@@ -124,9 +122,7 @@
     "thrusting heat": 382.1,
     "reverse thrust": 2139.7,
     "reverse thrusting energy": 132.3,
-    "reverse thrusting heat": 382.1,
-    "reverse flare sprite": "effect/atomic flare/huge",
-    "reverse flare sound": "atomic huge"
+    "reverse thrusting heat": 382.1
   },
   {
     "name": "Large Waveform Stabilizer",
@@ -139,9 +135,7 @@
     "thrusting heat": 2282.1,
     "reverse thrust": 12139.7,
     "reverse thrusting energy": 982.3,
-    "reverse thrusting heat": 2282.1,
-    "reverse flare sprite": "effect/atomic flare/huge",
-    "reverse flare sound": "atomic huge"
+    "reverse thrusting heat": 2282.1
   },
   {
     "name": "Waveform Steering",
@@ -190,8 +184,6 @@
     "reverse thrust": 64.8,
     "reverse thrusting energy": 3.9,
     "reverse thrusting heat": 9.2,
-    "reverse flare sprite": "effect/ion flare/large",
-    "reverse flare sound": "ion large",
     "turn": 3882,
     "turning energy": 5.9,
     "turning heat": 13.4,
@@ -214,8 +206,6 @@
     "reverse thrust": 156.8,
     "reverse thrusting energy": 7.6,
     "reverse thrusting heat": 18.8,
-    "reverse flare sprite": "effect/ion flare/huge",
-    "reverse flare sound": "ion huge",
     "turn": 8032,
     "turning energy": 11.6,
     "turning heat": 27.2,
@@ -611,9 +601,7 @@
     "turning heat": 14.2,
     "reverse thrust": 72.8,
     "reverse thrusting energy": 5.7,
-    "reverse thrusting heat": 13.6,
-    "reverse flare sprite": "effect/korath flare/medium",
-    "reverse flare sound": "plasma medium"
+    "reverse thrusting heat": 13.6
   },
   {
     "name": "Biikala Adaptive Engines",
@@ -746,9 +734,7 @@
     "turning heat": 0.32,
     "reverse thrust": 2.4,
     "reverse thrusting energy": 0.25,
-    "reverse thrusting heat": 0.32,
-    "reverse flare sprite": "effect/ion flare/tiny",
-    "reverse flare sound": "ion tiny"
+    "reverse thrusting heat": 0.32
   },
   {
     "name": "Tyrant Reverse Thruster",
@@ -758,9 +744,7 @@
     "weapon capacity": -129,
     "reverse thrust": 180.225,
     "reverse thrusting energy": 8.6,
-    "reverse thrusting heat": 19.1,
-    "reverse flare sprite": "effect/plasma flare/huge",
-    "reverse flare sound": "plasma huge"
+    "reverse thrusting heat": 19.1
   },
   {
     "name": "RD-550 Plasma Thruster",
@@ -893,8 +877,6 @@
     "reverse thrust": 28.4,
     "reverse thrusting energy": 2.3,
     "reverse thrusting heat": 10.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1
   },
   {
@@ -1127,9 +1109,7 @@
     "reverse thrusting energy": 4.44,
     "reverse thrusting heat": 6.66,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion L.L.W Atomic Engines",
@@ -1150,9 +1130,7 @@
     "reverse thrusting energy": 5.55,
     "reverse thrusting heat": 8.325,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion S.H.W Atomic Engines",
@@ -1173,9 +1151,7 @@
     "reverse thrusting energy": 8.3,
     "reverse thrusting heat": 12.45,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion M.H.W Atomic Engines",
@@ -1196,9 +1172,7 @@
     "reverse thrusting energy": 10,
     "reverse thrusting heat": 15,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion L.H.W Atomic Engines",
@@ -1219,9 +1193,7 @@
     "reverse thrusting energy": 11.7,
     "reverse thrusting heat": 17.55,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion H.H.W Atomic Engines",
@@ -1242,9 +1214,7 @@
     "reverse thrusting energy": 11.5,
     "reverse thrusting heat": 5.75,
     "slowing resistance": 1,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1
   },
   {
     "name": "Arion Flagship Atomic Engines",
@@ -1263,9 +1233,7 @@
     "thrusting heat": 10,
     "reverse thrust": 500,
     "reverse thrusting energy": 7.5,
-    "reverse thrusting heat": 5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 5
   },
   {
     "name": "Arion Basic Aircraft Engines",
@@ -1348,9 +1316,7 @@
     "turning heat": 3,
     "reverse thrust": 24,
     "reverse thrusting energy": 4,
-    "reverse thrusting heat": 6,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 6
   },
   {
     "name": "Omni Directional Engine-100s",
@@ -1366,9 +1332,7 @@
     "turning heat": 3.75,
     "reverse thrust": 30,
     "reverse thrusting energy": 5,
-    "reverse thrusting heat": 7.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 7.5
   },
   {
     "name": "Omni Directional Engine-150s",
@@ -1384,9 +1348,7 @@
     "turning heat": 5.625,
     "reverse thrust": 45,
     "reverse thrusting energy": 7.5,
-    "reverse thrusting heat": 11.25,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 11.25
   },
   {
     "name": "Omni Directional Engine-180s",
@@ -1402,9 +1364,7 @@
     "turning heat": 6.75,
     "reverse thrust": 54,
     "reverse thrusting energy": 9,
-    "reverse thrusting heat": 13.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 13.5
   },
   {
     "name": "Arion ODE-SA-15x",
@@ -1423,9 +1383,7 @@
     "turning heat": 2.4,
     "reverse thrust": 13.5,
     "reverse thrusting energy": 1.2,
-    "reverse thrusting heat": 2.4,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 2.4
   },
   {
     "name": "Arion ODE-AA-20x",
@@ -1446,9 +1404,7 @@
     "reverse thrusting energy": 2,
     "reverse thrusting heat": 4.3,
     "slowing resistance": 0.4,
-    "slowing protection": 0.2,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.2
   },
   {
     "name": "Arion ODE-FA-25x",
@@ -1469,9 +1425,7 @@
     "reverse thrusting energy": 2.5,
     "reverse thrusting heat": 5.4,
     "slowing resistance": 0.5,
-    "slowing protection": 0.25,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.25
   },
   {
     "name": "Arion ODE-IA-25x",
@@ -1513,9 +1467,7 @@
     "reverse thrusting energy": 3,
     "reverse thrusting heat": 6.5,
     "slowing resistance": 0.6,
-    "slowing protection": 0.3,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.3
   },
   {
     "name": "Arion ODE-MBA-50x",
@@ -1536,9 +1488,7 @@
     "reverse thrusting energy": 5,
     "reverse thrusting heat": 10.8,
     "slowing resistance": 1,
-    "slowing protection": 0.5,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.5
   },
   {
     "name": "Arion ODE-HBA-60x",
@@ -1559,9 +1509,7 @@
     "reverse thrusting energy": 6,
     "reverse thrusting heat": 13,
     "slowing resistance": 1.2,
-    "slowing protection": 0.6,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.6
   },
   {
     "name": "Arion ODE-MLW-80x",
@@ -1582,9 +1530,7 @@
     "reverse thrusting energy": 8.2,
     "reverse thrusting heat": 17.8,
     "slowing resistance": 1.6,
-    "slowing protection": 0.8,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 0.8
   },
   {
     "name": "Arion ODE-LLW-100x",
@@ -1605,9 +1551,7 @@
     "reverse thrusting energy": 10.3,
     "reverse thrusting heat": 22.4,
     "slowing resistance": 2,
-    "slowing protection": 1,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "slowing protection": 1
   },
   {
     "name": "Arion ODE-SHW-150x",
@@ -1628,9 +1572,7 @@
     "reverse thrusting energy": 15.8,
     "reverse thrusting heat": 34.8,
     "slowing resistance": 3,
-    "slowing protection": 1.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1.5
   },
   {
     "name": "Arion ODE-MHW-180x",
@@ -1651,9 +1593,7 @@
     "reverse thrusting energy": 19,
     "reverse thrusting heat": 41.2,
     "slowing resistance": 3.6,
-    "slowing protection": 1.8,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 1.8
   },
   {
     "name": "Arion ODE-LHW-210x",
@@ -1674,9 +1614,7 @@
     "reverse thrusting energy": 22.3,
     "reverse thrusting heat": 48.4,
     "slowing resistance": 4.2,
-    "slowing protection": 2.1,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 2.1
   },
   {
     "name": "Arion ODE-HHW-250x",
@@ -1698,9 +1636,7 @@
     "reverse thrusting energy": 26.5,
     "reverse thrusting heat": 57.5,
     "slowing resistance": 5,
-    "slowing protection": 2.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "slowing protection": 2.5
   },
   {
     "name": "Arion Light Afterburner",
@@ -1837,9 +1773,7 @@
     "turning heat": 1.75,
     "reverse thrust": 17.3,
     "reverse thrusting energy": 1.6,
-    "reverse thrusting heat": 3.5,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 3.5
   },
   {
     "name": "Omni Directional Engine-25w",
@@ -1855,9 +1789,7 @@
     "turning heat": 2.15,
     "reverse thrust": 21.6,
     "reverse thrusting energy": 2,
-    "reverse thrusting heat": 4.3,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 4.3
   },
   {
     "name": "Omni Directional Engine-30w",
@@ -1873,9 +1805,7 @@
     "turning heat": 2.6,
     "reverse thrust": 26,
     "reverse thrusting energy": 2.4,
-    "reverse thrusting heat": 5.2,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 5.2
   },
   {
     "name": "Omni Directional Engine-80w",
@@ -1891,9 +1821,7 @@
     "turning heat": 3.6,
     "reverse thrust": 65.5,
     "reverse thrusting energy": 3.3,
-    "reverse thrusting heat": 7.2,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 7.2
   },
   {
     "name": "Omni Directional Engine-100w",
@@ -1909,9 +1837,7 @@
     "turning heat": 7.8,
     "reverse thrust": 83,
     "reverse thrusting energy": 7.2,
-    "reverse thrusting heat": 15.6,
-    "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 15.6
   },
   {
     "name": "Omni Directional Engine-150w",
@@ -1927,9 +1853,7 @@
     "turning heat": 11.95,
     "reverse thrust": 130,
     "reverse thrusting energy": 11,
-    "reverse thrusting heat": 23.9,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 23.9
   },
   {
     "name": "Omni Directional Engine-180w",
@@ -1945,9 +1869,7 @@
     "turning heat": 14.45,
     "reverse thrust": 158,
     "reverse thrusting energy": 13.3,
-    "reverse thrusting heat": 28.9,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large"
+    "reverse thrusting heat": 28.9
   },
   {
     "name": "Large Fission Drive",
@@ -2000,8 +1922,6 @@
     "reverse thrust": 28.4,
     "reverse thrusting energy": 2.3,
     "reverse thrusting heat": 10.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1
   },
   {
@@ -2026,9 +1946,7 @@
     "weapon capacity": -9,
     "reverse thrust": 28.95,
     "reverse thrusting energy": 2.6,
-    "reverse thrusting heat": 3,
-    "reverse flare sprite": "effect/efreti flare/tiny",
-    "reverse flare sound": "ion tiny"
+    "reverse thrusting heat": 3
   },
   {
     "name": "Farves GP Hybrid Reverser",
@@ -2039,9 +1957,7 @@
     "weapon capacity": -16,
     "reverse thrust": 53.1,
     "reverse thrusting energy": 5.05,
-    "reverse thrusting heat": 5.9,
-    "reverse flare sprite": "effect/efreti flare/small",
-    "reverse flare sound": "ion small"
+    "reverse thrusting heat": 5.9
   },
   {
     "name": "Gaktem GP Hybrid Reverser",
@@ -2052,9 +1968,7 @@
     "weapon capacity": -28,
     "reverse thrust": 97.425,
     "reverse thrusting energy": 9.1,
-    "reverse thrusting heat": 11.05,
-    "reverse flare sprite": "effect/efreti flare/medium",
-    "reverse flare sound": "ion medium"
+    "reverse thrusting heat": 11.05
   },
   {
     "name": "Nelmeb GP Hybrid Reverser",
@@ -2065,9 +1979,7 @@
     "weapon capacity": -43,
     "reverse thrust": 156.9,
     "reverse thrusting energy": 14,
-    "reverse thrusting heat": 18,
-    "reverse flare sprite": "effect/efreti flare/large",
-    "reverse flare sound": "ion large"
+    "reverse thrusting heat": 18
   },
   {
     "name": "Steering (Planetary Class)(Damaged)",
@@ -3606,8 +3518,7 @@
     "jump drive": 1,
     "jump speed": 10,
     "jump effect": "ultaka gate drive",
-    "slowing protection": 3,
-    "reverse flare sprite": "effect/ultaka flare/urvulre huge"
+    "slowing protection": 3
   },
   {
     "name": "Meulrais-A Engines",
@@ -4194,8 +4105,6 @@
     "cloak by mass": 10,
     "cloak phasing": 0.75,
     "permanent cloak": 0.5,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1
   },
   {
@@ -4216,8 +4125,6 @@
     "outfit space": -180000,
     "engine capacity": -180000,
     "stellar engine": -1,
-    "reverse flare sprite": "effect/plasmablast",
-    "reverse flare sound": "atomic large",
     "reverse thrust": 55000.7,
     "turn": 1871000,
     "thrust": 55000.7
@@ -4458,8 +4365,7 @@
     "thrusting heat": 4.25,
     "reverse thrust": 38.3,
     "reverse thrusting energy": 3.2,
-    "reverse thrusting heat": 2.125,
-    "reverse flare sprite": "effect/graviton flare/small"
+    "reverse thrusting heat": 2.125
   },
   {
     "name": "Medium Graviton Thruster",
@@ -4472,8 +4378,7 @@
     "thrusting heat": 6.45,
     "reverse thrust": 61.4,
     "reverse thrusting energy": 4.85,
-    "reverse thrusting heat": 3.225,
-    "reverse flare sprite": "effect/graviton flare/medium"
+    "reverse thrusting heat": 3.225
   },
   {
     "name": "Large Graviton Thruster",
@@ -4486,8 +4391,7 @@
     "thrusting heat": 9.55,
     "reverse thrust": 95.3,
     "reverse thrusting energy": 7.15,
-    "reverse thrusting heat": 4.775,
-    "reverse flare sprite": "effect/graviton flare/large"
+    "reverse thrusting heat": 4.775
   },
   {
     "name": "Small Graviton Steering",
@@ -4559,9 +4463,7 @@
     "reverse thrust": 10.1,
     "reverse thrusting energy": 1.5,
     "reverse thrusting heat": 1.45,
-    "slowing resistance": 0.02,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny"
+    "slowing resistance": 0.02
   },
   {
     "name": "Crucible-Class Thruster",
@@ -4578,9 +4480,7 @@
     "reverse thrust": 10.8,
     "reverse thrusting energy": 1.6,
     "reverse thrusting heat": 1.5,
-    "slowing resistance": 0.012,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny"
+    "slowing resistance": 0.012
   },
   {
     "name": "Forge-Class Thruster",
@@ -4597,9 +4497,7 @@
     "reverse thrust": 23.6,
     "reverse thrusting energy": 3.3,
     "reverse thrusting heat": 3.2,
-    "slowing resistance": 0.024,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma small"
+    "slowing resistance": 0.024
   },
   {
     "name": "Smelter-Class Thruster",
@@ -4616,9 +4514,7 @@
     "reverse thrust": 53.3,
     "reverse thrusting energy": 7.1,
     "reverse thrusting heat": 7.2,
-    "slowing resistance": 0.048,
-    "reverse flare sprite": "effect/remnant flare/medium",
-    "reverse flare sound": "plasma medium"
+    "slowing resistance": 0.048
   },
   {
     "name": "Crucible-Class Steering",
@@ -5124,8 +5020,6 @@
     "reverse thrust": 66,
     "reverse thrusting energy": 5,
     "reverse thrusting heat": 13.4,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1,
     "unique": 1
   },
@@ -5149,8 +5043,6 @@
     "reverse thrust": 42.6,
     "reverse thrusting energy": 3.3,
     "reverse thrusting heat": 8.8,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1
   },
   {
@@ -5365,9 +5257,7 @@
     "weapon capacity": -16,
     "reverse thrust": 13.545,
     "reverse thrusting energy": 0.6,
-    "reverse thrusting heat": 0.9,
-    "reverse flare sprite": "effect/ion flare/tiny",
-    "reverse flare sound": "ion tiny"
+    "reverse thrusting heat": 0.9
   },
   {
     "name": "Chipmunk Plasma Thruster",
@@ -5477,9 +5367,7 @@
     "weapon capacity": -20,
     "reverse thrust": 21.75,
     "reverse thrusting energy": 1.0,
-    "reverse thrusting heat": 1.8,
-    "reverse flare sprite": "effect/plasma flare/tiny",
-    "reverse flare sound": "plasma tiny"
+    "reverse thrusting heat": 1.8
   },
   {
     "name": "A120 Atomic Thruster",
@@ -5589,9 +5477,7 @@
     "weapon capacity": -22,
     "reverse thrust": 28.02,
     "reverse thrusting energy": 1.8,
-    "reverse thrusting heat": 3.5,
-    "reverse flare sprite": "effect/atomic flare/tiny",
-    "reverse flare sound": "atomic tiny"
+    "reverse thrusting heat": 3.5
   },
   {
     "name": "Medium Graviton Thruster",
@@ -5714,8 +5600,6 @@
     "reverse thrust": 63.9,
     "reverse thrusting energy": 4.9,
     "reverse thrusting heat": 13.3,
-    "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
     "unplunderable": 1
   },
   {
@@ -5748,9 +5632,7 @@
     "reverse thrust": 15.45,
     "reverse thrusting energy": 1.5,
     "reverse thrusting heat": 1.45,
-    "slowing resistance": 0.02,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny"
+    "slowing resistance": 0.02
   },
   {
     "name": "Crucible-Class Thruster",
@@ -5767,9 +5649,7 @@
     "reverse thrust": 18.6,
     "reverse thrusting energy": 1.6,
     "reverse thrusting heat": 1.5,
-    "slowing resistance": 0.012,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny"
+    "slowing resistance": 0.012
   },
   {
     "name": "Forge-Class Thruster",
@@ -5786,9 +5666,7 @@
     "reverse thrust": 38.25,
     "reverse thrusting energy": 3.3,
     "reverse thrusting heat": 3.2,
-    "slowing resistance": 0.024,
-    "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma small"
+    "slowing resistance": 0.024
   },
   {
     "name": "Smelter-Class Thruster",
@@ -5805,9 +5683,7 @@
     "reverse thrust": 79.95,
     "reverse thrusting energy": 7.1,
     "reverse thrusting heat": 7.2,
-    "slowing resistance": 0.048,
-    "reverse flare sprite": "effect/remnant flare/medium",
-    "reverse flare sound": "plasma medium"
+    "slowing resistance": 0.048
   },
   {
     "name": "Crucible-Class Steering",
@@ -5866,9 +5742,7 @@
     "turn": 270,
     "turning energy": 0.6,
     "turning heat": 0.3,
-    "drag reduction": 0.3,
-    "reverse flare sprite": "effect/wanderer flare/tiny",
-    "reverse flare sound": "plasma tiny"
+    "drag reduction": 0.3
   },
   {
     "name": "Remass Injector",
@@ -5912,9 +5786,7 @@
     "turning heat": -3,
     "reverse thrust": 9,
     "reverse thrusting energy": 1.5,
-    "reverse thrusting heat": -3,
-    "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small"
+    "reverse thrusting heat": -3
   },
   {
     "name": "R-360 RCS Thrusters",
@@ -5927,9 +5799,7 @@
     "turning heat": -6,
     "reverse thrust": 18,
     "reverse thrusting energy": 3,
-    "reverse thrusting heat": -6,
-    "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small"
+    "reverse thrusting heat": -6
   },
   {
     "name": "R-720 RCS Thrusters",
@@ -5942,9 +5812,7 @@
     "turning heat": -9,
     "reverse thrust": 36,
     "reverse thrusting energy": 6,
-    "reverse thrusting heat": -9,
-    "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small"
+    "reverse thrusting heat": -9
   },
   {
     "name": "Small Thrust Module",
@@ -5983,9 +5851,7 @@
     "weapon capacity": -9,
     "reverse thrust": 12.45,
     "reverse thrusting energy": 0.46,
-    "reverse thrusting heat": 3,
-    "reverse flare sprite": "effect/coalition flare/small",
-    "reverse flare sound": "atomic tiny"
+    "reverse thrusting heat": 3
   },
   {
     "name": "Large Reverse Module",
@@ -5998,9 +5864,7 @@
     "weapon capacity": -32,
     "reverse thrust": 45.9,
     "reverse thrusting energy": 1.7,
-    "reverse thrusting heat": 11,
-    "reverse flare sprite": "effect/coalition flare/large",
-    "reverse flare sound": "atomic small"
+    "reverse thrusting heat": 11
   },
   {
     "name": "Small Steering Module",
@@ -6202,9 +6066,7 @@
     "thrusting heat": 9.5,
     "reverse thrust": 22.75,
     "reverse thrusting energy": 1.45,
-    "reverse thrusting heat": 4.45,
-    "reverse flare sprite": "effect/scin flare/large",
-    "reverse flare sound": "scplasma large"
+    "reverse thrusting heat": 4.45
   },
   {
     "name": "Maeri Engine Nacelles",
@@ -6359,9 +6221,7 @@
     "turning heat": 1.95,
     "reverse thrust": 15.75,
     "reverse thrusting energy": 1.35,
-    "reverse thrusting heat": 2.9,
-    "reverse flare sprite": "effect/korath flare/tiny",
-    "reverse flare sound": "plasma tiny"
+    "reverse thrusting heat": 2.9
   },
   {
     "name": "Reverser (Asteroid Class)",
@@ -6372,9 +6232,7 @@
     "weapon capacity": -7,
     "reverse thrust": 20.76,
     "reverse thrusting energy": 1.5,
-    "reverse thrusting heat": 3.4,
-    "reverse flare sprite": "effect/korath flare/tiny",
-    "reverse flare sound": "plasma tiny"
+    "reverse thrusting heat": 3.4
   },
   {
     "name": "Reverser (Comet Class)",
@@ -6385,9 +6243,7 @@
     "weapon capacity": -12,
     "reverse thrust": 37.53,
     "reverse thrusting energy": 2.8,
-    "reverse thrusting heat": 6.5,
-    "reverse flare sprite": "effect/korath flare/small",
-    "reverse flare sound": "plasma small"
+    "reverse thrusting heat": 6.5
   },
   {
     "name": "Reverser (Lunar Class)",
@@ -6398,9 +6254,7 @@
     "weapon capacity": -20,
     "reverse thrust": 66.195,
     "reverse thrusting energy": 4.9,
-    "reverse thrusting heat": 11.9,
-    "reverse flare sprite": "effect/korath flare/medium",
-    "reverse flare sound": "plasma medium"
+    "reverse thrusting heat": 11.9
   },
   {
     "name": "Reverser (Planetary Class)",
@@ -6411,9 +6265,7 @@
     "weapon capacity": -34,
     "reverse thrust": 120.0,
     "reverse thrusting energy": 8.9,
-    "reverse thrusting heat": 22.7,
-    "reverse flare sprite": "effect/korath flare/large",
-    "reverse flare sound": "plasma large"
+    "reverse thrusting heat": 22.7
   },
   {
     "name": "Reverser (Stellar Class)",
@@ -6424,9 +6276,7 @@
     "weapon capacity": -59,
     "reverse thrust": 224.1,
     "reverse thrusting energy": 15.8,
-    "reverse thrusting heat": 42.6,
-    "reverse flare sprite": "effect/korath flare/huge",
-    "reverse flare sound": "plasma huge"
+    "reverse thrusting heat": 42.6
   },
   {
     "name": "Thruster (Asteroid Class)",
