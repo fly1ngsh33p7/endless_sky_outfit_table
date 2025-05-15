@@ -8,8 +8,6 @@ import {
 } from '@tanstack/react-table';
 import type { Engine } from './App';
 
-interface Props { engines: Engine[]; }
-
 // Utility to title-case column headers
 const toHeader = (key: string) =>
     key
@@ -17,14 +15,7 @@ const toHeader = (key: string) =>
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ');
 
-export default function EnginesTable({ engines }: Props) {
-    // Gather all unique keys present across engine objects
-    const allKeys = useMemo(() => {
-        const set = new Set<string>();
-        engines.forEach(e => Object.keys(e).forEach(k => set.add(k)));
-        return Array.from(set);
-    }, [engines]);
-
+export default function EnginesTable({ engines, visibleColumns }: { engines: Engine[]; visibleColumns: string[]; }) {
     // Define default column order
     const defaultOrder = [
         'name', 'cost', 'mass', 'outfit space', 'engine capacity', 'turn',
@@ -32,34 +23,52 @@ export default function EnginesTable({ engines }: Props) {
         'steering flare sprite', 'steering flare sound', 'thumbnail', 'source'
     ];
 
-    // Sorting state
-    const [sorting, setSorting] = useState([]);
+    // Gather all unique keys present across engine objects
+    // const allKeys = useMemo(() => {
+    //     const set = new Set<string>();
+    //     engines.forEach(e => Object.keys(e).forEach(k => set.add(k)));
+    //     return Array.from(set);
+    // }, [engines]);
 
-    // Dynamically construct columns
-    const columns = useMemo<ColumnDef<Engine>[]>(() => {
-        // Place known columns first, then extras
-        const orderedKeys = [
-            ...defaultOrder.filter(k => allKeys.includes(k)),
-            ...allKeys.filter(k => !defaultOrder.includes(k))
-        ];
-
-        return orderedKeys.map(key => {
-            const base: ColumnDef<Engine> = {
+    const columns = useMemo<ColumnDef<Engine>[]>(() =>
+        visibleColumns.map(key => (
+            {
                 accessorKey: key,
                 header: () => <span>{toHeader(key)}</span>,
-                // Use alphanumeric sort for strings, basic for numbers
                 sortingFn: 'auto',
                 cell: info => {
                     const val = info.getValue();
-                    if (key === 'thumbnail' && typeof val === 'string') {
-                        return <img src={val} alt={info.row.original.name} className="w-8 h-8" />;
-                    }
                     return <span>{Array.isArray(val) ? val.join(', ') : String(val)}</span>;
                 }
-            };
-            return base;
-        });
-    }, [allKeys]);
+            } as ColumnDef<Engine>)
+    ), [visibleColumns]);
+
+
+    // Sorting state
+    const [sorting, setSorting] = useState([]);
+
+    // // Dynamically construct columns
+    // const columns = useMemo<ColumnDef<Engine>[]>(() => {
+    //     // Place known columns first, then extras
+    //     const orderedKeys = [
+    //         ...defaultOrder.filter(k => allKeys.includes(k)),
+    //         ...allKeys.filter(k => !defaultOrder.includes(k))
+    //     ];
+
+    //     return orderedKeys.map(key => {
+    //         const base: ColumnDef<Engine> = {
+    //             accessorKey: key,
+    //             header: () => <span>{toHeader(key)}</span>,
+    //             // Use alphanumeric sort for strings, basic for numbers
+    //             sortingFn: 'auto',
+    //             cell: info => {
+    //                 const val = info.getValue();
+    //                 return <span>{Array.isArray(val) ? val.join(', ') : String(val)}</span>;
+    //             }
+    //         };
+    //         return base;
+    //     });
+    // }, [allKeys]);
 
     const table = useReactTable({
         data: engines,
@@ -68,7 +77,7 @@ export default function EnginesTable({ engines }: Props) {
         onSortingChange: setSorting,
         getCoreRowModel: getCoreRowModel(),
         getSortedRowModel: getSortedRowModel(),
-        debugTable: false,
+        // debugTable: false,
     });
 
     return (

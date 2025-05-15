@@ -6,3 +6,5 @@ Lizenzen:
             - Tooltip mit Erläuterung
 
 
+Spalten:
+    - je Energie, Heat und so gruppieren statt einzeln für Turn und so (also wenn was mit mehreren ist, dann sonderbehandlung)

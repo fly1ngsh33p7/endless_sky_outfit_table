@@ -1,16 +1,17 @@
 import React, { useMemo } from 'react';
-import * as Engine from "./App"
+import type { Engine } from './App';
 import * as Slider from '@radix-ui/react-slider';
 import './FiltersPanel.css';
 
-export type Filters = {
-    [key: string]: [number, number] | string;
-};
 
+export type Filters = { [key: string]: [number, number] | string };
 interface Props {
-    engines: typeof Engine[];
+    engines: Engine[];
     filters: Filters;
     setFilters: React.Dispatch<React.SetStateAction<Filters>>;
+    allKeys: string[];
+    visibleColumns: string[];
+    setVisibleColumns: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const numericKeys = [
@@ -22,19 +23,14 @@ const numericKeys = [
     'turning energy',
     'turning heat',
     'slowing resistance',
-    'frame rate',
 ];
 const stringKeys = [
     'name',
     'licenses',
-    'thumbnail',
-    'source',
-    'steering flare sprite',
-    'steering flare sound',
 ];
 
-export default function FiltersPanel({ engines, filters, setFilters }: Props) {
-    // Compute min/max for numeric fields
+
+export default function FiltersPanel({ engines, filters, setFilters, allKeys, visibleColumns, setVisibleColumns }: Props) {
     const ranges = useMemo(() => {
         const map: Record<string, [number, number]> = {};
         numericKeys.forEach((key) => {
@@ -47,14 +43,15 @@ export default function FiltersPanel({ engines, filters, setFilters }: Props) {
         });
         return map;
     }, [engines]);
-
-    const handleNumericChange = (key: string, range: [number, number]) => {
-        setFilters((prev) => ({ ...prev, [key]: range }));
-    };
-    const handleStringChange = (key: string, value: string) => {
-        setFilters((prev) => ({ ...prev, [key]: value }));
-    };
+    const handleNumericChange = (key: string, range: [number, number]) => setFilters(prev => ({ ...prev, [key]: range }));
+    const handleStringChange = (key: string, value: string) => setFilters(prev => ({ ...prev, [key]: value }));
     const resetFilters = () => setFilters({});
+
+    const toggleColumn = (key: string) => {
+        setVisibleColumns(prev =>
+            prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
+        );
+    };
 
     return (
         <div className="space-y-6">
@@ -64,6 +61,22 @@ export default function FiltersPanel({ engines, filters, setFilters }: Props) {
             >
                 Reset Filters
             </button>
+
+            <div>
+                <h3 className="text-sm font-semibold mb-2">Columns</h3>
+                <div className="grid grid-cols-2 gap-2">
+                    {allKeys.map(key => (
+                        <label key={key} className="inline-flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                checked={visibleColumns.includes(key)}
+                                onChange={() => toggleColumn(key)}
+                            />
+                            <span className="text-sm">{key}</span>
+                        </label>
+                    ))}
+                </div>
+            </div>
 
             {/* Numeric Range Filters */}
             {numericKeys.map((key) => (
@@ -78,16 +91,16 @@ export default function FiltersPanel({ engines, filters, setFilters }: Props) {
                         step={1}
                         onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
                     >
-                        <Slider.Track 
+                        <Slider.Track
                             // className="relative flex-1 h-2 bg-gray-200 rounded"
                             className="SliderTrack"
-                            >
-                            <Slider.Range 
+                        >
+                            <Slider.Range
                                 // className="absolute h-full bg-blue-500 rounded" 
                                 className="SliderRange"
-                                />
+                            />
                         </Slider.Track>
-                        <Slider.Thumb 
+                        <Slider.Thumb
                             // className="w-s4 h-4 bg-white border border-gray-400 rounded-full shadow" 
                             className="SliderThumb"
                             aria-label="Volume"
