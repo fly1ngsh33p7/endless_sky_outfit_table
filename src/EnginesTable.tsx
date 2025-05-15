@@ -1,40 +1,62 @@
-import type { Engine } from "./App";
-import {
-    useReactTable,
-    type ColumnDef,
-    getCoreRowModel,
-    flexRender,
-} from "@tanstack/react-table";
-import React from "react";
+import React, { useMemo } from 'react';
+import { useReactTable, type ColumnDef, getCoreRowModel, flexRender } from '@tanstack/react-table';
+import type { Engine } from './App';
 
-interface Props {
-    engines: Engine[];
-}
+interface Props { engines: Engine[]; }
 
-const columns: ColumnDef<Engine>[] = [
-    { accessorKey: "name", header: "Name" },
-    { accessorKey: "cost", header: "Cost" },
-    { accessorKey: "mass", header: "Mass" },
-    { accessorKey: "outfit space", header: "Outfit Space" },
-    { accessorKey: "engine capacity", header: "Engine Capacity" },
-    { accessorKey: "turn", header: "Turn" },
-    { accessorKey: "turning energy", header: "Turning Energy" },
-    { accessorKey: "turning heat", header: "Turning Heat" },
-    { accessorKey: "slowing resistance", header: "Slowing Resistance" },
-    { accessorKey: "frame rate", header: "Frame Rate" },
-    { accessorKey: "steering flare sprite", header: "Flare Sprite" },
-    { accessorKey: "steering flare sound", header: "Flare Sound" },
-    {
-        accessorKey: "thumbnail",
-        header: "Thumbnail",
-        cell: (info) => (
-            <img src={info.getValue() as string} alt="" className="w-8 h-8" />
-        ),
-    },
-    { accessorKey: "source", header: "Source" },
-];
+// Utility to title-case column headers
+const toHeader = (key: string) =>
+    key
+        .split(/\s+/)
+        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(' ');
 
 export default function EnginesTable({ engines }: Props) {
+    // Gather all unique keys present across engine objects
+    const allKeys = useMemo(() => {
+        const set = new Set<string>();
+        engines.forEach(e => Object.keys(e).forEach(k => set.add(k)));
+        return Array.from(set);
+    }, [engines]);
+
+    // Define default column order
+    const defaultOrder = [
+        'name', 'cost', 'mass', 'outfit space', 'engine capacity', 'turn',
+        'turning energy', 'turning heat', 'slowing resistance', 'frame rate',
+        'steering flare sprite', 'steering flare sound', 'thumbnail', 'source'
+    ];
+
+    // Construct ColumnDef array dynamically
+    const columns = useMemo<ColumnDef<Engine>[]>(() => {
+        // Place known columns first, then any extras
+        const orderedKeys = [
+            ...defaultOrder.filter(k => allKeys.includes(k)),
+            ...allKeys.filter(k => !defaultOrder.includes(k))
+        ];
+
+        return orderedKeys.map(key => {
+            // Special thumbnail column renderer
+            if (key === 'thumbnail') {
+                return {
+                    accessorKey: key,
+                    header: toHeader(key),
+                    cell: info => (
+                        <img
+                            src={info.getValue() as string}
+                            alt={info.row.original.name}
+                            className="w-8 h-8"
+                        />
+                    )
+                } as ColumnDef<Engine>;
+            }
+
+            return {
+                accessorKey: key,
+                header: toHeader(key)
+            } as ColumnDef<Engine>;
+        });
+    }, [allKeys]);
+
     const table = useReactTable({
         data: engines,
         columns,
@@ -44,9 +66,9 @@ export default function EnginesTable({ engines }: Props) {
     return (
         <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
-                {table.getHeaderGroups().map((headerGroup: { id: React.Key | null | undefined; headers: any[]; }) => (
+                {table.getHeaderGroups().map(headerGroup => (
                     <tr key={headerGroup.id}>
-                        {headerGroup.headers.map((header) => (
+                        {headerGroup.headers.map(header => (
                             <th
                                 key={header.id}
                                 className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
@@ -63,9 +85,9 @@ export default function EnginesTable({ engines }: Props) {
                 ))}
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-                {table.getRowModel().rows.map((row: { id: React.Key | null | undefined; getVisibleCells: () => any[]; }) => (
+                {table.getRowModel().rows.map(row => (
                     <tr key={row.id}>
-                        {row.getVisibleCells().map((cell) => (
+                        {row.getVisibleCells().map(cell => (
                             <td
                                 key={cell.id}
                                 className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
