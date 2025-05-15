@@ -4906,8 +4906,7 @@
     "afterburner thrust": 540,
     "afterburner energy": 36,
     "afterburner heat": 36,
-    "unplunderable": 1,
-    "reinstall": -1
+    "unplunderable": 1
   },
   {
     "name": "Hybrid Afterburner",

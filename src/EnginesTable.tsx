@@ -1,5 +1,11 @@
-import React, { useMemo } from 'react';
-import { useReactTable, type ColumnDef, getCoreRowModel, flexRender } from '@tanstack/react-table';
+import React, { useMemo, useState } from 'react';
+import {
+    useReactTable,
+    type ColumnDef,
+    getCoreRowModel,
+    getSortedRowModel,
+    flexRender,
+} from '@tanstack/react-table';
 import type { Engine } from './App';
 
 interface Props { engines: Engine[]; }
@@ -26,41 +32,43 @@ export default function EnginesTable({ engines }: Props) {
         'steering flare sprite', 'steering flare sound', 'thumbnail', 'source'
     ];
 
-    // Construct ColumnDef array dynamically
+    // Sorting state
+    const [sorting, setSorting] = useState([]);
+
+    // Dynamically construct columns
     const columns = useMemo<ColumnDef<Engine>[]>(() => {
-        // Place known columns first, then any extras
+        // Place known columns first, then extras
         const orderedKeys = [
             ...defaultOrder.filter(k => allKeys.includes(k)),
             ...allKeys.filter(k => !defaultOrder.includes(k))
         ];
 
         return orderedKeys.map(key => {
-            // Special thumbnail column renderer
-            if (key === 'thumbnail') {
-                return {
-                    accessorKey: key,
-                    header: toHeader(key),
-                    cell: info => (
-                        <img
-                            src={info.getValue() as string}
-                            alt={info.row.original.name}
-                            className="w-8 h-8"
-                        />
-                    )
-                } as ColumnDef<Engine>;
-            }
-
-            return {
+            const base: ColumnDef<Engine> = {
                 accessorKey: key,
-                header: toHeader(key)
-            } as ColumnDef<Engine>;
+                header: () => <span>{toHeader(key)}</span>,
+                // Use alphanumeric sort for strings, basic for numbers
+                sortingFn: 'auto',
+                cell: info => {
+                    const val = info.getValue();
+                    if (key === 'thumbnail' && typeof val === 'string') {
+                        return <img src={val} alt={info.row.original.name} className="w-8 h-8" />;
+                    }
+                    return <span>{Array.isArray(val) ? val.join(', ') : String(val)}</span>;
+                }
+            };
+            return base;
         });
     }, [allKeys]);
 
     const table = useReactTable({
         data: engines,
         columns,
+        state: { sorting },
+        onSortingChange: setSorting,
         getCoreRowModel: getCoreRowModel(),
+        getSortedRowModel: getSortedRowModel(),
+        debugTable: false,
     });
 
     return (
@@ -73,12 +81,25 @@ export default function EnginesTable({ engines }: Props) {
                                 key={header.id}
                                 className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
                             >
-                                {header.isPlaceholder
-                                    ? null
-                                    : flexRender(
-                                        header.column.columnDef.header,
-                                        header.getContext()
-                                    )}
+                                <div className="flex items-center space-x-2">
+                                    {flexRender(header.column.columnDef.header, header.getContext())}
+                                    {/* Sort asc */}
+                                    <button
+                                        onClick={() => header.column.toggleSorting(false)}
+                                        className="text-gray-400 hover:text-gray-600"
+                                        aria-label="Sort ascending"
+                                    >
+                                        ▲
+                                    </button>
+                                    {/* Sort desc */}
+                                    <button
+                                        onClick={() => header.column.toggleSorting(true)}
+                                        className="text-gray-400 hover:text-gray-600"
+                                        aria-label="Sort descending"
+                                    >
+                                        ▼
+                                    </button>
+                                </div>
                             </th>
                         ))}
                     </tr>

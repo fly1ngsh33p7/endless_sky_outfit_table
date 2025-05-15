@@ -1,0 +1,8 @@
+Lizenzen: 
+    - über licences.json einlesen (wie die Engines erfassen)
+    - Checkboxen, was man alles hat
+        - speichern, was man hat 
+        - wenn man eine Lizenz nicht hat: Kosten beim Kaufpreis dazu addieren
+            - Tooltip mit Erläuterung
+
+
