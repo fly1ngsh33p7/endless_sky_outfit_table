@@ -10,8 +10,7 @@
     "afterburner fuel": 0.16,
     "afterburner energy": 6.0,
     "afterburner heat": 13.0,
-    "afterburner effect": "zonai afterburner",
-    "source": "celestial-strands/data/crescent/crescent outfits.txt"
+    "afterburner effect": "zonai afterburner"
   },
   {
     "name": "Za-Class Thruster",
@@ -27,8 +26,7 @@
     "flare sprite": "effect/bunrodea flare/large",
     "scale": 0.5,
     "frame rate": 7,
-    "flare sound": "ion small",
-    "source": "celestial-strands/data/crescent/crescent outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Azag-Class Thruster",
@@ -43,8 +41,7 @@
     "thrusting heat": 15.9,
     "flare sprite": "effect/bunrodea flare/large",
     "frame rate": 7,
-    "flare sound": "ion medium",
-    "source": "celestial-strands/data/crescent/crescent outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Za-Class Steering",
@@ -60,8 +57,7 @@
     "steering flare sprite": "effect/bunrodea flare/large",
     "scale": 0.5,
     "frame rate": 7.5,
-    "steering flare sound": "ion small",
-    "source": "celestial-strands/data/crescent/crescent outfits.txt"
+    "steering flare sound": "ion small"
   },
   {
     "name": "Azag-Class Steering",
@@ -76,8 +72,7 @@
     "turning heat": 8.6,
     "steering flare sprite": "effect/bunrodea flare/large",
     "frame rate": 7,
-    "steering flare sound": "ion medium",
-    "source": "celestial-strands/data/crescent/crescent outfits.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "Large Multi-Engine",
@@ -108,8 +103,7 @@
     "afterburner heat": 52.4,
     "afterburner effect": "ionic afterburner",
     "ramscoop": 45,
-    "force protection": 2,
-    "source": "QuaernanHardpointsCarries/data/casparnakit.txt"
+    "force protection": 2
   },
   {
     "name": "Quasar Afterburner",
@@ -126,8 +120,7 @@
     "slowing resistance": 0.22,
     "slowing resistance energy": 3.9,
     "slowing resistance fuel": 0.6,
-    "slowing resistance heat": 8.1,
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "slowing resistance heat": 8.1
   },
   {
     "name": "Waveform Thruster",
@@ -141,8 +134,7 @@
     "thrusting heat": 555.1,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Large Waveform Thruster",
@@ -156,8 +148,7 @@
     "thrusting heat": 3305.1,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Waveform Stabilizer",
@@ -176,8 +167,7 @@
     "reverse thrusting energy": 132.3,
     "reverse thrusting heat": 382.1,
     "reverse flare sprite": "effect/atomic flare/huge",
-    "reverse flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "reverse flare sound": "atomic huge"
   },
   {
     "name": "Large Waveform Stabilizer",
@@ -196,8 +186,7 @@
     "reverse thrusting energy": 982.3,
     "reverse thrusting heat": 2282.1,
     "reverse flare sprite": "effect/atomic flare/huge",
-    "reverse flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "reverse flare sound": "atomic huge"
   },
   {
     "name": "Waveform Steering",
@@ -211,8 +200,7 @@
     "turning heat": 632.1,
     "steering flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "steering flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "Large Waveform Steering",
@@ -226,8 +214,7 @@
     "turning heat": 632.1,
     "steering flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "steering flare sound": "atomic huge",
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "Exotic Engines",
@@ -248,8 +235,7 @@
     "steering flare sprite": "effect/ion flare/huge",
     "steering flare sound": "ion huge",
     "slowing protection": 0.4,
-    "force protection": 1,
-    "source": "QuaernanHardpointsCarries/data/quaernanmobility.txt"
+    "force protection": 1
   },
   {
     "name": "Small Multi-Engine",
@@ -280,8 +266,7 @@
     "afterburner heat": 14.0,
     "afterburner effect": "ionic afterburner",
     "ramscoop": 5,
-    "force protection": 1,
-    "source": "QuaernanHardpointsCarries/data/alpacakit.txt"
+    "force protection": 1
   },
   {
     "name": "Medium Multi-Engine",
@@ -312,8 +297,7 @@
     "afterburner heat": 26.2,
     "afterburner effect": "ionic afterburner",
     "ramscoop": 15,
-    "force protection": 1,
-    "source": "QuaernanHardpointsCarries/data/llamakit.txt"
+    "force protection": 1
   },
   {
     "name": "Large Mono-Engine",
@@ -333,8 +317,7 @@
     "turning heat": 128.4,
     "steering flare sprite": "effect/ion flare/large",
     "steering flare sound": "ion large",
-    "force protection": 5,
-    "source": "QuaernanHardpointsCarries/data/lianbakit.txt"
+    "force protection": 5
   },
   {
     "name": "Class-1 Atomic Thruster",
@@ -351,8 +334,7 @@
     "thrusting heat": 4.8,
     "flare sprite": "effect/nuclear flare/tiny",
     "frame rate": 14,
-    "flare sound": "atomic tiny",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic tiny"
   },
   {
     "name": "Class-2 Atomic Thruster",
@@ -369,8 +351,7 @@
     "thrusting heat": 8.2,
     "flare sprite": "effect/nuclear flare/small",
     "frame rate": 13,
-    "flare sound": "atomic small",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "Class-3 Atomic Thruster",
@@ -387,8 +368,7 @@
     "thrusting heat": 14.6,
     "flare sprite": "effect/nuclear flare/medium",
     "frame rate": 12,
-    "flare sound": "atomic medium",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "Class-4 Atomic Thruster",
@@ -405,8 +385,7 @@
     "thrusting heat": 20.6,
     "flare sprite": "effect/nuclear flare/large",
     "frame rate": 11,
-    "flare sound": "atomic large",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic large"
   },
   {
     "name": "Class-5 Atomic Thruster",
@@ -423,8 +402,7 @@
     "thrusting heat": 32.1,
     "flare sprite": "effect/nuclear flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Class-1 Atomic Steering",
@@ -441,8 +419,7 @@
     "turning heat": 2.8,
     "steering flare sprite": "effect/nuclear flare/tiny",
     "frame rate": 14,
-    "steering flare sound": "atomic tiny",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Class-2 Atomic Steering",
@@ -459,8 +436,7 @@
     "turning heat": 5.8,
     "steering flare sprite": "effect/nuclear flare/small",
     "frame rate": 13,
-    "steering flare sound": "atomic small",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "Class-3 Atomic Steering",
@@ -477,8 +453,7 @@
     "turning heat": 9.7,
     "steering flare sprite": "effect/nuclear flare/medium",
     "frame rate": 12,
-    "steering flare sound": "atomic medium",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic medium"
   },
   {
     "name": "Class-4 Atomic Steering",
@@ -495,8 +470,7 @@
     "turning heat": 14.8,
     "steering flare sprite": "effect/nuclear flare/large",
     "frame rate": 11,
-    "steering flare sound": "atomic large",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic large"
   },
   {
     "name": "Class-5 Atomic Steering",
@@ -513,8 +487,7 @@
     "turning heat": 21.3,
     "steering flare sprite": "effect/nuclear flare/huge",
     "frame rate": 10,
-    "steering flare sound": "atomic huge",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "Antimatter Thruster",
@@ -530,8 +503,7 @@
     "hull energy": 9.4,
     "flare sprite": "effect/nuclear flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Antimatter Steering",
@@ -547,8 +519,7 @@
     "hull energy": 7.2,
     "steering flare sprite": "effect/nuclear flare/huge",
     "frame rate": 10,
-    "steering flare sound": "atomic huge",
-    "source": "Mil-taj-Protectorate/data/mil'taj outfits.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "10KZ Electrostatic Thruster",
@@ -563,8 +534,7 @@
     "thrusting heat": 1.05,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "flare sound": "ion tiny",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "20KZ Electrostatic Thruster",
@@ -579,8 +549,7 @@
     "thrusting heat": 2.175,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "flare sound": "ion small",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "30KZ Electrostatic Thruster",
@@ -595,8 +564,7 @@
     "thrusting heat": 3.525,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "flare sound": "ion medium",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "40KZ Electrostatic Thruster",
@@ -611,8 +579,7 @@
     "thrusting heat": 6.15,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "flare sound": "ion large",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "50KZ Electrostatic Thruster",
@@ -627,8 +594,7 @@
     "thrusting heat": 9.6,
     "flare sprite": "effect/ion flare/huge",
     "frame rate": 0.8,
-    "flare sound": "ion huge",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "flare sound": "ion huge"
   },
   {
     "name": "10KZ Electrostatic Steering",
@@ -643,8 +609,7 @@
     "turning heat": 0.6,
     "steering flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "steering flare sound": "ion tiny",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "20KZ Electrostatic Steering",
@@ -659,8 +624,7 @@
     "turning heat": 1.075,
     "steering flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "steering flare sound": "ion small",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "steering flare sound": "ion small"
   },
   {
     "name": "30KZ Electrostatic Steering",
@@ -675,8 +639,7 @@
     "turning heat": 1.8,
     "steering flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "steering flare sound": "ion medium",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "40KZ Electrostatic Steering",
@@ -691,8 +654,7 @@
     "turning heat": 3.075,
     "steering flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "steering flare sound": "ion large",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "steering flare sound": "ion large"
   },
   {
     "name": "50KZ Electrostatic Steering",
@@ -707,8 +669,7 @@
     "turning heat": 4.8,
     "steering flare sprite": "effect/ion flare/huge",
     "frame rate": 0.8,
-    "steering flare sound": "ion huge",
-    "source": "Zoura-s-Outfits-Expanded/data/human/syndicate outfits.txt"
+    "steering flare sound": "ion huge"
   },
   {
     "name": "Nickel Magnetic Thruster",
@@ -724,8 +685,7 @@
     "flare sprite": "effect/magnetic flare/large",
     "scale": 0.3,
     "frame rate": 18,
-    "flare sound": "plasma small",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Iron Magnetic Thruster",
@@ -741,8 +701,7 @@
     "flare sprite": "effect/magnetic flare/large",
     "scale": 0.6,
     "frame rate": 18,
-    "flare sound": "plasma medium",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Cobalt Magnetic Thruster",
@@ -757,8 +716,7 @@
     "thrusting shields": -3.6,
     "flare sprite": "effect/magnetic flare/large",
     "frame rate": 18,
-    "flare sound": "plasma large",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Nickel Magnetic Steering",
@@ -773,8 +731,7 @@
     "turning shields": -0.4,
     "steering flare sprite": "effect/magnetic flare/small",
     "frame rate": 6,
-    "steering flare sound": "plasma small",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Iron Magnetic Steering",
@@ -789,8 +746,7 @@
     "turning shields": -0.9,
     "steering flare sprite": "effect/magnetic flare/medium",
     "frame rate": 7,
-    "steering flare sound": "plasma medium",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Cobalt Magnetic Steering",
@@ -805,8 +761,7 @@
     "turning shields": -1.8,
     "steering flare sprite": "effect/magnetic flare/large",
     "frame rate": 8,
-    "steering flare sound": "plasma large",
-    "source": "Zoura-s-Outfits-Expanded/data/remnant/remnant engines.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Small Afterburner Module",
@@ -822,8 +777,7 @@
     "afterburner thrust": 14.6,
     "afterburner fuel": 0.032,
     "afterburner heat": 6.4,
-    "afterburner effect": "afterburner",
-    "source": "Zoura-s-Outfits-Expanded/data/coalition/heliarch outfits.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "Large Afterburner Module",
@@ -838,8 +792,7 @@
     "afterburner thrust": 91.2,
     "afterburner fuel": 0.18,
     "afterburner heat": 22.9,
-    "afterburner effect": "caldera afterburner",
-    "source": "Zoura-s-Outfits-Expanded/data/coalition/heliarch outfits.txt"
+    "afterburner effect": "caldera afterburner"
   },
   {
     "name": "Positioner (Cluster Class)",
@@ -863,8 +816,7 @@
     "reverse thrusting energy": 5.7,
     "reverse thrusting heat": 13.6,
     "reverse flare sprite": "effect/korath flare/medium",
-    "reverse flare sound": "plasma medium",
-    "source": "Zoura-s-Outfits-Expanded/data/korath/mereti outfits.txt"
+    "reverse flare sound": "plasma medium"
   },
   {
     "name": "Biikala Adaptive Engines",
@@ -883,8 +835,7 @@
     "flare sound": "ion tiny",
     "turn": 615,
     "turning energy": 2.3,
-    "turning heat": 0.85,
-    "source": "Zoura-s-Outfits-Expanded/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 0.85
   },
   {
     "name": "Qiikata Adaptive Engines",
@@ -902,8 +853,7 @@
     "flare sound": "ion large",
     "turn": 2771,
     "turning energy": 12.2,
-    "turning heat": 4.7,
-    "source": "Zoura-s-Outfits-Expanded/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 4.7
   },
   {
     "name": "Engine Thrust Upgrade",
@@ -915,8 +865,7 @@
     "engine upgrades": -1,
     "thrust": 1.3,
     "thrusting energy": 0.1,
-    "thrusting heat": 0.06,
-    "source": "Zoura-s-Outfits-Expanded/data/bunrodea/bunrodea outfits.txt"
+    "thrusting heat": 0.06
   },
   {
     "name": "Engine Turn Upgrade",
@@ -928,8 +877,7 @@
     "engine upgrades": -2,
     "turn": 262,
     "turning energy": 0.42,
-    "turning heat": 0.2,
-    "source": "Zoura-s-Outfits-Expanded/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 0.2
   },
   {
     "name": "Engine Afterburn Upgrade",
@@ -942,8 +890,7 @@
     "afterburner thrust": 7.3,
     "afterburner energy": 0.9,
     "afterburner fuel": 0.0025,
-    "afterburner heat": 0.8,
-    "source": "Zoura-s-Outfits-Expanded/data/bunrodea/bunrodea outfits.txt"
+    "afterburner heat": 0.8
   },
   {
     "name": "HeVian-9 Engine",
@@ -962,8 +909,7 @@
     "turning energy": 820000.0,
     "turning heat": 2670000.0,
     "steering flare sprite": "effect/korath flare/huge",
-    "steering flare sound": "plasma huge",
-    "source": "Mega-Freight/data/magrunnos.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "GS20-Ak Fusion Engine",
@@ -984,8 +930,7 @@
     "turning energy": 0.6,
     "turning heat": 2.3,
     "steering flare sprite": "effect/atomic flare/small",
-    "steering flare sound": "atomic small",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "GS26-Ak-k Fusion Engine",
@@ -1006,8 +951,7 @@
     "turning energy": 0.45,
     "turning heat": 2.1,
     "steering flare sprite": "effect/atomic flare/small",
-    "steering flare sound": "atomic small",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "GS152-Ak Fusion Engine",
@@ -1028,8 +972,7 @@
     "turning energy": 5.85,
     "turning heat": 25.5,
     "steering flare sprite": "effect/atomic flare/huge",
-    "steering flare sound": "atomic huge",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "E-XE10 Ion Maneuver Engine",
@@ -1048,8 +991,7 @@
     "reverse thrusting energy": 0.25,
     "reverse thrusting heat": 0.32,
     "reverse flare sprite": "effect/ion flare/tiny",
-    "reverse flare sound": "ion tiny",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "reverse flare sound": "ion tiny"
   },
   {
     "name": "Tyrant Reverse Thruster",
@@ -1063,8 +1005,7 @@
     "reverse thrusting heat": 19.1,
     "reverse flare sprite": "effect/plasma flare/huge",
     "frame rate": 9,
-    "reverse flare sound": "plasma huge",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "reverse flare sound": "plasma huge"
   },
   {
     "name": "RD-550 Plasma Thruster",
@@ -1072,8 +1013,7 @@
     "thumbnail": "outfit/small plasma thruster",
     "mass": 26,
     "outfit space": -26,
-    "engine capacity": -26,
-    "source": "Mega-Freight/data/moutfits.txt"
+    "engine capacity": -26
   },
   {
     "name": "RD-560 Plasma Thruster",
@@ -1090,8 +1030,7 @@
     "turning heat": 6.25,
     "flare sprite": "effect/plasma flare/medium",
     "frame rate": 6,
-    "flare sound": "plasma medium",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "RD-570 Plasma Thruster",
@@ -1108,8 +1047,7 @@
     "turning heat": 6.25,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 7,
-    "flare sound": "plasma large",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "RD-550 Plasma Steering",
@@ -1117,8 +1055,7 @@
     "thumbnail": "outfit/small plasma steering",
     "mass": 21,
     "outfit space": -21,
-    "engine capacity": -21,
-    "source": "Mega-Freight/data/moutfits.txt"
+    "engine capacity": -21
   },
   {
     "name": "RD-560 Plasma Steering",
@@ -1132,8 +1069,7 @@
     "turning heat": 3.94,
     "steering flare sprite": "effect/plasma flare/medium",
     "frame rate": 6,
-    "steering flare sound": "plasma medium",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "RD-570 Plasma Steering",
@@ -1147,8 +1083,7 @@
     "turning heat": 7.62,
     "steering flare sprite": "effect/plasma flare/large",
     "frame rate": 7,
-    "steering flare sound": "plasma large",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "LC-90 Adaptive Engine",
@@ -1167,8 +1102,7 @@
     "turning energy": 3.9,
     "turning heat": 4.6,
     "steering flare sprite": "effect/plasma flare/medium",
-    "steering flare sound": "plasma medium",
-    "source": "Mega-Freight/data/moutfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Large Fission Drive",
@@ -1192,8 +1126,7 @@
     "steering flare sound": "fissiondrive",
     "licenses": [
       "Sheragi Capital"
-    ],
-    "source": "Jibauni/data/Sheragi/sheragi outfits.txt"
+    ]
   },
   {
     "name": "Fusion Afterburner",
@@ -1210,8 +1143,7 @@
     "afterburner attachment": 1,
     "licenses": [
       "Sheragi"
-    ],
-    "source": "Jibauni/data/Sheragi/sheragi outfits.txt"
+    ]
   },
   {
     "name": "Small Fusion Drive",
@@ -1246,8 +1178,7 @@
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
-    "unplunderable": 1,
-    "source": "Jibauni/data/Sheragi/sheragi outfits.txt"
+    "unplunderable": 1
   },
   {
     "name": "Jihtah Steering",
@@ -1257,8 +1188,7 @@
     "engine capacity": -15,
     "turn multiplier": 1.25,
     "unplunderable": 1,
-    "slowing resistance": 100,
-    "source": "Jibauni/data/Jibauni/jibauni outfits.txt"
+    "slowing resistance": 100
   },
   {
     "name": "Eimlaq Engines",
@@ -1277,8 +1207,7 @@
     "turn": 1250,
     "turning energy": 5,
     "turning heat": 12,
-    "turning fuel": 1.25,
-    "source": "Jibauni/data/Jibauni/jibauni outfits.txt"
+    "turning fuel": 1.25
   },
   {
     "name": "Wasita Engines",
@@ -1297,8 +1226,7 @@
     "turn": 600,
     "turning energy": 1,
     "turning heat": 4,
-    "turning fuel": 0.6,
-    "source": "Jibauni/data/Jibauni/jibauni outfits.txt"
+    "turning fuel": 0.6
   },
   {
     "name": "Alhaja Engines",
@@ -1317,8 +1245,7 @@
     "turn": 22,
     "turning energy": 1,
     "turning heat": 0.7,
-    "turning fuel": 0.2,
-    "source": "Jibauni/data/Jibauni/jibauni outfits.txt"
+    "turning fuel": 0.2
   },
   {
     "name": "Arion Basic Aircraft Engines",
@@ -1343,8 +1270,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion A.A Engines",
@@ -1371,8 +1297,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion F.A Engines",
@@ -1399,8 +1324,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion I.A Engines",
@@ -1427,8 +1351,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion B.A Engines",
@@ -1455,8 +1378,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion M.B.A Engines",
@@ -1483,8 +1405,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion H.B.A Engines",
@@ -1511,8 +1432,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion M.L.W Atomic Engines",
@@ -1541,8 +1461,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion L.L.W Atomic Engines",
@@ -1571,8 +1490,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion S.H.W Atomic Engines",
@@ -1601,8 +1519,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion M.H.W Atomic Engines",
@@ -1631,8 +1548,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion L.H.W Atomic Engines",
@@ -1661,8 +1577,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion H.H.W Atomic Engines",
@@ -1691,8 +1606,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion Flagship Atomic Engines",
@@ -1719,8 +1633,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion Basic Aircraft Engines",
@@ -1745,8 +1658,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Omni Directional Engine-20s",
@@ -1768,8 +1680,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Omni Directional Engine-25s",
@@ -1791,8 +1702,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Omni Directional Engine-30s",
@@ -1814,8 +1724,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Omni Directional Engine-80s",
@@ -1839,8 +1748,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Omni Directional Engine-100s",
@@ -1864,8 +1772,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Omni Directional Engine-150s",
@@ -1889,8 +1796,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Omni Directional Engine-180s",
@@ -1914,8 +1820,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion ODE-SA-15x",
@@ -1942,8 +1847,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion deprecated.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-AA-20x",
@@ -1972,8 +1876,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-FA-25x",
@@ -2002,8 +1905,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-IA-25x",
@@ -2030,8 +1932,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Arion ODE-LBA-30x",
@@ -2060,8 +1961,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-MBA-50x",
@@ -2090,8 +1990,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-HBA-60x",
@@ -2120,8 +2019,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-MLW-80x",
@@ -2150,8 +2048,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-LLW-100x",
@@ -2180,8 +2077,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Arion ODE-SHW-150x",
@@ -2210,8 +2106,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion ODE-MHW-180x",
@@ -2240,8 +2135,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion ODE-LHW-210x",
@@ -2270,8 +2164,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion ODE-HHW-250x",
@@ -2301,8 +2194,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Arion Light Afterburner",
@@ -2318,8 +2210,7 @@
     "afterburner fuel": 0.5,
     "afterburner energy": 10,
     "afterburner heat": 7.5,
-    "afterburner effect": "ionic afterburner",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Arion Medium Afterburner",
@@ -2335,8 +2226,7 @@
     "afterburner fuel": 1.0,
     "afterburner energy": 20,
     "afterburner heat": 15,
-    "afterburner effect": "ionic afterburner",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Arion Heavy Afterburner",
@@ -2352,8 +2242,7 @@
     "afterburner fuel": 1.5,
     "afterburner energy": 30,
     "afterburner heat": 22.5,
-    "afterburner effect": "ionic afterburner",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Arion Huge Afterburner",
@@ -2369,8 +2258,7 @@
     "afterburner fuel": 2.5,
     "afterburner energy": 50,
     "afterburner heat": 37.5,
-    "afterburner effect": "ionic afterburner",
-    "source": "Arion-Air_Superiority/data/arion outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Thrust Vectoring Engine-20w",
@@ -2389,8 +2277,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Thrust Vectoring Engine-25w",
@@ -2409,8 +2296,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Thrust Vectoring Engine-30w",
@@ -2429,8 +2315,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Thrust Vectoring Engine-80w",
@@ -2449,8 +2334,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Thrust Vectoring Engine-100w",
@@ -2469,8 +2353,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Omni Directional Engine-20w",
@@ -2494,8 +2377,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Omni Directional Engine-25w",
@@ -2519,8 +2401,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Omni Directional Engine-30w",
@@ -2544,8 +2425,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Omni Directional Engine-80w",
@@ -2569,8 +2449,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Omni Directional Engine-100w",
@@ -2594,8 +2473,7 @@
     "steering flare sprite": "effect/fissionflare",
     "steering flare sound": "atomic tiny",
     "reverse flare sprite": "effect/fissionflare",
-    "reverse flare sound": "atomic small",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Omni Directional Engine-150w",
@@ -2619,8 +2497,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Omni Directional Engine-180w",
@@ -2644,8 +2521,7 @@
     "steering flare sprite": "effect/fusionflare",
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
-    "reverse flare sound": "atomic large",
-    "source": "Arion-Air_Superiority/data/ncd outfits.txt"
+    "reverse flare sound": "atomic large"
   },
   {
     "name": "Large Fission Drive",
@@ -2666,8 +2542,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "sheragi-rebirth/data/outfit.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Fusion Afterburner",
@@ -2681,8 +2556,7 @@
     "afterburner heat": 50,
     "afterburner fuel": 0.55,
     "afterburner effect": "fusion afterburner effect",
-    "afterburner attachment": 1,
-    "source": "sheragi-rebirth/data/outfit.txt"
+    "afterburner attachment": 1
   },
   {
     "name": "Small Fusion Drive",
@@ -2716,8 +2590,7 @@
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
-    "unplunderable": 1,
-    "source": "sheragi-rebirth/data/outfit.txt"
+    "unplunderable": 1
   },
   {
     "name": "Afterburner (Meteor Class)",
@@ -2732,8 +2605,7 @@
     "afterburner energy": 1.5,
     "afterburner heat": 15.63,
     "afterburner fuel": 0.0938,
-    "afterburner effect": "korath afterburner small",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "afterburner effect": "korath afterburner small"
   },
   {
     "name": "Arkrof GP Hybrid Reverser",
@@ -2748,8 +2620,7 @@
     "reverse thrusting heat": 3,
     "reverse flare sprite": "effect/efreti flare/tiny",
     "frame rate": 8,
-    "reverse flare sound": "ion tiny",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "reverse flare sound": "ion tiny"
   },
   {
     "name": "Farves GP Hybrid Reverser",
@@ -2764,8 +2635,7 @@
     "reverse thrusting heat": 5.9,
     "reverse flare sprite": "effect/efreti flare/small",
     "frame rate": 7.5,
-    "reverse flare sound": "ion small",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "reverse flare sound": "ion small"
   },
   {
     "name": "Gaktem GP Hybrid Reverser",
@@ -2780,8 +2650,7 @@
     "reverse thrusting heat": 11.05,
     "reverse flare sprite": "effect/efreti flare/medium",
     "frame rate": 7,
-    "reverse flare sound": "ion medium",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "reverse flare sound": "ion medium"
   },
   {
     "name": "Nelmeb GP Hybrid Reverser",
@@ -2796,8 +2665,7 @@
     "reverse thrusting heat": 18,
     "reverse flare sprite": "effect/efreti flare/large",
     "frame rate": 6.5,
-    "reverse flare sound": "ion large",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "reverse flare sound": "ion large"
   },
   {
     "name": "Steering (Planetary Class)(Damaged)",
@@ -2806,8 +2674,7 @@
     "mass": 52,
     "outfit space": -52,
     "engine capacity": -52,
-    "fused circuits": 1,
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "fused circuits": 1
   },
   {
     "name": "Thruster (Planetary Class)(Damaged)",
@@ -2816,8 +2683,7 @@
     "mass": 69,
     "outfit space": -69,
     "engine capacity": -69,
-    "fused circuits": 1,
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "fused circuits": 1
   },
   {
     "name": "Korath Afterburner",
@@ -2832,8 +2698,7 @@
     "afterburner energy": 1.5,
     "afterburner heat": 15.63,
     "afterburner fuel": 0.0938,
-    "afterburner effect": "korath afterburner small",
-    "source": "Midnight-Scrapyard/data/outfits scrapyard.txt"
+    "afterburner effect": "korath afterburner small"
   },
   {
     "name": "Fhahu Star Drive",
@@ -2849,8 +2714,7 @@
     "frame rate": 3,
     "flare sound": "plasma small",
     "scram drive": 1,
-    "hyperdrive": 1,
-    "source": "Galactic-War/data/Gargoor'an/Gargoor'an outfits.txt"
+    "hyperdrive": 1
   },
   {
     "name": "Fhahu Maneuver Drive",
@@ -2860,8 +2724,7 @@
     "engine capacity": -22,
     "turn": 600,
     "turning energy": 0.9,
-    "turning heat": 1.5,
-    "source": "Galactic-War/data/Gargoor'an/Gargoor'an outfits.txt"
+    "turning heat": 1.5
   },
   {
     "name": "Jaciq'ai Star Drive",
@@ -2877,8 +2740,7 @@
     "frame rate": 3,
     "flare sound": "plasma small",
     "scram drive": 1,
-    "hyperdrive": 1,
-    "source": "Galactic-War/data/Gargoor'an/Gargoor'an outfits.txt"
+    "hyperdrive": 1
   },
   {
     "name": "Jaciq'ai Maneuver Drive",
@@ -2888,8 +2750,7 @@
     "engine capacity": -44,
     "turn": 1050,
     "turning energy": 1.65,
-    "turning heat": 2.3,
-    "source": "Galactic-War/data/Gargoor'an/Gargoor'an outfits.txt"
+    "turning heat": 2.3
   },
   {
     "name": "G48 Ion Thruster",
@@ -2903,8 +2764,7 @@
     "thrusting heat": 0.21,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.4,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Aumar/Aumar outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "G66 Ion Thruster",
@@ -2918,8 +2778,7 @@
     "thrusting heat": 0.24,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.4,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Aumar/Aumar outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "2HK1 RCS",
@@ -2930,8 +2789,7 @@
     "engine capacity": -0.05,
     "turn": 64,
     "turning energy": 0.16,
-    "turning heat": 0.23,
-    "source": "Galactic-War/data/Aumar/Aumar outfits.txt"
+    "turning heat": 0.23
   },
   {
     "name": "Uoorn Star Glider",
@@ -2951,8 +2809,7 @@
     "turning heat": 0.4,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 3,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Uoorn/uoorn outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Uoorn Void Slip",
@@ -2977,8 +2834,7 @@
     "turning heat": 1.6,
     "flare sprite": "effect/atomic flare/medium",
     "frame rate": 3,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Uoorn/uoorn outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Iogel01-04 Thruster",
@@ -2993,8 +2849,7 @@
     "thrusting ion": 0.06,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "Iogel02-04 Thruster",
@@ -3009,8 +2864,7 @@
     "thrusting ion": 0.07,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Iogel03-04 Thruster",
@@ -3025,8 +2879,7 @@
     "thrusting ion": 0.08,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "flare sound": "ion medium",
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Iogel04-04 Thruster",
@@ -3041,8 +2894,7 @@
     "thrusting ion": 0.09,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "flare sound": "ion large",
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "Iogel05-04 Thruster",
@@ -3057,8 +2909,7 @@
     "thrusting ion": 0.1,
     "flare sprite": "effect/ion flare/huge",
     "frame rate": 0.8,
-    "flare sound": "ion huge",
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "flare sound": "ion huge"
   },
   {
     "name": "Iogel01-04 Steering",
@@ -3070,8 +2921,7 @@
     "turn": 280,
     "turning energy": 0.2,
     "turning heat": 0.4,
-    "thrusting ion": 0.02,
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "thrusting ion": 0.02
   },
   {
     "name": "Iogel02-04 Steering",
@@ -3083,8 +2933,7 @@
     "turn": 330,
     "turning energy": 0.4,
     "turning heat": 0.5,
-    "thrusting ion": 0.03,
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "thrusting ion": 0.03
   },
   {
     "name": "Iogel03-04 Steering",
@@ -3096,8 +2945,7 @@
     "turn": 615,
     "turning energy": 0.8,
     "turning heat": 0.7,
-    "thrusting ion": 0.04,
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "thrusting ion": 0.04
   },
   {
     "name": "Iogel04-04 Steering",
@@ -3109,8 +2957,7 @@
     "turn": 1260,
     "turning energy": 1.1,
     "turning heat": 0.9,
-    "thrusting ion": 0.05,
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "thrusting ion": 0.05
   },
   {
     "name": "Iogel05-04 Steering",
@@ -3122,8 +2969,7 @@
     "turn": 2306,
     "turning energy": 2.4,
     "turning heat": 1.2,
-    "thrusting ion": 0.06,
-    "source": "Galactic-War/data/Geeva/Geeva Outfits.txt"
+    "thrusting ion": 0.06
   },
   {
     "name": "Eravarin Steering",
@@ -3137,8 +2983,7 @@
     "turning heat": 1.9,
     "steering flare sprite": "effect/akralva flare/small",
     "frame rate": 12,
-    "steering flare sound": "plasma small",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Iqirir Steering",
@@ -3152,8 +2997,7 @@
     "turning heat": 2.8,
     "steering flare sprite": "effect/akralva flare/medium",
     "frame rate": 8,
-    "steering flare sound": "plasma medium",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Nkralari Steering",
@@ -3167,8 +3011,7 @@
     "turning heat": 4,
     "steering flare sprite": "effect/akralva flare/large",
     "frame rate": 6,
-    "steering flare sound": "plasma large",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Elvisri Thruster",
@@ -3182,8 +3025,7 @@
     "thrusting heat": 5,
     "flare sprite": "effect/akralva flare/small",
     "frame rate": 12,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Iravri Thruster",
@@ -3197,8 +3039,7 @@
     "thrusting heat": 9.6,
     "flare sprite": "effect/akralva flare/medium",
     "frame rate": 8,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Nkralari Thruster",
@@ -3212,8 +3053,7 @@
     "thrusting heat": 4.8,
     "flare sprite": "effect/akralva flare/large",
     "frame rate": 6,
-    "flare sound": "plasma large",
-    "source": "Galactic-War/data/Akralva/Akralva Outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Jappar Thruster",
@@ -3227,8 +3067,7 @@
     "thrusting heat": 1.0,
     "flare sprite": "effect/coalition flare/small",
     "frame rate": 4.8,
-    "flare sound": "atomic tiny",
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "flare sound": "atomic tiny"
   },
   {
     "name": "Corjen Thruster",
@@ -3242,8 +3081,7 @@
     "thrusting heat": 1.8,
     "flare sprite": "effect/coalition flare/small",
     "frame rate": 4.8,
-    "flare sound": "atomic medium",
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "Parfod Thruster",
@@ -3257,8 +3095,7 @@
     "thrusting heat": 3.2,
     "flare sprite": "effect/coalition flare/large",
     "frame rate": 4.8,
-    "flare sound": "atomic huge",
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Jappar Steering",
@@ -3269,8 +3106,7 @@
     "engine capacity": -8,
     "turn": 190,
     "turning energy": 0.3,
-    "turning heat": 0.8,
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "turning heat": 0.8
   },
   {
     "name": "Corjen Steering",
@@ -3281,8 +3117,7 @@
     "engine capacity": -16,
     "turn": 384,
     "turning energy": 0.6,
-    "turning heat": 1.6,
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "turning heat": 1.6
   },
   {
     "name": "Parfod Steering",
@@ -3293,8 +3128,7 @@
     "engine capacity": -34,
     "turn": 771,
     "turning energy": 1.2,
-    "turning heat": 3.2,
-    "source": "Galactic-War/data/Resmakia/Resmakia outfits.txt"
+    "turning heat": 3.2
   },
   {
     "name": "Akonu Thruster",
@@ -3308,8 +3142,7 @@
     "thrusting heat": 3.5,
     "flare sprite": "effect/atomic flare/tiny",
     "frame rate": 14,
-    "flare sound": "atomic tiny",
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "flare sound": "atomic tiny"
   },
   {
     "name": "Ahura Thruster",
@@ -3323,8 +3156,7 @@
     "thrusting heat": 6.1,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 13,
-    "flare sound": "atomic small",
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "Fokhun Thruster",
@@ -3338,8 +3170,7 @@
     "thrusting heat": 10.3,
     "flare sprite": "effect/atomic flare/medium",
     "frame rate": 12,
-    "flare sound": "atomic medium",
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "Ivtorne Thruster",
@@ -3353,8 +3184,7 @@
     "thrusting heat": 17.4,
     "flare sprite": "effect/atomic flare/large",
     "frame rate": 11,
-    "flare sound": "atomic large",
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "flare sound": "atomic large"
   },
   {
     "name": "Urhas Thruster",
@@ -3368,8 +3198,7 @@
     "thrusting heat": 29.1,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Akonu Steering",
@@ -3380,8 +3209,7 @@
     "engine capacity": -16,
     "turn": 392,
     "turning energy": 0.9,
-    "turning heat": 2.2,
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "turning heat": 2.2
   },
   {
     "name": "Ahura Steering",
@@ -3392,8 +3220,7 @@
     "engine capacity": -25,
     "turn": 687,
     "turning energy": 1.5,
-    "turning heat": 3.7,
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "turning heat": 3.7
   },
   {
     "name": "Fokhun Steering",
@@ -3404,8 +3231,7 @@
     "engine capacity": -38,
     "turn": 1192,
     "turning energy": 2.5,
-    "turning heat": 6.3,
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "turning heat": 6.3
   },
   {
     "name": "Ivtorne Steering",
@@ -3416,8 +3242,7 @@
     "engine capacity": -60,
     "turn": 2050,
     "turning energy": 4.1,
-    "turning heat": 10.5,
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "turning heat": 10.5
   },
   {
     "name": "Urhas Steering",
@@ -3428,8 +3253,7 @@
     "engine capacity": -92,
     "turn": 3509,
     "turning energy": 5.6,
-    "turning heat": 17.5,
-    "source": "Galactic-War/data/Tehru/tehru outfits.txt"
+    "turning heat": 17.5
   },
   {
     "name": "Hao Ion Engines",
@@ -3446,8 +3270,7 @@
     "turning heat": 1,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Kuar Ion Engines",
@@ -3464,8 +3287,7 @@
     "turning heat": 1.7,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "flare sound": "ion medium",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Mae Ion Engines",
@@ -3482,8 +3304,7 @@
     "turning heat": 2.5,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 1.0,
-    "flare sound": "ion big",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "ion big"
   },
   {
     "name": "Maon Ion Engines",
@@ -3500,8 +3321,7 @@
     "turning heat": 4.6,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "flare sound": "ion large",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "Akuorai Afterburner",
@@ -3514,8 +3334,7 @@
     "afterburner fuel": 0.15,
     "afterburner energy": 6,
     "afterburner heat": 19.4,
-    "afterburner effect": "ionic afterburner",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Auker Thruster",
@@ -3529,8 +3348,7 @@
     "thrusting heat": 1.4,
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Fekorna Thruster",
@@ -3544,8 +3362,7 @@
     "thrusting heat": 2.7,
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Ornao Thruster",
@@ -3559,8 +3376,7 @@
     "thrusting heat": 5,
     "flare sprite": "effect/plasma flare/medium",
     "frame rate": 7,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Qutaran Thruster",
@@ -3574,8 +3390,7 @@
     "thrusting heat": 10,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "flare sound": "plasma large",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Vikuan Thruster",
@@ -3589,8 +3404,7 @@
     "thrusting heat": 19.7,
     "flare sprite": "effect/plasma flare/huge",
     "frame rate": 9,
-    "flare sound": "plasma huge",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Auker Steering",
@@ -3604,8 +3418,7 @@
     "turning heat": 0.9,
     "steering flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "steering flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Fekorna Steering",
@@ -3619,8 +3432,7 @@
     "turning heat": 1.8,
     "steering flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
-    "steering flare sound": "plasma small",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Ornao Steering",
@@ -3634,8 +3446,7 @@
     "turning heat": 5.2,
     "steering flare sprite": "effect/plasma flare/medium",
     "frame rate": 7,
-    "steering flare sound": "plasma medium",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Qutaran Steering",
@@ -3649,8 +3460,7 @@
     "turning heat": 6.6,
     "steering flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "steering flare sound": "plasma large",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Vikuan Steering",
@@ -3664,8 +3474,7 @@
     "turning heat": 11.2,
     "steering flare sprite": "effect/plasma flare/huge",
     "frame rate": 9,
-    "steering flare sound": "plasma huge",
-    "source": "Galactic-War/data/Dels/Dels outfit.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "Ursun Thruster",
@@ -3678,8 +3487,7 @@
     "thrusting energy": 20,
     "thrusting heat": 15,
     "flare sprite": "effect/ursun",
-    "frame rate": 20,
-    "source": "Galactic-War/data/Taroun/Taroun outfits.txt"
+    "frame rate": 20
   },
   {
     "name": "Ursun Steering",
@@ -3690,8 +3498,7 @@
     "engine capacity": -50,
     "turn": 1800,
     "turning energy": 10,
-    "turning heat": 10,
-    "source": "Galactic-War/data/Taroun/Taroun outfits.txt"
+    "turning heat": 10
   },
   {
     "name": "P1V3 Thruster",
@@ -3705,8 +3512,7 @@
     "thrusting heat": 1.1,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "P1V3 Steering",
@@ -3720,8 +3526,7 @@
     "turning heat": 0.95,
     "steering flare sprite": "effect/ion flare/tiny",
     "frame rate": 1,
-    "steering flare sound": "ion tiny",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "P2V3 Thruster",
@@ -3735,8 +3540,7 @@
     "thrusting heat": 1.95,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "P2V3 Steering",
@@ -3750,8 +3554,7 @@
     "turning heat": 1.75,
     "steering flare sprite": "effect/ion flare/small",
     "frame rate": 1,
-    "steering flare sound": "ion small",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "steering flare sound": "ion small"
   },
   {
     "name": "P3V3 Thruster",
@@ -3765,8 +3568,7 @@
     "thrusting heat": 4.5,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 1,
-    "flare sound": "ion medium",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "P3V3 Steering",
@@ -3780,8 +3582,7 @@
     "turning heat": 3.2,
     "steering flare sprite": "effect/ion flare/medium",
     "frame rate": 1,
-    "steering flare sound": "ion medium",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "P4V3 Thruster",
@@ -3795,8 +3596,7 @@
     "thrusting heat": 8.4,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "flare sound": "ion large",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "P4V3 Steering",
@@ -3810,8 +3610,7 @@
     "turning heat": 5.5,
     "steering flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "steering flare sound": "ion large",
-    "source": "Galactic-War/data/Vareen/vareen outfits.txt"
+    "steering flare sound": "ion large"
   },
   {
     "name": "Kttyr Thruster",
@@ -3826,8 +3625,7 @@
     "thrusting heat": 4,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 6,
-    "flare sound": "atomic small",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "Kxur Thruster",
@@ -3842,8 +3640,7 @@
     "thrusting heat": 7.5,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 8,
-    "flare sound": "atomic medium",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "Kynsin Thruster",
@@ -3858,8 +3655,7 @@
     "thrusting heat": 14,
     "flare sprite": "effect/ion flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Haahesn Thruster",
@@ -3873,8 +3669,7 @@
     "thrusting heat": 0.6,
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 3,
-    "flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Haron Thruster",
@@ -3888,8 +3683,7 @@
     "thrusting heat": 1.4,
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 3,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Hconor Thruster",
@@ -3903,8 +3697,7 @@
     "thrusting heat": 2.2,
     "flare sprite": "effect/plasma flare/medium",
     "frame rate": 3,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Hvean Thruster",
@@ -3918,8 +3711,7 @@
     "thrusting heat": 3.8,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 3,
-    "flare sound": "plasma large",
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Haahesn Steering",
@@ -3930,8 +3722,7 @@
     "engine capacity": -12,
     "turn": 228,
     "turning energy": 0.4,
-    "turning heat": 0.4,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "turning heat": 0.4
   },
   {
     "name": "Haron Steering",
@@ -3942,8 +3733,7 @@
     "engine capacity": -24,
     "turn": 460,
     "turning energy": 0.8,
-    "turning heat": 1.2,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "turning heat": 1.2
   },
   {
     "name": "Hconor Steering",
@@ -3954,8 +3744,7 @@
     "engine capacity": -34,
     "turn": 680,
     "turning energy": 1.1,
-    "turning heat": 2.8,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "turning heat": 2.8
   },
   {
     "name": "Hvean Steering",
@@ -3966,8 +3755,7 @@
     "engine capacity": -72,
     "turn": 1380,
     "turning energy": 2.4,
-    "turning heat": 3.2,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "turning heat": 3.2
   },
   {
     "name": "Haron Reverse Thruster",
@@ -3978,8 +3766,7 @@
     "weapon capacity": -12,
     "reverse thrust": 8.4,
     "reverse thrusting energy": 1,
-    "reverse thrusting heat": 1,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "reverse thrusting heat": 1
   },
   {
     "name": "Hvean Reverse Thruster",
@@ -3990,8 +3777,7 @@
     "weapon capacity": -36,
     "reverse thrust": 25.4,
     "reverse thrusting energy": 3,
-    "reverse thrusting heat": 3.8,
-    "source": "Galactic-War/data/Zorcn/zorcn outfits.txt"
+    "reverse thrusting heat": 3.8
   },
   {
     "name": "Darloid Drive",
@@ -4003,8 +3789,7 @@
     "afterburner thrust": 250,
     "afterburner energy": 5,
     "afterburner heat": 1.0,
-    "afterburner effect": "afterburner",
-    "source": "Galactic-War/data/Revos/Revos outfits.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "Oidor Type-1 Engines",
@@ -4021,8 +3806,7 @@
     "thrusting heat": 0.25,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Revos/Revos outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "Oidor Type-2 Engines",
@@ -4039,8 +3823,7 @@
     "thrusting heat": 0.35,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1.2,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Revos/Revos outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Asutur Thruster",
@@ -4056,8 +3839,7 @@
     "slowing resistance energy": 0.3,
     "flare sprite": "effect/qoro flare/tiny",
     "frame rate": 10,
-    "flare sound": "seeker",
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "flare sound": "seeker"
   },
   {
     "name": "Eensura Thruster",
@@ -4073,8 +3855,7 @@
     "slowing resistance energy": 0.3,
     "flare sprite": "effect/qoro flare/small",
     "frame rate": 10,
-    "flare sound": "seeker",
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "flare sound": "seeker"
   },
   {
     "name": "Maseka Thruster",
@@ -4090,8 +3871,7 @@
     "slowing resistance energy": 0.35,
     "flare sprite": "effect/qoro flare/medium",
     "frame rate": 10,
-    "flare sound": "seeker",
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "flare sound": "seeker"
   },
   {
     "name": "Otsarui Thruster",
@@ -4107,8 +3887,7 @@
     "slowing resistance energy": 0.4,
     "flare sprite": "effect/qoro flare/big",
     "frame rate": 10,
-    "flare sound": "seeker",
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "flare sound": "seeker"
   },
   {
     "name": "Sokenue Thruster",
@@ -4124,8 +3903,7 @@
     "slowing resistance energy": 0.5,
     "flare sprite": "effect/qoro flare/huge",
     "frame rate": 10,
-    "flare sound": "seeker",
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "flare sound": "seeker"
   },
   {
     "name": "Asutur-ian Steering",
@@ -4136,8 +3914,7 @@
     "engine capacity": -10,
     "turn": 250,
     "turning energy": 0.4,
-    "turning heat": 0.5,
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "turning heat": 0.5
   },
   {
     "name": "Eensura-ian Steering",
@@ -4148,8 +3925,7 @@
     "engine capacity": -20,
     "turn": 550,
     "turning energy": 0.8,
-    "turning heat": 1,
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "turning heat": 1
   },
   {
     "name": "Maseka-ian Steering",
@@ -4160,8 +3936,7 @@
     "engine capacity": -39,
     "turn": 1200,
     "turning energy": 1.4,
-    "turning heat": 2,
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "turning heat": 2
   },
   {
     "name": "Otsarui-ian Steering",
@@ -4172,8 +3947,7 @@
     "engine capacity": -78,
     "turn": 2400,
     "turning energy": 2.8,
-    "turning heat": 3.8,
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "turning heat": 3.8
   },
   {
     "name": "Sokenue-ian Steering",
@@ -4184,8 +3958,7 @@
     "engine capacity": -100,
     "turn": 3610,
     "turning energy": 4.9,
-    "turning heat": 5.46,
-    "source": "Galactic-War/data/Qoro/Qoro Makau outfits.txt"
+    "turning heat": 5.46
   },
   {
     "name": "Gotam Ion Thruster",
@@ -4202,8 +3975,7 @@
     "flare sound": "ion small",
     "turn": 320,
     "turning energy": 1,
-    "turning heat": 1.3,
-    "source": "Galactic-War/data/Qoro/Qoro Siogal outfits.txt"
+    "turning heat": 1.3
   },
   {
     "name": "Gowaki Ion Thruster",
@@ -4220,8 +3992,7 @@
     "flare sound": "ion medium",
     "turn": 660,
     "turning energy": 2,
-    "turning heat": 2.7,
-    "source": "Galactic-War/data/Qoro/Qoro Siogal outfits.txt"
+    "turning heat": 2.7
   },
   {
     "name": "Msidai Reaction System",
@@ -4236,8 +4007,7 @@
     "thrusting heat": 20,
     "turn": 4505.0,
     "turning energy": 8.2,
-    "turning heat": 16.2,
-    "source": "Galactic-War/data/Isgeda/Isgeda Outfits.txt"
+    "turning heat": 16.2
   },
   {
     "name": "Ielur Thruster",
@@ -4252,8 +4022,7 @@
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
     "flare sound": "plasma tiny",
-    "ignaggen engine port": 1,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "ignaggen engine port": 1
   },
   {
     "name": "Rika Thruster",
@@ -4268,8 +4037,7 @@
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
     "flare sound": "plasma small",
-    "ignaggen engine port": 2,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "ignaggen engine port": 2
   },
   {
     "name": "Rila Thruster",
@@ -4284,8 +4052,7 @@
     "flare sprite": "effect/plasma flare/medium",
     "frame rate": 6,
     "flare sound": "plasma medium",
-    "ignaggen engine port": 3,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "ignaggen engine port": 3
   },
   {
     "name": "Rilen Thruster",
@@ -4300,8 +4067,7 @@
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 0.9,
     "flare sound": "plasma large",
-    "ignaggen engine port": 4,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "ignaggen engine port": 4
   },
   {
     "name": "Ielur Steering",
@@ -4312,8 +4078,7 @@
     "engine capacity": -12,
     "turn": 280,
     "turning energy": 0.26,
-    "turning heat": 0.36,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "turning heat": 0.36
   },
   {
     "name": "Rika Steering",
@@ -4324,8 +4089,7 @@
     "engine capacity": -22,
     "turn": 580,
     "turning energy": 0.5,
-    "turning heat": 0.6,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "turning heat": 0.6
   },
   {
     "name": "Rilen Steering",
@@ -4336,8 +4100,7 @@
     "engine capacity": -75,
     "turn": 2220,
     "turning energy": 2.2,
-    "turning heat": 2.3,
-    "source": "Galactic-War/data/Ignaggen/Ignaggen outfits.txt"
+    "turning heat": 2.3
   },
   {
     "name": "DIT6 Thruster",
@@ -4353,8 +4116,7 @@
     "heat generation": 2,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 0.6,
-    "flare sound": "ion huge",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion huge"
   },
   {
     "name": "DIT6 Steering",
@@ -4369,8 +4131,7 @@
     "energy consumption": 1.2,
     "heat generation": 1.2,
     "steering flare sprite": "effect/atomic flare/huge",
-    "frame rate": 0.6,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 0.6
   },
   {
     "name": "DIT5 Thruster",
@@ -4386,8 +4147,7 @@
     "heat generation": 1.7,
     "flare sprite": "effect/atomic flare/large",
     "frame rate": 0.8,
-    "flare sound": "ion large",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "DIT5 Steering",
@@ -4402,8 +4162,7 @@
     "energy consumption": 0.8,
     "heat generation": 0.8,
     "steering flare sprite": "effect/atomic flare/large",
-    "frame rate": 0.8,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 0.8
   },
   {
     "name": "DIT4 Thruster",
@@ -4419,8 +4178,7 @@
     "heat generation": 1.2,
     "flare sprite": "effect/atomic flare/medium",
     "frame rate": 1,
-    "flare sound": "ion medium",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "DIT4 Steering",
@@ -4435,8 +4193,7 @@
     "energy consumption": 0.65,
     "heat generation": 0.65,
     "steering flare sprite": "effect/atomic flare/medium",
-    "frame rate": 1,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 1
   },
   {
     "name": "DIT3 Thruster",
@@ -4452,8 +4209,7 @@
     "heat generation": 1,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 1.2,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "DIT3 Steering",
@@ -4468,8 +4224,7 @@
     "energy consumption": 0.5,
     "heat generation": 0.5,
     "steering flare sprite": "effect/atomic flare/small",
-    "frame rate": 1.2,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 1.2
   },
   {
     "name": "DIT2 Thruster",
@@ -4485,8 +4240,7 @@
     "heat generation": 0.7,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 1.4,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "DIT2 Steering",
@@ -4501,8 +4255,7 @@
     "energy consumption": 0.4,
     "heat generation": 0.4,
     "steering flare sprite": "effect/atomic flare/small",
-    "frame rate": 1.4,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 1.4
   },
   {
     "name": "DIT1 Thruster",
@@ -4518,8 +4271,7 @@
     "heat generation": 0.5,
     "flare sprite": "effect/atomic flare/tiny",
     "frame rate": 1.5,
-    "flare sound": "ion tiny",
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "DIT1 Steering",
@@ -4534,8 +4286,7 @@
     "energy consumption": 0.3,
     "heat generation": 0.3,
     "steering flare sprite": "effect/atomic flare/tiny",
-    "frame rate": 1.5,
-    "source": "Galactic-War/data/Donko/Donko outfits.txt"
+    "frame rate": 1.5
   },
   {
     "name": "Cokor Thruster",
@@ -4555,8 +4306,7 @@
     "afterburner effect": "kumakk small afterburner",
     "flare sprite": "effect/kumakk flare/tiny",
     "frame rate": 6,
-    "flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Kolun'a Thruster",
@@ -4576,8 +4326,7 @@
     "afterburner effect": "kumakk medium afterburner",
     "flare sprite": "effect/kumakk flare/small",
     "frame rate": 6,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Lelu'a Thruster",
@@ -4597,8 +4346,7 @@
     "afterburner effect": "kumakk large afterburner",
     "flare sprite": "effect/kumakk flare/medium",
     "frame rate": 6,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Mocoro Thruster",
@@ -4618,8 +4366,7 @@
     "cooling energy": 30,
     "flare sprite": "effect/kumakk flare/large",
     "frame rate": 6,
-    "flare sound": "plasma large",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Cokor Steering",
@@ -4633,8 +4380,7 @@
     "turning heat": 0.3,
     "steering flare sprite": "effect/kumakk flare/tiny",
     "frame rate": 6,
-    "steering flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Kolun'a Steering",
@@ -4648,8 +4394,7 @@
     "turning heat": 0.6,
     "steering flare sprite": "effect/kumakk flare/small",
     "frame rate": 6,
-    "steering flare sound": "plasma small",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Lelu'a Steering",
@@ -4663,8 +4408,7 @@
     "turning heat": 1.1,
     "steering flare sprite": "effect/kumakk flare/medium",
     "frame rate": 6,
-    "steering flare sound": "plasma medium",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Mocoro Steering",
@@ -4678,8 +4422,7 @@
     "turning heat": 1.9,
     "steering flare sprite": "effect/kumakk flare/large",
     "frame rate": 6,
-    "steering flare sound": "plasma large",
-    "source": "Galactic-War/data/Kumakk/Kumakk Outfits.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "C-Class Engine",
@@ -4696,8 +4439,7 @@
     "turning heat": 5,
     "flare sprite": "effect/korath flare/medium",
     "frame rate": 7,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Qanse/Qanse outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "B-Class Engine",
@@ -4714,8 +4456,7 @@
     "turning heat": 4,
     "flare sprite": "effect/korath flare/small",
     "frame rate": 7,
-    "flare sound": "plasma small",
-    "source": "Galactic-War/data/Qanse/Qanse outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Harken Graviton Engines",
@@ -4739,8 +4480,7 @@
     "reverse thrusting heat": 10,
     "hyperdrive": 1,
     "jump drive": 1,
-    "jump speed": 7,
-    "source": "Galactic-War/data/Erm/Erm outfits.txt"
+    "jump speed": 7
   },
   {
     "name": "Hordel Graviton Engines",
@@ -4764,8 +4504,7 @@
     "reverse thrusting heat": 10,
     "hyperdrive": 1,
     "jump drive": 1,
-    "jump speed": 7,
-    "source": "Galactic-War/data/Erm/Erm outfits.txt"
+    "jump speed": 7
   },
   {
     "name": "Kizan-Hordel Graviton Engines",
@@ -4789,8 +4528,7 @@
     "reverse thrusting heat": 5,
     "hyperdrive": 1,
     "jump drive": 1,
-    "jump speed": 5,
-    "source": "Galactic-War/data/Erm/Erm outfits.txt"
+    "jump speed": 5
   },
   {
     "name": "Eseyar Ion Thruster",
@@ -4804,8 +4542,7 @@
     "thrusting heat": 0.5,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1,
-    "flare sound": "ion small",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Gerneil Plasma Thruster",
@@ -4819,8 +4556,7 @@
     "thrusting heat": 10.2,
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 12,
-    "flare sound": "plasma medium",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Kenlark-G2 Atomic Thruster",
@@ -4834,8 +4570,7 @@
     "thrusting heat": 14.6,
     "flare sprite": "effect/atomic flare/large",
     "frame rate": 20,
-    "flare sound": "atomic large",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "flare sound": "atomic large"
   },
   {
     "name": "Esinkan Ion Steering",
@@ -4849,8 +4584,7 @@
     "turning heat": 0.3,
     "steering flare sprite": "effect/ion flare/small",
     "frame rate": 1.2,
-    "steering flare sound": "ion tiny",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "Ginskel Plasma Steering",
@@ -4864,8 +4598,7 @@
     "turning heat": 6.8,
     "steering flare sprite": "effect/plasma flare/medium",
     "frame rate": 11,
-    "steering flare sound": "plasma medium",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Kenlark-c2 Atomic Steering",
@@ -4879,8 +4612,7 @@
     "turning heat": 12.5,
     "steering flare sprite": "effect/atomic flare/large",
     "frame rate": 19,
-    "steering flare sound": "atomic large",
-    "source": "Galactic-War/data/Erader/Erader outfits.txt"
+    "steering flare sound": "atomic large"
   },
   {
     "name": "Urvulre Engines",
@@ -4906,8 +4638,7 @@
     "flare sound": "plasma huge",
     "steering flare sprite": "effect/ultaka flare/urvulre huge",
     "steering flare sound": "plasma huge",
-    "reverse flare sprite": "effect/ultaka flare/urvulre huge",
-    "source": "Galactic-War/data/Ultaka/Ultaka outfit alrul.txt"
+    "reverse flare sprite": "effect/ultaka flare/urvulre huge"
   },
   {
     "name": "Meulrais-A Engines",
@@ -4933,8 +4664,7 @@
     "frame rate": 9,
     "flare sound": "plasma huge",
     "steering flare sprite": "effect/ultaka flare/meulrais small",
-    "steering flare sound": "plasma huge",
-    "source": "Galactic-War/data/Ultaka/Ultaka outfits Lvoris.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "Kel'aku Engines",
@@ -4961,8 +4691,7 @@
     "frame rate": 30,
     "flare sound": "plasma huge",
     "steering flare sprite": "effect/ultaka flare/small",
-    "steering flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Ultaka/Ultaka outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "DR Drive",
@@ -4987,8 +4716,7 @@
     "afterburner heat": 58,
     "slowing protection": 12,
     "slowing resistance": 8,
-    "slowing resistance energy": 3.2,
-    "source": "Galactic-War/data/Ultaka/Ultaka outfits.txt"
+    "slowing resistance energy": 3.2
   },
   {
     "name": "Kel'aku-Cu Engines",
@@ -5015,8 +4743,7 @@
     "frame rate": 30,
     "flare sound": "plasma small",
     "steering flare sprite": "effect/ultaka flare/small",
-    "steering flare sound": "plasma tiny",
-    "source": "Galactic-War/data/Ultaka/Ultaka outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Kal-1 Engines",
@@ -5034,8 +4761,7 @@
     "hyperdrive": 1,
     "jump drive": 1,
     "jump speed": 1.2,
-    "flare sprite": "effect/atomic flare/tiny",
-    "source": "Galactic-War/data/Wallagi/Wallagi outfit.txt"
+    "flare sprite": "effect/atomic flare/tiny"
   },
   {
     "name": "Kal-4 Engines",
@@ -5053,8 +4779,7 @@
     "hyperdrive": 1,
     "jump drive": 1,
     "jump speed": 1.2,
-    "flare sprite": "effect/atomic flare/medium",
-    "source": "Galactic-War/data/Wallagi/Wallagi outfit.txt"
+    "flare sprite": "effect/atomic flare/medium"
   },
   {
     "name": "Kal-8 Engines",
@@ -5072,8 +4797,7 @@
     "hyperdrive": 1,
     "jump drive": 1,
     "jump speed": 1.2,
-    "flare sprite": "effect/atomic flare/large",
-    "source": "Galactic-War/data/Wallagi/Wallagi outfit.txt"
+    "flare sprite": "effect/atomic flare/large"
   },
   {
     "name": "Kal-10 Engines",
@@ -5091,8 +4815,7 @@
     "hyperdrive": 1,
     "jump drive": 1,
     "jump speed": 1.2,
-    "flare sprite": "effect/atomic flare/huge",
-    "source": "Galactic-War/data/Wallagi/Wallagi outfit.txt"
+    "flare sprite": "effect/atomic flare/huge"
   },
   {
     "name": "MPa20Sb-04 Engines",
@@ -5112,8 +4835,7 @@
     "afterburner thrust": 15.0,
     "afterburner energy": 4,
     "afterburner heat": 8,
-    "afterburner effect": "afterburner",
-    "source": "Galactic-War/data/Zis/Zis outfit.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "MPa20Gp-02 Engines",
@@ -5132,8 +4854,7 @@
     "frame rate": 1.2,
     "reverse thrust": 8,
     "reverse thrusting energy": 1.2,
-    "reverse thrusting heat": 0.05,
-    "source": "Galactic-War/data/Zis/Zis outfit.txt"
+    "reverse thrusting heat": 0.05
   },
   {
     "name": "MPa30Gp-02 Engines",
@@ -5152,8 +4873,7 @@
     "frame rate": 1.1,
     "reverse thrust": 18,
     "reverse thrusting energy": 2.3,
-    "reverse thrusting heat": 0.1,
-    "source": "Galactic-War/data/Zis/Zis outfit.txt"
+    "reverse thrusting heat": 0.1
   },
   {
     "name": "MPa60Gp-02 Engines",
@@ -5172,8 +4892,7 @@
     "frame rate": 0.9,
     "reverse thrust": 35,
     "reverse thrusting energy": 12,
-    "reverse thrusting heat": 20,
-    "source": "Galactic-War/data/Zis/Zis outfit.txt"
+    "reverse thrusting heat": 20
   },
   {
     "name": "MPb12Gp-02 Engines",
@@ -5192,8 +4911,7 @@
     "frame rate": 0.9,
     "reverse thrust": 70,
     "reverse thrusting energy": 20,
-    "reverse thrusting heat": 37,
-    "source": "Galactic-War/data/Zis/Zis outfit.txt"
+    "reverse thrusting heat": 37
   },
   {
     "name": "Kalmo Thruster",
@@ -5208,8 +4926,7 @@
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
     "flare sound": "plasma tiny",
-    "slowing protection": 0.01,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.01
   },
   {
     "name": "Karmar Thruster",
@@ -5224,8 +4941,7 @@
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
     "flare sound": "plasma small",
-    "slowing protection": 0.02,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.02
   },
   {
     "name": "Kompar Thruster",
@@ -5240,8 +4956,7 @@
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 0.9,
     "flare sound": "plasma large",
-    "slowing protection": 0.03,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.03
   },
   {
     "name": "Kalmo Steering",
@@ -5255,8 +4970,7 @@
     "turning heat": 0.96,
     "steering flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "slowing protection": 0.01,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.01
   },
   {
     "name": "Karmar Steering",
@@ -5270,8 +4984,7 @@
     "turning heat": 2.3,
     "steering flare sprite": "effect/plasma flare/small",
     "frame rate": 5,
-    "slowing protection": 0.02,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.02
   },
   {
     "name": "Kompar Steering",
@@ -5285,8 +4998,7 @@
     "turning heat": 7.8,
     "steering flare sprite": "effect/plasma flare/large",
     "frame rate": 6,
-    "slowing protection": 0.03,
-    "source": "Galactic-War/data/Kroom/Kroom outfits.txt"
+    "slowing protection": 0.03
   },
   {
     "name": "Eakis-1 Engine",
@@ -5309,8 +5021,7 @@
     "afterburner thrust": 20.0,
     "afterburner energy": 5.6,
     "afterburner heat": 15.0,
-    "afterburner effect": "ionic afterburner",
-    "source": "Galactic-War/data/Ceasrilis/Ceasrilis Outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Ealris-1 Engine",
@@ -5333,8 +5044,7 @@
     "afterburner thrust": 25.0,
     "afterburner energy": 7.5,
     "afterburner heat": 19.0,
-    "afterburner effect": "ionic afterburner",
-    "source": "Galactic-War/data/Ceasrilis/Ceasrilis Outfits.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Nuru Mini Void Motion System",
@@ -5359,8 +5069,7 @@
     "reverse thrusting heat": 16,
     "jump speed": 0.07,
     "jump drive": 1,
-    "jump fuel": 200,
-    "source": "Galactic-War/data/Nuru/nuru outfits.txt"
+    "jump fuel": 200
   },
   {
     "name": "Nuru Void Motion System",
@@ -5386,8 +5095,7 @@
     "jump speed": 0.07,
     "jump drive": 1,
     "jump fuel": 200,
-    "nuru weaponization": 1,
-    "source": "Galactic-War/data/Nuru/nuru outfits.txt"
+    "nuru weaponization": 1
   },
   {
     "name": "Akasha Heavy Thruster",
@@ -5399,8 +5107,7 @@
     "thrust": 90,
     "thrusting energy": 25,
     "thrusting heat": 12,
-    "flare sprite": "effect/medium graviton flare",
-    "source": "akasha-chronicles/data/akashic outfits.txt"
+    "flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Akasha Steering",
@@ -5411,8 +5118,7 @@
     "engine capacity": -55,
     "turn": 3000,
     "turning energy": 10,
-    "turning heat": 10,
-    "source": "akasha-chronicles/data/akashic outfits.txt"
+    "turning heat": 10
   },
   {
     "name": "Sankrit Thruster",
@@ -5424,8 +5130,7 @@
     "thrust": 70,
     "thrusting energy": 20,
     "thrusting heat": 10,
-    "flare sprite": "effect/medium graviton flare",
-    "source": "akasha-chronicles/data/sankrit outfits.txt"
+    "flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Sankrit Steering",
@@ -5436,8 +5141,7 @@
     "engine capacity": -70,
     "turn": 2600,
     "turning energy": 15,
-    "turning heat": 15,
-    "source": "akasha-chronicles/data/sankrit outfits.txt"
+    "turning heat": 15
   },
   {
     "name": "Lemurian Thrust",
@@ -5447,8 +5151,7 @@
     "outfit space": -100,
     "engine capacity": -100,
     "thrust": 120,
-    "thrusting energy": 50,
-    "source": "akasha-chronicles/data/lemurian outfits.txt"
+    "thrusting energy": 50
   },
   {
     "name": "Lemurian Wings",
@@ -5458,8 +5161,7 @@
     "outfit space": -100,
     "engine capacity": -100,
     "turn": 4000,
-    "turning energy": 50,
-    "source": "akasha-chronicles/data/lemurian outfits.txt"
+    "turning energy": 50
   },
   {
     "name": "Vector Engine (Reality Class)",
@@ -5473,8 +5175,7 @@
     "thrusting heat": 51.6,
     "flare sprite": "effect/korath flare/huge",
     "frame rate": 6,
-    "flare sound": "plasma huge",
-    "source": "Midnight-Expansion/data/outfit-Midnight AESmisc.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Adamas Aerugite Thruster",
@@ -5488,8 +5189,7 @@
     "thrusting heat": 2.3,
     "flare sprite": "effect/atomic flare/tiny",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Adamas Amethyst Thruster",
@@ -5503,8 +5203,7 @@
     "thrusting heat": 7.5,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Adamas Amethyst Steering",
@@ -5515,8 +5214,7 @@
     "engine capacity": -23,
     "turn": 760,
     "turning energy": 0.5,
-    "turning heat": 1.4,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "turning heat": 1.4
   },
   {
     "name": "Amethyst Reverse Thruster",
@@ -5528,8 +5226,7 @@
     "engine capacity": -20,
     "reverse thrust": 15.2,
     "reverse thrusting energy": 5.3,
-    "reverse thrusting heat": 11.2,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "reverse thrusting heat": 11.2
   },
   {
     "name": "Adamas Onyx Thruster",
@@ -5543,8 +5240,7 @@
     "thrusting heat": 14.5,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Adamas Onyx Steering",
@@ -5555,8 +5251,7 @@
     "engine capacity": -30,
     "turn": 597,
     "turning energy": 0.8,
-    "turning heat": 2.7,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "turning heat": 2.7
   },
   {
     "name": "Onyx Reverse Thruster",
@@ -5567,8 +5262,7 @@
     "weapon capacity": -32,
     "reverse thrust": 28.3,
     "reverse thrusting energy": 3.3,
-    "reverse thrusting heat": 6.2,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "reverse thrusting heat": 6.2
   },
   {
     "name": "Adamas Ruby Thruster",
@@ -5582,8 +5276,7 @@
     "thrusting heat": 25.5,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "Adamas Ruby Steering",
@@ -5594,8 +5287,7 @@
     "engine capacity": -52,
     "turn": 1259,
     "turning energy": 1.9,
-    "turning heat": 5.2,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "turning heat": 5.2
   },
   {
     "name": "Ruby Reverse Thruster",
@@ -5606,8 +5298,7 @@
     "weapon capacity": -54,
     "reverse thrust": 53.4,
     "reverse thrusting energy": 5.3,
-    "reverse thrusting heat": 11.2,
-    "source": "Adamas-Project/data/adamas outfits.txt"
+    "reverse thrusting heat": 11.2
   },
   {
     "name": "Antique Afterburner",
@@ -5619,8 +5310,7 @@
     "afterburner thrust": 25.0,
     "afterburner fuel": 0.5,
     "afterburner heat": 10.0,
-    "afterburner effect": "afterburner",
-    "source": "Space-Shuttle-Start/data/space shuttle ships.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "Centrum Potestae",
@@ -5663,8 +5353,7 @@
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
-    "unplunderable": 1,
-    "source": "Exporianes/data/lux_celestis_outfits(WIP).txt"
+    "unplunderable": 1
   },
   {
     "name": "Exporiane Engines",
@@ -5679,8 +5368,7 @@
     "turning energy": 1,
     "flare sprite": "effect/exp_engine",
     "frame rate": 1.1,
-    "flare sound": "ion small",
-    "source": "Exporianes/data/outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Stellar Engine",
@@ -5697,8 +5385,7 @@
     "reverse flare sound": "atomic large",
     "reverse thrust": 55000.7,
     "turn": 1871000,
-    "thrust": 55000.7,
-    "source": "Exporianes/data/DysonSphere.txt"
+    "thrust": 55000.7
   },
   {
     "name": "Stellar Afterburner",
@@ -5709,8 +5396,7 @@
     "afterburner thrust": 50000,
     "afterburner fuel": 5,
     "afterburner heat": 10.0,
-    "afterburner effect": "stellar afterburner",
-    "source": "Exporianes/data/DysonSphere.txt"
+    "afterburner effect": "stellar afterburner"
   },
   {
     "name": "Nitrogen Afterburnner",
@@ -5722,8 +5408,7 @@
     "afterburner thrust": 15.8,
     "afterburner fuel": 0.1,
     "afterburner heat": 3.2,
-    "afterburner effect": "nitrogen afterburner",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "afterburner effect": "nitrogen afterburner"
   },
   {
     "name": "W-120 Nitrogen Thruster",
@@ -5737,8 +5422,7 @@
     "thrusting heat": 4.2,
     "flare sprite": "effect/nitrogen flare/small",
     "frame rate": 11,
-    "flare sound": "atomic small",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "W-120 Nitrogen Steering",
@@ -5752,8 +5436,7 @@
     "turning heat": 4.2,
     "steering flare sprite": "effect/nitrogen flare/small",
     "frame rate": 11,
-    "steering flare sound": "atomic small",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "W-160 Nitrogen Thruster",
@@ -5767,8 +5450,7 @@
     "thrusting heat": 6.4,
     "flare sprite": "effect/nitrogen flare/medium",
     "frame rate": 11,
-    "flare sound": "atomic medium",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "W-160 Nitrogen Steering",
@@ -5782,8 +5464,7 @@
     "turning heat": 6.4,
     "steering flare sprite": "effect/nitrogen flare/medium",
     "frame rate": 11,
-    "steering flare sound": "atomic medium",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "steering flare sound": "atomic medium"
   },
   {
     "name": "W-180 Nitrogen Thruster",
@@ -5797,8 +5478,7 @@
     "thrusting heat": 8.3,
     "flare sprite": "effect/nitrogen flare/large",
     "frame rate": 11,
-    "flare sound": "atomic large",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "flare sound": "atomic large"
   },
   {
     "name": "W-180 Nitrogen Steering",
@@ -5812,8 +5492,7 @@
     "turning heat": 8.3,
     "steering flare sprite": "effect/nitrogen flare/large",
     "frame rate": 11,
-    "steering flare sound": "atomic large",
-    "source": "Cromha-Expansion-plugin/data/Rebels/rebels engines.txt"
+    "steering flare sound": "atomic large"
   },
   {
     "name": "Guz'Yar 1 Thruster",
@@ -5833,8 +5512,7 @@
     "afterburner thrust": 9.7,
     "afterburner fuel": 0.7,
     "afterburner heat": 7.8,
-    "afterburner effect": "guz afterburner small",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "afterburner effect": "guz afterburner small"
   },
   {
     "name": "Guz'Yar 2 Thruster",
@@ -5854,8 +5532,7 @@
     "afterburner thrust": 19.4,
     "afterburner fuel": 0.75,
     "afterburner heat": 10.9,
-    "afterburner effect": "guz afterburner small",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "afterburner effect": "guz afterburner small"
   },
   {
     "name": "Guz'Yar 3 Thruster",
@@ -5875,8 +5552,7 @@
     "afterburner thrust": 24.3,
     "afterburner fuel": 0.8,
     "afterburner heat": 14.5,
-    "afterburner effect": "guz afterburner medium",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "afterburner effect": "guz afterburner medium"
   },
   {
     "name": "Guz'Yar 4 Thruster",
@@ -5896,8 +5572,7 @@
     "afterburner thrust": 32.5,
     "afterburner fuel": 0.85,
     "afterburner heat": 16.3,
-    "afterburner effect": "guz afterburner medium",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "afterburner effect": "guz afterburner medium"
   },
   {
     "name": "Guz'Yar 5 Thruster",
@@ -5917,8 +5592,7 @@
     "afterburner thrust": 39.5,
     "afterburner fuel": 0.9,
     "afterburner heat": 24.35,
-    "afterburner effect": "lumba piercer large",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "afterburner effect": "lumba piercer large"
   },
   {
     "name": "Guz'Yar 1 Steering",
@@ -5934,8 +5608,7 @@
     "steering flare sprite": "effect/guz flare/guz flare",
     "frame rate": 1,
     "scale": 0.3,
-    "steering flare sound": "excavator",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "steering flare sound": "excavator"
   },
   {
     "name": "Guz'Yar 2 Steering",
@@ -5951,8 +5624,7 @@
     "steering flare sprite": "effect/guz flare/guz flare",
     "frame rate": 1,
     "scale": 0.5,
-    "steering flare sound": "excavator",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "steering flare sound": "excavator"
   },
   {
     "name": "Guz'Yar 3 Steering",
@@ -5968,8 +5640,7 @@
     "steering flare sprite": "effect/guz flare/guz flare",
     "frame rate": 1,
     "scale": 0.7,
-    "steering flare sound": "excavator",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "steering flare sound": "excavator"
   },
   {
     "name": "Guz'Yar 4 Steering",
@@ -5985,8 +5656,7 @@
     "steering flare sprite": "effect/guz flare/guz flare",
     "frame rate": 1,
     "scale": 0.9,
-    "steering flare sound": "excavator",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "steering flare sound": "excavator"
   },
   {
     "name": "Guz'Yar 5 Steering",
@@ -6002,8 +5672,7 @@
     "steering flare sprite": "effect/guz flare/guz flare",
     "frame rate": 1,
     "scale": 1.2,
-    "steering flare sound": "excavator",
-    "source": "Cromha-Expansion-plugin/data/Guz/guz engines.txt"
+    "steering flare sound": "excavator"
   },
   {
     "name": "Disruption Afterburnner",
@@ -6018,8 +5687,7 @@
     "afterburner thrust": 29.4,
     "afterburner fuel": 0.33,
     "afterburner disruption": 0.033,
-    "afterburner effect": "disruption afterburner",
-    "source": "Cromha-Expansion-plugin/data/Empire/empire engines.txt"
+    "afterburner effect": "disruption afterburner"
   },
   {
     "name": "Empire Detonator Engine Secret",
@@ -6027,8 +5695,7 @@
     "thumbnail": "outfit/unknown",
     "cost": 0,
     "heat generation": 150,
-    "energy consumption": 55,
-    "source": "Cromha-Expansion-plugin/data/Empire/empire prototypes outfits.txt"
+    "energy consumption": 55
   },
   {
     "name": "Small Graviton Thruster",
@@ -6044,8 +5711,7 @@
     "reverse thrusting energy": 3.2,
     "reverse thrusting heat": 2.125,
     "flare sprite": "effect/graviton flare/small",
-    "reverse flare sprite": "effect/graviton flare/small",
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "reverse flare sprite": "effect/graviton flare/small"
   },
   {
     "name": "Medium Graviton Thruster",
@@ -6061,8 +5727,7 @@
     "reverse thrusting energy": 4.85,
     "reverse thrusting heat": 3.225,
     "flare sprite": "effect/graviton flare/medium",
-    "reverse flare sprite": "effect/graviton flare/medium",
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "reverse flare sprite": "effect/graviton flare/medium"
   },
   {
     "name": "Large Graviton Thruster",
@@ -6078,8 +5743,7 @@
     "reverse thrusting energy": 7.15,
     "reverse thrusting heat": 4.775,
     "flare sprite": "effect/graviton flare/large",
-    "reverse flare sprite": "effect/graviton flare/large",
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "reverse flare sprite": "effect/graviton flare/large"
   },
   {
     "name": "Small Graviton Steering",
@@ -6090,8 +5754,7 @@
     "engine capacity": -35,
     "turn": 1021,
     "turning energy": 3.2,
-    "turning heat": 2.15,
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "turning heat": 2.15
   },
   {
     "name": "Medium Graviton Steering",
@@ -6102,8 +5765,7 @@
     "engine capacity": -50,
     "turn": 1637,
     "turning energy": 4.9,
-    "turning heat": 3.25,
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "turning heat": 3.25
   },
   {
     "name": "Large Graviton Steering",
@@ -6114,8 +5776,7 @@
     "engine capacity": -73,
     "turn": 2541,
     "turning energy": 7.1,
-    "turning heat": 4.75,
-    "source": "Cromha-Expansion-plugin/data/Quarg/quarg engines.txt"
+    "turning heat": 4.75
   },
   {
     "name": "Vector Engine (Reality Class)",
@@ -6129,8 +5790,7 @@
     "thrusting heat": 51.6,
     "flare sprite": "effect/korath flare/huge",
     "frame rate": 6,
-    "flare sound": "plasma huge",
-    "source": "Cromha-Expansion-plugin/data/Kor Mereti/kor mereti engines.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Bellows-Class Afterburner",
@@ -6144,8 +5804,7 @@
     "afterburner fuel": 0.65,
     "afterburner energy": 6.0,
     "afterburner heat": 8.0,
-    "afterburner effect": "remnant afterburner",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "afterburner effect": "remnant afterburner"
   },
   {
     "name": "Anvil-Class Engine",
@@ -6173,8 +5832,7 @@
     "steering flare sprite": "effect/remnant flare/small",
     "steering flare sound": "plasma tiny",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Crucible-Class Thruster",
@@ -6197,8 +5855,7 @@
     "frame rate": 5,
     "flare sound": "plasma tiny",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Forge-Class Thruster",
@@ -6221,8 +5878,7 @@
     "frame rate": 5,
     "flare sound": "plasma small",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma small",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "Smelter-Class Thruster",
@@ -6245,8 +5901,7 @@
     "frame rate": 5,
     "flare sound": "plasma medium",
     "reverse flare sprite": "effect/remnant flare/medium",
-    "reverse flare sound": "plasma medium",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma medium"
   },
   {
     "name": "Crucible-Class Steering",
@@ -6264,8 +5919,7 @@
     "slowing resistance": 0.008,
     "steering flare sprite": "effect/remnant flare/small",
     "frame rate": 5,
-    "steering flare sound": "plasma tiny",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Forge-Class Steering",
@@ -6283,8 +5937,7 @@
     "slowing resistance": 0.016,
     "steering flare sprite": "effect/remnant flare/medium",
     "frame rate": 4,
-    "steering flare sound": "plasma small",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Smelter-Class Steering",
@@ -6302,8 +5955,7 @@
     "slowing resistance": 0.032,
     "steering flare sprite": "effect/remnant flare/large",
     "frame rate": 3,
-    "steering flare sound": "plasma medium",
-    "source": "Cromha-Expansion-plugin/data/Remnant/remnant outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Fighter Plasma Drive",
@@ -6326,8 +5978,7 @@
     "afterburner thrust": 400.0,
     "afterburner energy": 2.1,
     "afterburner heat": 6.0,
-    "afterburner effect": "imperium afterburner tiny",
-    "source": "Endless-Sky-40K/data/imperium outfit.txt"
+    "afterburner effect": "imperium afterburner tiny"
   },
   {
     "name": "Small Plasma Drive",
@@ -6350,8 +6001,7 @@
     "afterburner thrust": 1300.0,
     "afterburner energy": 8.1,
     "afterburner heat": 14.0,
-    "afterburner effect": "imperium afterburner medium",
-    "source": "Endless-Sky-40K/data/imperium outfit.txt"
+    "afterburner effect": "imperium afterburner medium"
   },
   {
     "name": "Medium Plasma Drive",
@@ -6374,8 +6024,7 @@
     "afterburner thrust": 2300.0,
     "afterburner energy": 15.6,
     "afterburner heat": 27.2,
-    "afterburner effect": "imperium afterburner large",
-    "source": "Endless-Sky-40K/data/imperium outfit.txt"
+    "afterburner effect": "imperium afterburner large"
   },
   {
     "name": "Large Plasma Drive",
@@ -6398,8 +6047,7 @@
     "afterburner thrust": 3300.0,
     "afterburner energy": 34.6,
     "afterburner heat": 47.2,
-    "afterburner effect": "imperium afterburner huge",
-    "source": "Endless-Sky-40K/data/imperium outfit.txt"
+    "afterburner effect": "imperium afterburner huge"
   },
   {
     "name": "Large Necron Inertialess Drive",
@@ -6420,8 +6068,7 @@
     "turning energy": 11.1,
     "turning heat": 15.6,
     "steering flare sprite": "effect/necron flare/huge",
-    "steering flare sound": "atomic huge",
-    "source": "Endless-Sky-40K/data/necron outfits.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "Medium Graviton Thruster",
@@ -6438,8 +6085,7 @@
     "thrusting heat": 2,
     "force protection": 0.15,
     "inertia reduction": 0.15,
-    "flare sprite": "effect/medium graviton flare",
-    "source": "A-Coalition-At-War/data/Quarg/quarg-outfits.txt"
+    "flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Medium Graviton Steering",
@@ -6456,8 +6102,7 @@
     "turning heat": 1,
     "force protection": 0.15,
     "inertia reduction": 0.15,
-    "steering flare sprite": "effect/medium graviton flare",
-    "source": "A-Coalition-At-War/data/Quarg/quarg-outfits.txt"
+    "steering flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Advanced Thrust Module",
@@ -6474,8 +6119,7 @@
     "thrusting heat": "19 # 1.7x instead of 2x",
     "flare sprite": "effect/coalition flare/large",
     "frame rate": 7,
-    "flare sound": "atomic small",
-    "source": "A-Coalition-At-War/data/Heliarch/heliarch-outfits.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "Advanced Steering Module",
@@ -6492,8 +6136,7 @@
     "turning heat": "11 # 1.7 instead of 2x.",
     "steering flare sprite": "effect/coalition flare/large",
     "frame rate": 7,
-    "steering flare sound": "atomic small",
-    "source": "A-Coalition-At-War/data/Heliarch/heliarch-outfits.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "Type 0 Radiant Engines",
@@ -6514,8 +6157,7 @@
     "cooling": 1.3,
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 10,
-    "flare sound": "plasma tiny",
-    "source": "QOL-Outfits/data/outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Type 5 Radiant Thruster",
@@ -6533,8 +6175,7 @@
     "cooling": 19.5,
     "flare sprite": "effect/plasma flare/huge",
     "frame rate": 20,
-    "flare sound": "plasma huge",
-    "source": "QOL-Outfits/data/outfits.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Type 5 Radiant Steering",
@@ -6549,8 +6190,7 @@
     "turn": 3840,
     "turning energy": 3.3,
     "turning heat": 7.7,
-    "cooling": 11.1,
-    "source": "QOL-Outfits/data/outfits.txt"
+    "cooling": 11.1
   },
   {
     "name": "Pug Akcorlo Engines",
@@ -6569,8 +6209,7 @@
     "turning energy": 0.7,
     "turning heat": 1.1,
     "steering flare sprite": "effect/pug flare/tiny",
-    "steering flare sound": "ion tiny",
-    "source": "Lost-in-Midnight/data/pug midnight/outfits pug.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "Pug Maretar Thruster",
@@ -6585,8 +6224,7 @@
     "flare sprite": "effect/pug flare/titanic",
     "frame rate": 23.5,
     "flare sound": "ion huge",
-    "unique": 1,
-    "source": "Lost-in-Midnight/data/pug midnight/outfits pug.txt"
+    "unique": 1
   },
   {
     "name": "Pug Maretar Steering",
@@ -6601,8 +6239,7 @@
     "steering flare sprite": "effect/pug flare/titanic",
     "frame rate": 23.5,
     "steering flare sound": "ion huge",
-    "unique": 1,
-    "source": "Lost-in-Midnight/data/pug midnight/outfits pug.txt"
+    "unique": 1
   },
   {
     "name": "Pug Afterburner",
@@ -6615,8 +6252,7 @@
     "afterburner fuel": 0.025,
     "afterburner energy": 4.0,
     "afterburner heat": 5.1,
-    "afterburner effect": "pug afterburner",
-    "source": "Lost-in-Midnight/data/pug midnight/outfits pug.txt"
+    "afterburner effect": "pug afterburner"
   },
   {
     "name": "Quantum Paradox Propulsion",
@@ -6638,8 +6274,7 @@
     "afterburner heat": 36,
     "afterburner effect": "paradox propulsion",
     "unplunderable": 1,
-    "reinstall": -1,
-    "source": "Lost-in-Midnight/data/drak midnight/Geddonian Worldcrusher.txt"
+    "reinstall": -1
   },
   {
     "name": "Hybrid Afterburner",
@@ -6653,8 +6288,7 @@
     "afterburner energy": 2.2,
     "afterburner heat": 9,
     "afterburner effect": "hybrid afterburner",
-    "unique": 1,
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "unique": 1
   },
   {
     "name": "Archaic Afterburner",
@@ -6667,8 +6301,7 @@
     "afterburner fuel": 0.5,
     "afterburner heat": 10.0,
     "afterburner effect": "afterburner",
-    "unique": 1,
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "unique": 1
   },
   {
     "name": "Sunracer Afterburner",
@@ -6681,8 +6314,7 @@
     "afterburner fuel": 0.086,
     "afterburner energy": 1.9,
     "afterburner heat": 8,
-    "afterburner effect": "sunracer afterburner",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "afterburner effect": "sunracer afterburner"
   },
   {
     "name": "Chimera Junk Thruster",
@@ -6696,8 +6328,7 @@
     "thrusting heat": 1.8,
     "flare sprite": "effect/junk flare/tiny",
     "frame rate": 5,
-    "flare sound": "plasma tiny",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Griffin Junk Thruster",
@@ -6711,8 +6342,7 @@
     "thrusting heat": 3.4,
     "flare sprite": "effect/junk flare/small",
     "frame rate": 6,
-    "flare sound": "plasma small",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Hippogriff Junk Thruster",
@@ -6726,8 +6356,7 @@
     "thrusting heat": 6.5,
     "flare sprite": "effect/junk flare/medium",
     "frame rate": 7,
-    "flare sound": "plasma medium",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Manticore Junk Thruster",
@@ -6741,8 +6370,7 @@
     "thrusting heat": 12.3,
     "flare sprite": "effect/junk flare/large",
     "frame rate": 8,
-    "flare sound": "plasma large",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Tarasque Junk Thruster",
@@ -6756,8 +6384,7 @@
     "thrusting heat": 19.1,
     "flare sprite": "effect/junk flare/huge",
     "frame rate": 9,
-    "flare sound": "plasma huge",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Chimera Junk Steering",
@@ -6771,8 +6398,7 @@
     "turning heat": 1.1,
     "steering flare sprite": "effect/junk flare/tiny",
     "frame rate": 5,
-    "steering flare sound": "plasma tiny",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Griffin Junk Steering",
@@ -6786,8 +6412,7 @@
     "turning heat": 2.1,
     "steering flare sprite": "effect/junk flare/small",
     "frame rate": 6,
-    "steering flare sound": "plasma small",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Hippogriff Junk Steering",
@@ -6801,8 +6426,7 @@
     "turning heat": 4.1,
     "steering flare sprite": "effect/junk flare/medium",
     "frame rate": 7,
-    "steering flare sound": "plasma medium",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Manticore Junk Steering",
@@ -6816,8 +6440,7 @@
     "turning heat": 7.7,
     "steering flare sprite": "effect/junk flare/large",
     "frame rate": 8,
-    "steering flare sound": "plasma large",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Tarasque Junk Steering",
@@ -6831,8 +6454,7 @@
     "turning heat": 12.5,
     "steering flare sprite": "effect/junk flare/huge",
     "frame rate": 9,
-    "steering flare sound": "plasma huge",
-    "source": "Lost-in-Midnight/data/human midnight/Outfits Human.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "Genesis Afterburner",
@@ -6845,8 +6467,7 @@
     "afterburner fuel": 0.1,
     "afterburner energy": 5.1,
     "afterburner heat": 12.0,
-    "afterburner effect": "ionic afterburner",
-    "source": "Lost-in-Midnight/data/genesis midnight/outfits genesis.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "Genesis Engines",
@@ -6867,8 +6488,7 @@
     "frame rate": 1.2,
     "flare sound": "ion tiny",
     "steering flare sprite": "effect/genesis flare/tiny",
-    "steering flare sound": "ion tiny",
-    "source": "Lost-in-Midnight/data/genesis midnight/outfits genesis.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "Engines",
@@ -6889,8 +6509,7 @@
     "frame rate": 1.2,
     "flare sound": "ion tiny",
     "steering flare sprite": "effect/ion flare/tiny",
-    "steering flare sound": "ion tiny",
-    "source": "Lost-in-Midnight/data/genesis midnight/outfits genesis.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "Korath Thruster (Large)",
@@ -6905,8 +6524,7 @@
     "thrusting heat": 14.3,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "flare sound": "plasma large",
-    "source": "Lost-in-Midnight/data/korath midnight/outfits Korath.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Korath Steering (Large)",
@@ -6918,8 +6536,7 @@
     "engine capacity": -67,
     "turn": 2520,
     "turning energy": 3.1,
-    "turning heat": 7.9,
-    "source": "Lost-in-Midnight/data/korath midnight/outfits Korath.txt"
+    "turning heat": 7.9
   },
   {
     "name": "Fake Sheragi Drive",
@@ -6949,8 +6566,7 @@
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
     "unplunderable": 1,
-    "unique": 1,
-    "source": "Lost-in-Midnight/data/sheragi midnight/outfits sheragi.txt"
+    "unique": 1
   },
   {
     "name": "Reactor Drive",
@@ -6980,8 +6596,7 @@
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
-    "unplunderable": 1,
-    "source": "Lost-in-Midnight/data/sheragi midnight/outfits sheragi.txt"
+    "unplunderable": 1
   },
   {
     "name": "Large Graviton Thruster",
@@ -6995,8 +6610,7 @@
     "thrusting heat": 3,
     "force protection": 0.3,
     "inertia reduction": 0.3,
-    "flare sprite": "effect/large graviton flare",
-    "source": "Lost-in-Midnight/data/quarg midnight/Outfits Quarg.txt"
+    "flare sprite": "effect/large graviton flare"
   },
   {
     "name": "Small Graviton Thruster",
@@ -7010,8 +6624,7 @@
     "thrusting heat": 1,
     "force protection": 0.1,
     "inertia reduction": 0.1,
-    "flare sprite": "effect/small graviton flare",
-    "source": "Lost-in-Midnight/data/quarg midnight/Outfits Quarg.txt"
+    "flare sprite": "effect/small graviton flare"
   },
   {
     "name": "Large Graviton Steering",
@@ -7025,8 +6638,7 @@
     "turning heat": 2,
     "force protection": 0.3,
     "inertia reduction": 0.3,
-    "steering flare sprite": "effect/large graviton flare",
-    "source": "Lost-in-Midnight/data/quarg midnight/Outfits Quarg.txt"
+    "steering flare sprite": "effect/large graviton flare"
   },
   {
     "name": "Small Graviton Steering",
@@ -7040,8 +6652,7 @@
     "turning heat": 0.5,
     "force protection": 0.1,
     "inertia reduction": 0.1,
-    "steering flare sprite": "effect/small graviton flare",
-    "source": "Lost-in-Midnight/data/quarg midnight/Outfits Quarg.txt"
+    "steering flare sprite": "effect/small graviton flare"
   },
   {
     "name": "Tiny Graviton Reverser",
@@ -7055,8 +6666,7 @@
     "reverse thrusting heat": 0.4,
     "force protection": 0.05,
     "inertia reduction": 0.05,
-    "flare sprite": "effect/tiny graviton flare",
-    "source": "Lost-in-Midnight/data/quarg midnight/Outfits Quarg.txt"
+    "flare sprite": "effect/tiny graviton flare"
   },
   {
     "name": "Volcano Afterburner",
@@ -7068,8 +6678,7 @@
     "afterburner thrust": 40.65,
     "afterburner fuel": 0.125,
     "afterburner heat": 10.0,
-    "afterburner effect": "afterburner",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "Caldera Afterburner",
@@ -7081,8 +6690,7 @@
     "afterburner thrust": 180.0,
     "afterburner fuel": 0.5,
     "afterburner heat": 42.0,
-    "afterburner effect": "caldera afterburner",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "afterburner effect": "caldera afterburner"
   },
   {
     "name": "Ionic Afterburner",
@@ -7095,8 +6703,7 @@
     "afterburner fuel": 0.03,
     "afterburner energy": 5.1,
     "afterburner heat": 4.0,
-    "afterburner effect": "ionic afterburner",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "afterburner effect": "ionic afterburner"
   },
   {
     "name": "X1050 Ion Engines",
@@ -7115,8 +6722,7 @@
     "frame rate": 1.2,
     "flare sound": "ion tiny",
     "steering flare sprite": "effect/ion flare/tiny",
-    "steering flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "X1700 Ion Thruster",
@@ -7130,8 +6736,7 @@
     "thrusting heat": 0.9,
     "flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "X2700 Ion Thruster",
@@ -7145,8 +6750,7 @@
     "thrusting heat": 1.7,
     "flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "flare sound": "ion small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "X3700 Ion Thruster",
@@ -7160,8 +6764,7 @@
     "thrusting heat": 3.2,
     "flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "X4700 Ion Thruster",
@@ -7175,8 +6778,7 @@
     "thrusting heat": 6.2,
     "flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "X5700 Ion Thruster",
@@ -7190,8 +6792,7 @@
     "thrusting heat": 11.7,
     "flare sprite": "effect/ion flare/huge",
     "frame rate": 0.8,
-    "flare sound": "ion huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "ion huge"
   },
   {
     "name": "X1200 Ion Steering",
@@ -7205,8 +6806,7 @@
     "turning heat": 0.6,
     "steering flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "steering flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "X2200 Ion Steering",
@@ -7220,8 +6820,7 @@
     "turning heat": 1.1,
     "steering flare sprite": "effect/ion flare/small",
     "frame rate": 1.1,
-    "steering flare sound": "ion small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion small"
   },
   {
     "name": "X3200 Ion Steering",
@@ -7235,8 +6834,7 @@
     "turning heat": 2.0,
     "steering flare sprite": "effect/ion flare/medium",
     "frame rate": 1.0,
-    "steering flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "X4200 Ion Steering",
@@ -7250,8 +6848,7 @@
     "turning heat": 3.9,
     "steering flare sprite": "effect/ion flare/large",
     "frame rate": 0.9,
-    "steering flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion large"
   },
   {
     "name": "X5200 Ion Steering",
@@ -7265,8 +6862,7 @@
     "turning heat": 7.3,
     "steering flare sprite": "effect/ion flare/huge",
     "frame rate": 0.8,
-    "steering flare sound": "ion huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "ion huge"
   },
   {
     "name": "X1100 Ion Reverse Thruster",
@@ -7280,8 +6876,7 @@
     "reverse thrusting heat": 0.9,
     "reverse flare sprite": "effect/ion flare/tiny",
     "frame rate": 1.2,
-    "reverse flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "reverse flare sound": "ion tiny"
   },
   {
     "name": "Chipmunk Plasma Thruster",
@@ -7295,8 +6890,7 @@
     "thrusting heat": 1.8,
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Greyhound Plasma Thruster",
@@ -7310,8 +6904,7 @@
     "thrusting heat": 3.4,
     "flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
-    "flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Impala Plasma Thruster",
@@ -7325,8 +6918,7 @@
     "thrusting heat": 6.5,
     "flare sprite": "effect/plasma flare/medium",
     "frame rate": 7,
-    "flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Orca Plasma Thruster",
@@ -7340,8 +6932,7 @@
     "thrusting heat": 12.3,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Tyrant Plasma Thruster",
@@ -7355,8 +6946,7 @@
     "thrusting heat": 19.1,
     "flare sprite": "effect/plasma flare/huge",
     "frame rate": 9,
-    "flare sound": "plasma huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Chipmunk Plasma Steering",
@@ -7370,8 +6960,7 @@
     "turning heat": 1.1,
     "steering flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Greyhound Plasma Steering",
@@ -7385,8 +6974,7 @@
     "turning heat": 2.1,
     "steering flare sprite": "effect/plasma flare/small",
     "frame rate": 6,
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Impala Plasma Steering",
@@ -7400,8 +6988,7 @@
     "turning heat": 4.1,
     "steering flare sprite": "effect/plasma flare/medium",
     "frame rate": 7,
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Orca Plasma Steering",
@@ -7415,8 +7002,7 @@
     "turning heat": 7.7,
     "steering flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "steering flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Tyrant Plasma Steering",
@@ -7430,8 +7016,7 @@
     "turning heat": 12.5,
     "steering flare sprite": "effect/plasma flare/huge",
     "frame rate": 9,
-    "steering flare sound": "plasma huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "Capybara Reverse Thruster",
@@ -7445,8 +7030,7 @@
     "reverse thrusting heat": 1.8,
     "reverse flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "reverse flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "A120 Atomic Thruster",
@@ -7460,8 +7044,7 @@
     "thrusting heat": 3.5,
     "flare sprite": "effect/atomic flare/tiny",
     "frame rate": 14,
-    "flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "atomic tiny"
   },
   {
     "name": "A250 Atomic Thruster",
@@ -7475,8 +7058,7 @@
     "thrusting heat": 6.1,
     "flare sprite": "effect/atomic flare/small",
     "frame rate": 13,
-    "flare sound": "atomic small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "A370 Atomic Thruster",
@@ -7490,8 +7072,7 @@
     "thrusting heat": 10.3,
     "flare sprite": "effect/atomic flare/medium",
     "frame rate": 12,
-    "flare sound": "atomic medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "atomic medium"
   },
   {
     "name": "A520 Atomic Thruster",
@@ -7505,8 +7086,7 @@
     "thrusting heat": 17.4,
     "flare sprite": "effect/atomic flare/large",
     "frame rate": 11,
-    "flare sound": "atomic large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "atomic large"
   },
   {
     "name": "A860 Atomic Thruster",
@@ -7520,8 +7100,7 @@
     "thrusting heat": 29.1,
     "flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "flare sound": "atomic huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "flare sound": "atomic huge"
   },
   {
     "name": "A125 Atomic Steering",
@@ -7535,8 +7114,7 @@
     "turning heat": 2.2,
     "steering flare sprite": "effect/atomic flare/tiny",
     "frame rate": 14,
-    "steering flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "A255 Atomic Steering",
@@ -7550,8 +7128,7 @@
     "turning heat": 3.7,
     "steering flare sprite": "effect/atomic flare/small",
     "frame rate": 13,
-    "steering flare sound": "atomic small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "A375 Atomic Steering",
@@ -7565,8 +7142,7 @@
     "turning heat": 6.3,
     "steering flare sprite": "effect/atomic flare/medium",
     "frame rate": 12,
-    "steering flare sound": "atomic medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "atomic medium"
   },
   {
     "name": "A525 Atomic Steering",
@@ -7580,8 +7156,7 @@
     "turning heat": 10.5,
     "steering flare sprite": "effect/atomic flare/large",
     "frame rate": 11,
-    "steering flare sound": "atomic large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "atomic large"
   },
   {
     "name": "A865 Atomic Steering",
@@ -7595,8 +7170,7 @@
     "turning heat": 17.5,
     "steering flare sprite": "effect/atomic flare/huge",
     "frame rate": 10,
-    "steering flare sound": "atomic huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "steering flare sound": "atomic huge"
   },
   {
     "name": "AR120 Reverse Thruster",
@@ -7610,8 +7184,7 @@
     "reverse thrusting heat": 3.5,
     "reverse flare sprite": "effect/atomic flare/tiny",
     "frame rate": 14,
-    "reverse flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/human/engines.txt"
+    "reverse flare sound": "atomic tiny"
   },
   {
     "name": "Medium Graviton Thruster",
@@ -7625,8 +7198,7 @@
     "thrusting heat": 2,
     "force protection": 0.15,
     "inertia reduction": 0.15,
-    "flare sprite": "effect/medium graviton flare",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/quarg/quarg outfits.txt"
+    "flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Medium Graviton Steering",
@@ -7640,8 +7212,7 @@
     "turning heat": 1,
     "force protection": 0.15,
     "inertia reduction": 0.15,
-    "steering flare sprite": "effect/medium graviton flare",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/quarg/quarg outfits.txt"
+    "steering flare sprite": "effect/medium graviton flare"
   },
   {
     "name": "Korath Ark'torbal Thruster",
@@ -7655,8 +7226,7 @@
     "thrusting heat": 1.0,
     "flare sprite": "effect/plasma flare/tiny",
     "frame rate": 5,
-    "flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Korath Ark'parat Steering",
@@ -7667,8 +7237,7 @@
     "engine capacity": -12,
     "turn": 360,
     "turning energy": 0.6,
-    "turning heat": 0.7,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "turning heat": 0.7
   },
   {
     "name": "Korath Jak'torbal Thruster",
@@ -7682,8 +7251,7 @@
     "thrusting heat": 14.3,
     "flare sprite": "effect/plasma flare/large",
     "frame rate": 8,
-    "flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Korath Jak'parat Steering",
@@ -7694,8 +7262,7 @@
     "engine capacity": -67,
     "turn": 2520,
     "turning energy": 3.1,
-    "turning heat": 7.9,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "turning heat": 7.9
   },
   {
     "name": "Reverse Thruster",
@@ -7706,8 +7273,7 @@
     "weapon capacity": -22,
     "reverse thrust": 28.06,
     "reverse thrusting energy": 1.8,
-    "reverse thrusting heat": 3.5,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "reverse thrusting heat": 3.5
   },
   {
     "name": "Afterburner",
@@ -7719,8 +7285,7 @@
     "afterburner thrust": 56.25,
     "afterburner fuel": 0.1,
     "afterburner heat": 10.0,
-    "afterburner effect": "afterburner",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/_deprecated/deprecated outfits.txt"
+    "afterburner effect": "afterburner"
   },
   {
     "name": "Fission Drive",
@@ -7742,8 +7307,7 @@
     "frame rate": 30,
     "flare sound": "atomic small",
     "steering flare sprite": "effect/fissionflare",
-    "steering flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/sheragi/sheragi outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Fusion Drive",
@@ -7774,8 +7338,7 @@
     "steering flare sound": "atomic medium",
     "reverse flare sprite": "effect/fusionflare",
     "reverse flare sound": "atomic large",
-    "unplunderable": 1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/sheragi/sheragi outfits.txt"
+    "unplunderable": 1
   },
   {
     "name": "Bellows-Class Afterburner",
@@ -7789,8 +7352,7 @@
     "afterburner fuel": 1.3,
     "afterburner energy": 6,
     "afterburner heat": 18,
-    "afterburner effect": "remnant afterburner",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "afterburner effect": "remnant afterburner"
   },
   {
     "name": "Anvil-Class Engine",
@@ -7818,8 +7380,7 @@
     "steering flare sprite": "effect/remnant flare/small",
     "steering flare sound": "plasma tiny",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Crucible-Class Thruster",
@@ -7842,8 +7403,7 @@
     "frame rate": 5,
     "flare sound": "plasma tiny",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Forge-Class Thruster",
@@ -7866,8 +7426,7 @@
     "frame rate": 5,
     "flare sound": "plasma small",
     "reverse flare sprite": "effect/remnant flare/small",
-    "reverse flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "Smelter-Class Thruster",
@@ -7890,8 +7449,7 @@
     "frame rate": 5,
     "flare sound": "plasma medium",
     "reverse flare sprite": "effect/remnant flare/medium",
-    "reverse flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "reverse flare sound": "plasma medium"
   },
   {
     "name": "Crucible-Class Steering",
@@ -7909,8 +7467,7 @@
     "slowing resistance": 0.008,
     "steering flare sprite": "effect/remnant flare/small",
     "frame rate": 5,
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Forge-Class Steering",
@@ -7928,8 +7485,7 @@
     "slowing resistance": 0.016,
     "steering flare sprite": "effect/remnant flare/medium",
     "frame rate": 4,
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Smelter-Class Steering",
@@ -7947,8 +7503,7 @@
     "slowing resistance": 0.032,
     "steering flare sprite": "effect/remnant flare/large",
     "frame rate": 3,
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/remnant/remnant outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Magnetoplasma Drive",
@@ -7973,8 +7528,7 @@
     "steering flare sprite": "effect/wanderer flare/tiny",
     "steering flare sound": "plasma tiny",
     "reverse flare sprite": "effect/wanderer flare/tiny",
-    "reverse flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Remass Injector",
@@ -7990,8 +7544,7 @@
     "afterburner energy": 3,
     "afterburner heat": -18,
     "afterburner fuel": 0.24,
-    "magnetic nozzle": -1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "magnetic nozzle": -1
   },
   {
     "name": "Inductive Extractor",
@@ -8008,8 +7561,7 @@
     "thrust": -12,
     "thrusting energy": -24,
     "thrusting heat": 6,
-    "magnetic nozzle": -1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "magnetic nozzle": -1
   },
   {
     "name": "R-180 RCS Thrusters",
@@ -8029,8 +7581,7 @@
     "scale": 0.125,
     "steering flare sound": "plasma small",
     "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "R-360 RCS Thrusters",
@@ -8050,8 +7601,7 @@
     "scale": 0.25,
     "steering flare sound": "plasma small",
     "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "R-720 RCS Thrusters",
@@ -8071,8 +7621,7 @@
     "scale": 0.5,
     "steering flare sound": "plasma small",
     "reverse flare sprite": "effect/avgi flare/rcs",
-    "reverse flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/avgi/avgi outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "Small Thrust Module",
@@ -8089,8 +7638,7 @@
     "thrusting heat": 3,
     "flare sprite": "effect/coalition flare/small",
     "frame rate": 10,
-    "flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "flare sound": "atomic tiny"
   },
   {
     "name": "Large Thrust Module",
@@ -8107,8 +7655,7 @@
     "thrusting heat": 11,
     "flare sprite": "effect/coalition flare/large",
     "frame rate": 7,
-    "flare sound": "atomic small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "flare sound": "atomic small"
   },
   {
     "name": "Small Reverse Module",
@@ -8125,8 +7672,7 @@
     "reverse thrusting heat": 3,
     "reverse flare sprite": "effect/coalition flare/small",
     "frame rate": 10,
-    "reverse flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "reverse flare sound": "atomic tiny"
   },
   {
     "name": "Large Reverse Module",
@@ -8143,8 +7689,7 @@
     "reverse thrusting heat": 11,
     "reverse flare sprite": "effect/coalition flare/large",
     "frame rate": 7,
-    "reverse flare sound": "atomic small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "reverse flare sound": "atomic small"
   },
   {
     "name": "Small Steering Module",
@@ -8161,8 +7706,7 @@
     "turning heat": 1.8,
     "steering flare sprite": "effect/coalition flare/small",
     "frame rate": 10,
-    "steering flare sound": "atomic tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "steering flare sound": "atomic tiny"
   },
   {
     "name": "Large Steering Module",
@@ -8179,8 +7723,7 @@
     "turning heat": 6.5,
     "steering flare sprite": "effect/coalition flare/large",
     "frame rate": 7,
-    "steering flare sound": "atomic small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/coalition/coalition outfits.txt"
+    "steering flare sound": "atomic small"
   },
   {
     "name": "RG15 Torch Thruster",
@@ -8197,8 +7740,7 @@
     "thrusting heat": 1.5,
     "flare sprite": "effect/vi flare/small",
     "frame rate": 2.5,
-    "flare sound": "ion torch small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "flare sound": "ion torch small"
   },
   {
     "name": "RG15 Torch Steering",
@@ -8215,8 +7757,7 @@
     "turning heat": 0.85,
     "steering flare sprite": "effect/vi flare/small",
     "frame rate": 2.4,
-    "steering flare sound": "ion torch small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "ion torch small"
   },
   {
     "name": "RG18 Torch Thruster",
@@ -8233,8 +7774,7 @@
     "thrusting heat": 2.9,
     "flare sprite": "effect/vi flare/medium",
     "frame rate": 2.4,
-    "flare sound": "ion torch medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "flare sound": "ion torch medium"
   },
   {
     "name": "RG18 Torch Steering",
@@ -8251,8 +7791,7 @@
     "turning heat": 1.5,
     "steering flare sprite": "effect/vi flare/medium",
     "frame rate": 2.4,
-    "steering flare sound": "ion torch medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "ion torch medium"
   },
   {
     "name": "RG3 Torch Thruster",
@@ -8272,8 +7811,7 @@
     "thrusting heat": 5.4,
     "flare sprite": "effect/vi flare/large",
     "frame rate": 2.3,
-    "flare sound": "ion torch large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "flare sound": "ion torch large"
   },
   {
     "name": "RG3 Torch Steering",
@@ -8293,8 +7831,7 @@
     "turning heat": 2.8,
     "steering flare sprite": "effect/vi flare/large",
     "frame rate": 2.3,
-    "steering flare sound": "ion torch large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "ion torch large"
   },
   {
     "name": "SC-1 Plasma Engines",
@@ -8318,8 +7855,7 @@
     "turning energy": 0.35,
     "turning heat": 0.8,
     "steering flare sprite": "effect/scin flare/tiny",
-    "steering flare sound": "scplasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "scplasma tiny"
   },
   {
     "name": "SC-12 Plasma Thruster",
@@ -8337,8 +7873,7 @@
     "thrusting heat": 2.25,
     "flare sprite": "effect/scin flare/small",
     "frame rate": 0.5,
-    "flare sound": "scplasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "flare sound": "scplasma small"
   },
   {
     "name": "SC-12 Plasma Steering",
@@ -8356,8 +7891,7 @@
     "turning heat": 1.15,
     "steering flare sprite": "effect/scin flare/small",
     "frame rate": 0.5,
-    "steering flare sound": "scplasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "scplasma small"
   },
   {
     "name": "SC-14 Plasma Thruster",
@@ -8375,8 +7909,7 @@
     "thrusting heat": 4.95,
     "flare sprite": "effect/scin flare/med",
     "frame rate": 0.4,
-    "flare sound": "scplasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "flare sound": "scplasma medium"
   },
   {
     "name": "SC-14 Plasma Steering",
@@ -8394,8 +7927,7 @@
     "turning heat": 2.95,
     "steering flare sprite": "effect/scin flare/med",
     "frame rate": 0.4,
-    "steering flare sound": "scplasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "steering flare sound": "scplasma medium"
   },
   {
     "name": "SC-15 Plasma Thrusters",
@@ -8419,8 +7951,7 @@
     "reverse thrusting energy": 1.45,
     "reverse thrusting heat": 4.45,
     "reverse flare sprite": "effect/scin flare/large",
-    "reverse flare sound": "scplasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/gegno/gegno outfits.txt"
+    "reverse flare sound": "scplasma large"
   },
   {
     "name": "Maeri Engine Nacelles",
@@ -8439,8 +7970,7 @@
     "frame rate": 30,
     "flare sound": "plasma medium",
     "steering flare sprite": "effect/ka'het flare/large",
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/kahet/kahet outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Ka'het Sustainer Nacelles",
@@ -8459,8 +7989,7 @@
     "frame rate": 30,
     "flare sound": "plasma small",
     "steering flare sprite": "effect/ka'het flare/medium",
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/kahet/kahet outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Telis Engine Nacelles",
@@ -8479,8 +8008,7 @@
     "frame rate": 30,
     "flare sound": "plasma medium",
     "steering flare sprite": "effect/ka'het flare/large",
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/kahet/kahet outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Vareti Engine Block",
@@ -8499,8 +8027,7 @@
     "frame rate": 30,
     "flare sound": "plasma large",
     "steering flare sprite": "effect/ka'het flare/large",
-    "steering flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/kahet/kahet outfits.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Ka'het Compact Engine",
@@ -8521,8 +8048,7 @@
     "frame rate": 30,
     "flare sound": "plasma small",
     "steering flare sprite": "effect/ka'het flare/medium",
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/kahet/kahet outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Afterburner (Asteroid Class)",
@@ -8537,8 +8063,7 @@
     "afterburner energy": 0.6,
     "afterburner heat": 6.25,
     "afterburner fuel": 0.0375,
-    "afterburner effect": "korath afterburner tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "afterburner effect": "korath afterburner tiny"
   },
   {
     "name": "Afterburner (Comet Class)",
@@ -8551,8 +8076,7 @@
     "afterburner energy": 2.25,
     "afterburner heat": 22.75,
     "afterburner fuel": 0.125,
-    "afterburner effect": "korath afterburner small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "afterburner effect": "korath afterburner small"
   },
   {
     "name": "Afterburner (Lunar Class)",
@@ -8565,8 +8089,7 @@
     "afterburner energy": 3.9,
     "afterburner heat": 41.65,
     "afterburner fuel": 0.225,
-    "afterburner effect": "korath afterburner medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "afterburner effect": "korath afterburner medium"
   },
   {
     "name": "Afterburner (Planetary Class)",
@@ -8580,8 +8103,7 @@
     "afterburner heat": 79.45,
     "afterburner fuel": 0.4,
     "afterburner effect": "korath afterburner large",
-    "heat capacity": 150,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "heat capacity": 150
   },
   {
     "name": "Afterburner (Stellar Class)",
@@ -8597,8 +8119,7 @@
     "afterburner effect": "korath afterburner huge",
     "active cooling": 8,
     "cooling energy": 0.4,
-    "heat capacity": 150,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "heat capacity": 150
   },
   {
     "name": "Engine (Meteor Class)",
@@ -8617,8 +8138,7 @@
     "frame rate": 8,
     "flare sound": "plasma tiny",
     "steering flare sprite": "effect/korath flare/tiny",
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Bow Drive (Meteor Class)",
@@ -8638,8 +8158,7 @@
     "frame rate": 8,
     "reverse flare sprite": "effect/korath flare/tiny",
     "reverse flare sound": "plasma tiny",
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Reverser (Asteroid Class)",
@@ -8654,8 +8173,7 @@
     "reverse thrusting heat": 3.4,
     "reverse flare sprite": "effect/korath flare/tiny",
     "frame rate": 8,
-    "reverse flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "reverse flare sound": "plasma tiny"
   },
   {
     "name": "Reverser (Comet Class)",
@@ -8670,8 +8188,7 @@
     "reverse thrusting heat": 6.5,
     "reverse flare sprite": "effect/korath flare/small",
     "frame rate": 7.5,
-    "reverse flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "reverse flare sound": "plasma small"
   },
   {
     "name": "Reverser (Lunar Class)",
@@ -8686,8 +8203,7 @@
     "reverse thrusting heat": 11.9,
     "reverse flare sprite": "effect/korath flare/medium",
     "frame rate": 7,
-    "reverse flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "reverse flare sound": "plasma medium"
   },
   {
     "name": "Reverser (Planetary Class)",
@@ -8702,8 +8218,7 @@
     "reverse thrusting heat": 22.7,
     "reverse flare sprite": "effect/korath flare/large",
     "frame rate": 6.5,
-    "reverse flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "reverse flare sound": "plasma large"
   },
   {
     "name": "Reverser (Stellar Class)",
@@ -8718,8 +8233,7 @@
     "reverse thrusting heat": 42.6,
     "reverse flare sprite": "effect/korath flare/huge",
     "frame rate": 6,
-    "reverse flare sound": "plasma huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "reverse flare sound": "plasma huge"
   },
   {
     "name": "Thruster (Asteroid Class)",
@@ -8733,8 +8247,7 @@
     "thrusting heat": 3.4,
     "flare sprite": "effect/korath flare/tiny",
     "frame rate": 8,
-    "flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Thruster (Comet Class)",
@@ -8748,8 +8261,7 @@
     "thrusting heat": 6.5,
     "flare sprite": "effect/korath flare/small",
     "frame rate": 7.5,
-    "flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Thruster (Lunar Class)",
@@ -8763,8 +8275,7 @@
     "thrusting heat": 11.9,
     "flare sprite": "effect/korath flare/medium",
     "frame rate": 7,
-    "flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Thruster (Planetary Class)",
@@ -8778,8 +8289,7 @@
     "thrusting heat": 22.7,
     "flare sprite": "effect/korath flare/large",
     "frame rate": 6.5,
-    "flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Thruster (Stellar Class)",
@@ -8793,8 +8303,7 @@
     "thrusting heat": 42.6,
     "flare sprite": "effect/korath flare/huge",
     "frame rate": 6,
-    "flare sound": "plasma huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "plasma huge"
   },
   {
     "name": "Steering (Asteroid Class)",
@@ -8808,8 +8317,7 @@
     "turning heat": 2.1,
     "steering flare sprite": "effect/korath flare/tiny",
     "frame rate": 8,
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Steering (Comet Class)",
@@ -8823,8 +8331,7 @@
     "turning heat": 4.1,
     "steering flare sprite": "effect/korath flare/small",
     "frame rate": 7.5,
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Steering (Lunar Class)",
@@ -8838,8 +8345,7 @@
     "turning heat": 7.4,
     "steering flare sprite": "effect/korath flare/medium",
     "frame rate": 7,
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Steering (Planetary Class)",
@@ -8853,8 +8359,7 @@
     "turning heat": 14.2,
     "steering flare sprite": "effect/korath flare/large",
     "frame rate": 6.5,
-    "steering flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma large"
   },
   {
     "name": "Steering (Stellar Class)",
@@ -8868,8 +8373,7 @@
     "turning heat": 26.7,
     "steering flare sprite": "effect/korath flare/huge",
     "frame rate": 6,
-    "steering flare sound": "plasma huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "plasma huge"
   },
   {
     "name": "Arkrof GP Hybrid Thruster",
@@ -8883,8 +8387,7 @@
     "thrusting heat": 3,
     "flare sprite": "effect/efreti flare/tiny",
     "frame rate": 8,
-    "flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "Farves GP Hybrid Thruster",
@@ -8898,8 +8401,7 @@
     "thrusting heat": 5.9,
     "flare sprite": "effect/efreti flare/small",
     "frame rate": 7.5,
-    "flare sound": "ion small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Gaktem GP Hybrid Thruster",
@@ -8913,8 +8415,7 @@
     "thrusting heat": 11.05,
     "flare sprite": "effect/efreti flare/medium",
     "frame rate": 7,
-    "flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Nelmeb GP Hybrid Thruster",
@@ -8928,8 +8429,7 @@
     "thrusting heat": 18,
     "flare sprite": "effect/efreti flare/large",
     "frame rate": 6.5,
-    "flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "Arkrof GP Hybrid Steering",
@@ -8943,8 +8443,7 @@
     "turning heat": 1.3,
     "steering flare sprite": "effect/efreti flare/tiny",
     "frame rate": 8,
-    "steering flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "ion tiny"
   },
   {
     "name": "Farves GP Hybrid Steering",
@@ -8958,8 +8457,7 @@
     "turning heat": 2.95,
     "steering flare sprite": "effect/efreti flare/small",
     "frame rate": 7.5,
-    "steering flare sound": "ion small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "ion small"
   },
   {
     "name": "Gaktem GP Hybrid Steering",
@@ -8973,8 +8471,7 @@
     "turning heat": 5.85,
     "steering flare sprite": "effect/efreti flare/medium",
     "frame rate": 7,
-    "steering flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "Nelmeb GP Hybrid Steering",
@@ -8988,8 +8485,7 @@
     "turning heat": 10,
     "steering flare sprite": "effect/efreti flare/large",
     "frame rate": 6.5,
-    "steering flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/korath/korath outfits.txt"
+    "steering flare sound": "ion large"
   },
   {
     "name": "Chiisana Rift Thruster",
@@ -9004,8 +8500,7 @@
     "flare sprite": "effect/bunrodea flare/large",
     "frame rate": 1,
     "scale": 0.3,
-    "flare sound": "ion tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "flare sound": "ion tiny"
   },
   {
     "name": "Nami Rift Thruster",
@@ -9020,8 +8515,7 @@
     "flare sprite": "effect/bunrodea flare/large",
     "frame rate": 1,
     "scale": 0.6,
-    "flare sound": "ion small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "flare sound": "ion small"
   },
   {
     "name": "Ookii Rift Thruster",
@@ -9036,8 +8530,7 @@
     "flare sprite": "effect/bunrodea flare/large",
     "frame rate": 1,
     "scale": 0.8,
-    "flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Subarashii Rift Thruster",
@@ -9051,8 +8544,7 @@
     "thrusting heat": 4.9,
     "flare sprite": "effect/bunrodea flare/large",
     "frame rate": 1,
-    "flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "Chiisana Rift Steering",
@@ -9063,8 +8555,7 @@
     "engine capacity": -17,
     "turn": 808.5,
     "turning energy": 2.6,
-    "turning heat": 1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 1
   },
   {
     "name": "Nami Rift Steering",
@@ -9075,8 +8566,7 @@
     "engine capacity": -31,
     "turn": 1705.5,
     "turning energy": 5.3,
-    "turning heat": 2.1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 2.1
   },
   {
     "name": "Ookii Rift Steering",
@@ -9087,8 +8577,7 @@
     "engine capacity": -53,
     "turn": 3148.5,
     "turning energy": 9.2,
-    "turning heat": 3.65,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 3.65
   },
   {
     "name": "Subarashii Rift Steering",
@@ -9099,8 +8588,7 @@
     "engine capacity": -90,
     "turn": 5850,
     "turning energy": 17.1,
-    "turning heat": 6.5,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/bunrodea/bunrodea outfits.txt"
+    "turning heat": 6.5
   },
   {
     "name": "Pug Akfar Thruster",
@@ -9114,8 +8602,7 @@
     "thrusting heat": 3.1,
     "flare sprite": "effect/pug flare/medium",
     "frame rate": 20,
-    "flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "flare sound": "ion medium"
   },
   {
     "name": "Pug Akfar Steering",
@@ -9129,8 +8616,7 @@
     "turning heat": 2.1,
     "steering flare sprite": "effect/pug flare/medium",
     "frame rate": 20,
-    "steering flare sound": "ion medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "steering flare sound": "ion medium"
   },
   {
     "name": "Pug Cormet Thruster",
@@ -9144,8 +8630,7 @@
     "thrusting heat": 4.6,
     "flare sprite": "effect/pug flare/large",
     "frame rate": 22,
-    "flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "flare sound": "ion large"
   },
   {
     "name": "Pug Cormet Steering",
@@ -9159,8 +8644,7 @@
     "turning heat": 3.1,
     "steering flare sprite": "effect/pug flare/large",
     "frame rate": 22,
-    "steering flare sound": "ion large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "steering flare sound": "ion large"
   },
   {
     "name": "Pug Lohmar Thruster",
@@ -9174,8 +8658,7 @@
     "thrusting heat": 6.9,
     "flare sprite": "effect/pug flare/huge",
     "frame rate": 23,
-    "flare sound": "ion huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "flare sound": "ion huge"
   },
   {
     "name": "Pug Lohmar Steering",
@@ -9189,8 +8672,7 @@
     "turning heat": 4.7,
     "steering flare sprite": "effect/pug flare/huge",
     "frame rate": 23,
-    "steering flare sound": "ion huge",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/pug/pug outfits.txt"
+    "steering flare sound": "ion huge"
   },
   {
     "name": "MH Blue-Class Thruster",
@@ -9203,8 +8685,7 @@
     "flare sound": "incip plasma small",
     "thrust": 24,
     "thrusting energy": 2,
-    "thrusting heat": 2.5,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "thrusting heat": 2.5
   },
   {
     "name": "MH Blue-Class Steering",
@@ -9214,8 +8695,7 @@
     "engine capacity": -24,
     "turn": 498,
     "turning energy": 1.0,
-    "turning heat": 3,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "turning heat": 3
   },
   {
     "name": "MH Green-Class Thruster",
@@ -9228,8 +8708,7 @@
     "flare sound": "incip plasma med",
     "thrust": 30,
     "thrusting energy": 2.2,
-    "thrusting heat": 2.8,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "thrusting heat": 2.8
   },
   {
     "name": "MH Green-Class Steering",
@@ -9239,8 +8718,7 @@
     "engine capacity": -28,
     "turn": 618,
     "turning energy": 1.1,
-    "turning heat": 3.1,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "turning heat": 3.1
   },
   {
     "name": "MH Red-Class Thruster",
@@ -9253,8 +8731,7 @@
     "flare sound": "incip plasma large",
     "thrust": 48,
     "thrusting energy": 5,
-    "thrusting heat": 10,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "thrusting heat": 10
   },
   {
     "name": "MH Red-Class Steering",
@@ -9264,8 +8741,7 @@
     "engine capacity": -41,
     "turn": 1134,
     "turning energy": 2.5,
-    "turning heat": 12,
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/incipias/incipias outfits.txt"
+    "turning heat": 12
   },
   {
     "name": "Type 1 Radiant Thruster",
@@ -9283,8 +8759,7 @@
     "cooling": 1.5,
     "flare sprite": "effect/wanderer flare/tiny",
     "frame rate": 12,
-    "flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "flare sound": "plasma tiny"
   },
   {
     "name": "Type 2 Radiant Thruster",
@@ -9302,8 +8777,7 @@
     "cooling": 3.6,
     "flare sprite": "effect/wanderer flare/small",
     "frame rate": 14,
-    "flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "flare sound": "plasma small"
   },
   {
     "name": "Type 3 Radiant Thruster",
@@ -9321,8 +8795,7 @@
     "cooling": 6.5,
     "flare sprite": "effect/wanderer flare/medium",
     "frame rate": 16,
-    "flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "flare sound": "plasma medium"
   },
   {
     "name": "Type 4 Radiant Thruster",
@@ -9340,8 +8813,7 @@
     "cooling": 11.7,
     "flare sprite": "effect/wanderer flare/large",
     "frame rate": 18,
-    "flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "flare sound": "plasma large"
   },
   {
     "name": "Type 1 Radiant Steering",
@@ -9359,8 +8831,7 @@
     "cooling": 1.0,
     "steering flare sprite": "effect/wanderer flare/tiny",
     "frame rate": 12,
-    "steering flare sound": "plasma tiny",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "steering flare sound": "plasma tiny"
   },
   {
     "name": "Type 2 Radiant Steering",
@@ -9378,8 +8849,7 @@
     "cooling": 2.1,
     "steering flare sprite": "effect/wanderer flare/small",
     "frame rate": 14,
-    "steering flare sound": "plasma small",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "steering flare sound": "plasma small"
   },
   {
     "name": "Type 3 Radiant Steering",
@@ -9397,8 +8867,7 @@
     "cooling": 3.9,
     "steering flare sprite": "effect/wanderer flare/medium",
     "frame rate": 16,
-    "steering flare sound": "plasma medium",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "steering flare sound": "plasma medium"
   },
   {
     "name": "Type 4 Radiant Steering",
@@ -9416,7 +8885,6 @@
     "cooling": 6.7,
     "steering flare sprite": "effect/wanderer flare/large",
     "frame rate": 18,
-    "steering flare sound": "plasma large",
-    "source": "/home/thomas/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Endless Sky/data/wanderer/wanderer outfits.txt"
+    "steering flare sound": "plasma large"
   }
 ]

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import FiltersPanel, { Filters } from './FiltersPanel';
+import FiltersPanel, { type Filters } from './FiltersPanel';
 import EnginesTable from './EnginesTable';
 
 export interface Engine {

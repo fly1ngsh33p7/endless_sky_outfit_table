@@ -1,7 +1,7 @@
-import { Engine } from "./App";
+import type { Engine } from "./App";
 import {
     useReactTable,
-    ColumnDef,
+    type ColumnDef,
     getCoreRowModel,
     flexRender,
 } from "@tanstack/react-table";
@@ -44,7 +44,7 @@ export default function EnginesTable({ engines }: Props) {
     return (
         <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
-                {table.getHeaderGroups().map((headerGroup) => (
+                {table.getHeaderGroups().map((headerGroup: { id: React.Key | null | undefined; headers: any[]; }) => (
                     <tr key={headerGroup.id}>
                         {headerGroup.headers.map((header) => (
                             <th
@@ -63,7 +63,7 @@ export default function EnginesTable({ engines }: Props) {
                 ))}
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-                {table.getRowModel().rows.map((row) => (
+                {table.getRowModel().rows.map((row: { id: React.Key | null | undefined; getVisibleCells: () => any[]; }) => (
                     <tr key={row.id}>
                         {row.getVisibleCells().map((cell) => (
                             <td
