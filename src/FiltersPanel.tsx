@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import type { Engine, License } from './App';
-import * as Slider from '@radix-ui/react-slider';
-import './FiltersPanel.css';
+import NumericFilter from './components/numericFilter/NumericFilter';
+
 
 export type Filters = { [key: string]: [number, number] | string };
 
@@ -24,13 +24,13 @@ export default function FiltersPanel({
     allKeys, visibleColumns, setVisibleColumns
 }: Props) {
     const numericKeys = useMemo(() => {
-        return allKeys.filter(key => 
+        return allKeys.filter(key =>
             engines.some(engine => typeof (engine as any)[key] === 'number')
         );
     }, [allKeys, engines]);
 
     const stringKeys = useMemo(() => {
-        return allKeys.filter(key => 
+        return allKeys.filter(key =>
             engines.some(engine => typeof (engine as any)[key] === 'string')
         );
     }, [allKeys, engines]);
@@ -83,7 +83,7 @@ export default function FiltersPanel({
                 Reset Filters
             </button>
             <button
-                // onClick={showAll}
+                // onClick={showAll} //TODO:
                 className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
             >
                 Show All
@@ -126,54 +126,14 @@ export default function FiltersPanel({
 
             {numericKeys.map(key => (
                 visibleColumns.includes(key) && (
-                    <div key={key}>
-                        <label className="block text-sm font-medium text-gray-700">{key}</label>
-                        <Slider.Root
-                            className="SliderRoot"
-                            value={(filters[key] as [number, number]) || ranges[key]}
-                            min={ranges[key][0]}
-                            max={ranges[key][1]}
-                            step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                            onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
-                        >
-                            <Slider.Track className="SliderTrack">
-                                <Slider.Range className="SliderRange" />
-                            </Slider.Track>
-                            <Slider.Thumb className="SliderThumb" aria-label="Min" />
-                            <Slider.Thumb className="SliderThumb" aria-label="Max" />
-                        </Slider.Root>
-                        <div className="flex space-x-2 mt-1">
-                            <input
-                                type="number"
-                                value={(filters[key] as [number, number])?.[0] || ranges[key][0]}
-                                min={ranges[key][0]}
-                                max={ranges[key][1]}
-                                step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                                onChange={e =>
-                                    handleNumericChange(key, [
-                                        Number(e.target.value),
-                                        (filters[key] as [number, number])?.[1] || ranges[key][1],
-                                    ])
-                                }
-                                className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
-                            />
-                            <span className="text-gray-600">to</span>
-                            <input
-                                type="number"
-                                value={(filters[key] as [number, number])?.[1] || ranges[key][1]}
-                                min={ranges[key][0]}
-                                max={ranges[key][1]}
-                                step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                                onChange={e =>
-                                    handleNumericChange(key, [
-                                        (filters[key] as [number, number])?.[0] || ranges[key][0],
-                                        Number(e.target.value),
-                                    ])
-                                }
-                                className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
-                            />
-                        </div>
-                    </div>
+                    <NumericFilter
+                        key={"numeric_filter-" + key}
+                        label={key}
+                        range={[ranges[key][0], ranges[key][1]]}
+                        value={(filters[key] as [number, number]) || ranges[key]}
+                        step={getDynamicStep(ranges[key][0], ranges[key][1])}
+                        onChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
+                    />
                 )
             ))}
 
