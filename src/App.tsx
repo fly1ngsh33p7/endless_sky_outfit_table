@@ -29,7 +29,7 @@ export interface License {
 
 // --- Hilfs-Konstanten + Post-Processing ---
 const ignorePatterns = [
-	'category', 'thumbnail', '*flare*', '*afterburner*effect*', 'description', 'unplunderable',
+	'category', '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name', 
 ];
 const matchesPattern = (key: string, pattern: string) =>
 	new RegExp(
@@ -97,6 +97,10 @@ function App() {
 		fetch('/outfits.json')
 			.then(res => res.json())
 			.then((all: any) => {
+				const rawLic = all['Licenses'] || [];
+				setLicenses(processLicenses(rawLic));
+
+
 				const rawEng = all['Engines'] || [];
 				// 1) Process engines, 2) compute thrust per capacity, 3) set state
 				const processed = processEngines(rawEng);
@@ -135,8 +139,6 @@ function App() {
 				}));
 				setEngines(withComputed);
 
-				const rawLic = all['Licenses'] || [];
-				setLicenses(processLicenses(rawLic));
 			});
 	}, []);
 
