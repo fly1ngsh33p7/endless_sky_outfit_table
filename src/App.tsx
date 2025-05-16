@@ -194,9 +194,9 @@ function App() {
 	// --- sichtbare Spalten initialisieren ---
 	useEffect(() => {
 		const defaults = [
-			'name', 'cost', 'mass', 'engine capacity', 'thrust',
+			'name', 'cost', 'mass', 'engine capacity', 'thrust+turn per capacity', 'energy per combined thrust', 'thrust',
 			'turn', 'reverse thrust', 'thrust per capacity', 'turn per capacity',
-			'reverse thrust per capacity', 'thrust+turn per capacity', 'energy per combined thrust', 'licenses',
+			'reverse thrust per capacity',  'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
 	}, [allKeys]);

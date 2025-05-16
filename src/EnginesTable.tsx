@@ -70,6 +70,7 @@ export default function EnginesTable({
                         // Alle anderen Typen als String ausgeben
                         return <span>{String(val)}</span>;
                     },
+                    sortUndefined: 'last',
                 } as ColumnDef<Engine>;
             }),
         [visibleColumns, numericColumns]
