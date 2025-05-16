@@ -2,9 +2,14 @@ import React, { useState, useEffect, useMemo } from 'react';
 import FiltersPanel, { type Filters } from './FiltersPanel';
 import EnginesTable from './EnginesTable';
 
+export interface License {
+	name: string;
+	cost?: number;
+}
+
 export interface Engine {
 	name: string;
-	licenses?: string[] | string;
+	licenses: License[];
 	cost?: number;
 	mass?: number;
 	'outfit space'?: number;
@@ -22,20 +27,17 @@ export interface Engine {
 	'reverse thrust per capacity'?: number;
 }
 
-export interface License {
-	name: string;
-	cost?: number;
-}
-
 // --- Hilfs-Konstanten + Post-Processing ---
 const ignorePatterns = [
-	'category', '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name', 
+	'category', '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*',
+	'unplunderable', 'display name',
 ];
 const matchesPattern = (key: string, pattern: string) =>
 	new RegExp(
 		'^' +
 		pattern.replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&').replace(/\*/g, '.*') +
-		'$', 'i'
+		'$',
+		'i'
 	).test(key);
 
 const engineFieldTransforms: Record<string, (v: any) => any> = {
@@ -58,29 +60,20 @@ function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn 
 }
 
 const licenseFieldTransforms: Record<string, (v: any) => any> = {
-	name: v => typeof v === 'string' ? v.replace(/ License$/, '') : v
+	name: v => (typeof v === 'string' ? v.replace(/ License$/, '') : v),
 };
 
 function processLicenses(raw: any[]): License[] {
 	return raw.reduce((acc: License[], item) => {
 		const copy: any = { ...item };
-
 		Object.keys(copy).forEach(k => {
-			if (ignorePatterns.some(p => matchesPattern(k, p))) {
-				delete copy[k];
-			}
+			if (ignorePatterns.some(p => matchesPattern(k, p))) delete copy[k];
 		});
-
 		Object.entries(licenseFieldTransforms).forEach(([f, fn]) => {
-			const act = Object.keys(copy)
-				.find(k => k.toLowerCase() === f.toLowerCase());
+			const act = Object.keys(copy).find(k => k.toLowerCase() === f.toLowerCase());
 			if (act) copy[act] = fn(copy[act]);
 		});
-
-		//dont add a License that has a name that is already present
-		if (!acc.some(license => license.name === copy.name)) {
-			acc.push(copy as License);
-		}
+		if (!acc.some(l => l.name === copy.name)) acc.push(copy as License);
 		return acc;
 	}, []);
 }
@@ -88,23 +81,41 @@ function processLicenses(raw: any[]): License[] {
 function App() {
 	const [engines, setEngines] = useState<Engine[]>([]);
 	const [licenses, setLicenses] = useState<License[]>([]);
+	const [relevantLicenses, setRelevantLicenses] = useState<License[]>([]);
 	const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 	const [filters, setFilters] = useState<Filters>({});
 	const [visibleColumns, setVisibleColumns] = useState<string[]>([]);
 
-	// --- Daten laden und vorverarbeiten ---
+	// --- Daten laden + in echte License-Objekte umwandeln + in Engines mappen ---
 	useEffect(() => {
 		fetch('/outfits.json')
 			.then(res => res.json())
 			.then((all: any) => {
+				// 1) Licenses erzeugen und in State
 				const rawLic = all['Licenses'] || [];
-				setLicenses(processLicenses(rawLic));
+				const licObjs = processLicenses(rawLic);
+				setLicenses(licObjs);
 
-
+				// 2) Engines parsen
 				const rawEng = all['Engines'] || [];
-				// 1) Process engines, 2) compute thrust per capacity, 3) set state
 				const processed = processEngines(rawEng);
-				const withComputed: Engine[] = processed.map(e => ({
+
+				// 3) Lizenz-Namen → echte Objekte
+				const mapped: Engine[] = processed.map((e: any) => {
+					const names: string[] = Array.isArray(e.licenses)
+						? e.licenses.map((lic: any) => (typeof lic === 'string' ? lic : lic.name))
+						: typeof e.licenses === 'string'
+							? [e.licenses]
+							: [];
+
+					const licArray = names
+						.flatMap(n => licObjs.filter(l => l.name === n));
+
+					return { ...e, licenses: licArray };
+				});
+
+				// 4) berechnete Felder ergänzen
+				const withComputed = mapped.map(e => ({
 					...e,
 					'thrust per capacity':
 						typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
@@ -119,44 +130,49 @@ function App() {
 							? parseFloat((e['reverse thrust'] / e['engine capacity']).toFixed(3))
 							: undefined,
 					'thrust+turn per capacity':
-						typeof e['engine capacity'] === 'number' &&
-							(e.thrust || e.turn)
-								? parseFloat(
-										(((e.thrust || 0) + (e.turn || 0)) / e['engine capacity']).toFixed(3)
-								)
-								: undefined,
+						typeof e['engine capacity'] === 'number'
+							? parseFloat(
+								(
+									((e.thrust || 0) + (e.turn || 0)) /
+									e['engine capacity']
+								).toFixed(3)
+							)
+							: undefined,
 					'energy per combined thrust':
-						typeof e['engine capacity'] === 'number' &&
-						(e['thrusting energy'] || e['turning energy']) &&
-							(e.thrust || e.turn)
-								? parseFloat(
-										(
-											((e['turning energy'] || 0) + (e['thrusting energy'] || 0)) /
-											((e.thrust || 0) + (e.turn || 0))
-										).toFixed(6)
-								)
-								: undefined,
+						typeof e['engine capacity'] === 'number'
+							? parseFloat(
+								(
+									((e['turning energy'] || 0) + (e['thrusting energy'] || 0)) /
+									((e.thrust || 0) + (e.turn || 0) || 1)
+								).toFixed(6)
+							)
+							: undefined,
 				}));
+
 				setEngines(withComputed);
 
+
+				// Relevante Lizenzen setzen
+				const relevant = licObjs.filter(license =>
+					mapped.some(engine => engine.licenses.some(l => l.name === license.name))
+				);
+				setRelevantLicenses(relevant);
 			});
 	}, []);
 
-	// --- Alle Spalten aus den Engines auslesen ---
+	// --- Spaltenliste ermitteln ---
 	const allKeys = useMemo(() => {
 		const s = new Set<string>();
 		engines.forEach(e => Object.keys(e).forEach(k => s.add(k)));
 		return Array.from(s);
 	}, [engines]);
 
+	// --- Filter & Lizenz-Filter ---
 	const filteredEngines = useMemo(() => {
 		return engines
 			.filter(e => {
 				if (selectedLicenses.length === 0) return true;
-				const lic = e.licenses;
-				if (Array.isArray(lic)) return lic.some(l => selectedLicenses.includes(l));
-				if (typeof lic === 'string') return selectedLicenses.includes(lic);
-				return false;
+				return e.licenses.some(l => selectedLicenses.includes(l.name));
 			})
 			.filter(e =>
 				Object.entries(filters).every(([key, value]) => {
@@ -175,32 +191,22 @@ function App() {
 			);
 	}, [engines, filters, selectedLicenses]);
 
-	// --- Sichtbare Spalten initial füllen ---
+	// --- sichtbare Spalten initialisieren ---
 	useEffect(() => {
 		const defaults = [
-			'name', 'cost', 'mass', 
-			// 'outfit space', 
-			'engine capacity', 'thrust+turn per capacity',
-			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity',
-			'energy per combined thrust',
-			'thrust', 'turn', 'reverse thrust', 
-			'licenses',
+			'name', 'cost', 'mass', 'engine capacity', 'thrust',
+			'turn', 'reverse thrust', 'thrust per capacity', 'turn per capacity',
+			'reverse thrust per capacity', 'thrust+turn per capacity', 'energy per combined thrust', 'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
 	}, [allKeys]);
-
-	// Debug
-	useEffect(() => {
-		console.log(filteredEngines);
-		console.log(licenses);
-	}, [filteredEngines, licenses]);
 
 	return (
 		<div className="flex flex-col md:flex-row h-screen">
 			<aside className="w-full md:w-1/4 p-4 overflow-auto border-r">
 				<FiltersPanel
 					engines={engines}
-					licenses={licenses}
+					licenses={relevantLicenses}
 					selectedLicenses={selectedLicenses}
 					setSelectedLicenses={setSelectedLicenses}
 					filters={filters}

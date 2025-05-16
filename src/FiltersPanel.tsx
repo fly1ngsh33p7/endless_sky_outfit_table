@@ -82,6 +82,12 @@ export default function FiltersPanel({
             >
                 Reset Filters
             </button>
+            <button
+                // onClick={showAll}
+                className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
+            >
+                Show All
+            </button>
 
             <div>
                 <h3 className="text-sm font-semibold mb-2">Columns</h3>

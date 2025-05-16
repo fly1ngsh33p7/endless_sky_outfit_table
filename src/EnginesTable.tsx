@@ -7,7 +7,7 @@ import {
     getSortedRowModel,
     flexRender,
 } from '@tanstack/react-table';
-import type { Engine } from './App';
+import type { Engine, License } from './App';
 import './EnginesTable.css';
 
 export interface EnginesTableProps {
@@ -26,8 +26,7 @@ export default function EnginesTable({
     engines,
     visibleColumns,
 }: EnginesTableProps) {
-    //  Dynamisch ermitteln, welche Columns numeric sind:
-    //    Eine Column gilt als numeric, wenn in filteredData mindestens ein Wert an dieser Column eine number ist.
+    // Dynamisch erkennen, welche Columns numeric sind
     const numericColumns = useMemo<Set<string>>(() => {
         const set = new Set<string>();
         visibleColumns.forEach(key => {
@@ -38,7 +37,7 @@ export default function EnginesTable({
         return set;
     }, [visibleColumns, engines]);
 
-    //  Spalten-Definitionen: für numeric Columns custom sortingFn, sonst 'auto'
+    // 3) Spalten-Definitionen mit angepasster cell-Renderer
     const columns = useMemo<ColumnDef<Engine>[]>(
         () =>
             visibleColumns.map(key => {
@@ -48,35 +47,38 @@ export default function EnginesTable({
                     header: () => <span>{toHeader(key)}</span>,
                     sortingFn: isNumeric
                         ? (rowA, rowB, columnId) => {
-                            const a = rowA.getValue<number>(columnId);
-                            const b = rowB.getValue<number>(columnId);
-                    
-                            // Handle empty values explicitly
-                            if (a == null && b == null) return 0; // Both are empty
-                            if (a == null) return 1; // `a` is empty, place it after `b`
-                            if (b == null) return -1; // `b` is empty, place it after `a`
-                    
-                            return a - b; // Normal numeric comparison
+                            const a = rowA.getValue<number>(columnId) ?? 0;
+                            const b = rowB.getValue<number>(columnId) ?? 0;
+                            return a - b;
                         }
                         : 'auto',
                     cell: info => {
                         const val = info.getValue();
                         if (val == null) return null;
+
+                        // Wenn ein Array vorliegt
                         if (Array.isArray(val)) {
+                            // Array von License-Objekten?
+                            if (val.length > 0 && typeof val[0] === 'object' && 'name' in (val[0] as License)) {
+                                const names = (val as License[]).map(l => l.name);
+                                return <span>{names.join(', ')}</span>;
+                            }
+                            // Sonst Array von Strings oder Zahlen
                             return <span>{val.join(', ')}</span>;
                         }
+
+                        // Alle anderen Typen als String ausgeben
                         return <span>{String(val)}</span>;
                     },
-                    sortUndefined: 'last',
                 } as ColumnDef<Engine>;
             }),
         [visibleColumns, numericColumns]
     );
 
-    //  Sorting state
+    // 4) Sorting state
     const [sorting, setSorting] = useState<SortingState>([]);
 
-    // Table-Instanz
+    // 5) Table-Instanz
     const table = useReactTable<Engine>({
         data: engines,
         columns,
@@ -88,60 +90,65 @@ export default function EnginesTable({
 
     // Render
     return (
-        <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-                {table.getHeaderGroups().map(headerGroup => (
-                    <tr key={headerGroup.id}>
-                        {headerGroup.headers.map(header => (
-                            <th
-                                key={header.id}
-                                className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
-                            >
-                                <div className="flex items-center space-x-2">
-                                    {flexRender(
-                                        header.column.columnDef.header,
-                                        header.getContext()
-                                    )}
-                                    <button
-                                        onClick={() => {
-                                            header.column.toggleSorting(false);
-                                            console.log(`Column: ${header.column.id}, Direction: Ascending`);
-                                        }}
-                                        className="text-gray-400 hover:text-gray-600"
-                                        aria-label="Sort ascending"
-                                    >
-                                        ▲
-                                    </button>
-                                    <button
-                                        onClick={() => {
-                                            header.column.toggleSorting(true);
-                                            console.log(`Column: ${header.column.id}, Direction: Descending`);
-                                        }}
-                                        className="text-gray-400 hover:text-gray-600"
-                                        aria-label="Sort descending"
-                                    >
-                                        ▼
-                                    </button>
-                                </div>
-                            </th>
-                        ))}
-                    </tr>
-                ))}
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-                {table.getRowModel().rows.map(row => (
-                    <tr key={row.id}>
-                        {row.getVisibleCells().map(cell => (
-                            <td
-                                key={cell.id}
-                                className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
-                            >
-                                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                            </td>
-                        ))}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+        <>
+            <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                    {table.getHeaderGroups().map(headerGroup => (
+                        <tr key={headerGroup.id}>
+                            {headerGroup.headers.map(header => (
+                                <th
+                                    key={header.id}
+                                    className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
+                                >
+                                    <div className="flex items-center space-x-2">
+                                        {flexRender(
+                                            header.column.columnDef.header,
+                                            header.getContext()
+                                        )}
+                                        <button
+                                            onClick={() => {
+                                                header.column.toggleSorting(false);
+                                                console.log(`Column: ${header.column.id}, Direction: Ascending`);
+                                            }}
+                                            className="text-gray-400 hover:text-gray-600"
+                                            aria-label="Sort ascending"
+                                        >
+                                            ▲
+                                        </button>
+                                        <button
+                                            onClick={() => {
+                                                header.column.toggleSorting(true);
+                                                console.log(`Column: ${header.column.id}, Direction: Descending`);
+                                            }}
+                                            className="text-gray-400 hover:text-gray-600"
+                                            aria-label="Sort descending"
+                                        >
+                                            ▼
+                                        </button>
+                                    </div>
+                                </th>
+                            ))}
+                        </tr>
+                    ))}
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                    {table.getRowModel().rows.map(row => (
+                        <tr key={row.id}>
+                            {row.getVisibleCells().map(cell => (
+                                <td
+                                    key={cell.id}
+                                    className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
+                                >
+                                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <div className="mt-4 text-sm text-gray-500">
+                Total rows: {table.getRowModel().rows.length}
+            </div>
+        </>
     );
 }
