@@ -129,7 +129,7 @@ function App() {
 										(
 											((e['turning energy'] || 0) + (e['thrusting energy'] || 0)) /
 											((e.thrust || 0) + (e.turn || 0))
-										).toFixed(3)
+										).toFixed(6)
 								)
 								: undefined,
 				}));
@@ -179,8 +179,9 @@ function App() {
 			'name', 'cost', 'mass', 
 			// 'outfit space', 
 			'engine capacity', 'thrust+turn per capacity',
-			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity',//'thrust', 'turn', 'reverse thrust', 
+			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity',
 			'energy per combined thrust',
+			'thrust', 'turn', 'reverse thrust', 
 			'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));

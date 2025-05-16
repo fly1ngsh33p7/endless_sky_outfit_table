@@ -13,3 +13,9 @@ Spalten:
 
 Vergleich:
     - checkboxen als erste Spalte, Button zum applien von einem Filter dafür ('name in list' oder so)
+
+"Ein Schiff zusammenstellen":
+    - Schiff definieren: Outfit Space: Engine Space + Weapon Space
+    - Engines zum schiff hinzufügen
+
+    -> ganze Konfigurationen vergleichen (wegen der trennung von Thrust/Turn)
