@@ -2,11 +2,18 @@ import React, { useMemo, useState } from 'react';
 import {
     useReactTable,
     type ColumnDef,
+    type SortingState,
     getCoreRowModel,
     getSortedRowModel,
     flexRender,
 } from '@tanstack/react-table';
 import type { Engine } from './App';
+
+export interface EnginesTableProps {
+    engines: Engine[];
+    visibleColumns: string[];
+    selectedLicenses: string[];
+}
 
 // Utility to title-case column headers
 const toHeader = (key: string) =>
@@ -15,83 +22,59 @@ const toHeader = (key: string) =>
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ');
 
-export default function EnginesTable({ engines, visibleColumns }: { engines: Engine[]; visibleColumns: string[]; }) {
-    // Define default column order
-    const defaultOrder = [
-        'name', 'cost', 'mass', 'outfit space', 'engine capacity', 'turn',
-        'turning energy', 'turning heat', 'slowing resistance', 'frame rate',
-        'steering flare sprite', 'steering flare sound', 'thumbnail', 'source'
-    ];
+export default function EnginesTable({
+    engines,
+    visibleColumns,
+    selectedLicenses,
+}: EnginesTableProps) {
+    // 1) Erst nach Licenses filtern:
+    const filteredData = useMemo(() => {
+        if (selectedLicenses.length === 0) return engines;
+        return engines.filter(engine => {
+            const lic = engine.licenses;
+            if (Array.isArray(lic)) {
+                return lic.some(l => selectedLicenses.includes(l));
+            }
+            if (typeof lic === 'string') {
+                return selectedLicenses.includes(lic);
+            }
+            return false;
+        });
+    }, [engines, selectedLicenses]);
 
-    // Gather all unique keys present across engine objects
-    // const allKeys = useMemo(() => {
-    //     const set = new Set<string>();
-    //     engines.forEach(e => Object.keys(e).forEach(k => set.add(k)));
-    //     return Array.from(set);
-    // }, [engines]);
-
-    const columns = useMemo<ColumnDef<Engine>[]>(() =>
-        visibleColumns.map(key => (
-            {
+    // 2) Spalten-Definitionen
+    const columns = useMemo<ColumnDef<Engine>[]>(
+        () =>
+            visibleColumns.map(key => ({
                 accessorKey: key,
                 header: () => <span>{toHeader(key)}</span>,
                 sortingFn: 'auto',
                 cell: info => {
-                    const val = info.getValue()
-
-                    // if no value, render nothing
-                    if (val == null) {
-                        return null
-                    }
-
-                    // arrays become comma-lists
+                    const val = info.getValue();
+                    if (val == null) return null;
                     if (Array.isArray(val)) {
-                        return <span>{val.join(', ')}</span>
+                        return <span>{val.join(', ')}</span>;
                     }
+                    return <span>{String(val)}</span>;
+                },
+            })),
+        [visibleColumns]
+    );
 
-                    // everything else stringified
-                    return <span>{val}</span>
-                }
-            } as ColumnDef<Engine>)
-        ), [visibleColumns]);
+    // 3) Sorting state mit korrektem Typ
+    const [sorting, setSorting] = useState<SortingState>([]);
 
-
-    // Sorting state
-    const [sorting, setSorting] = useState([]);
-
-    // // Dynamically construct columns
-    // const columns = useMemo<ColumnDef<Engine>[]>(() => {
-    //     // Place known columns first, then extras
-    //     const orderedKeys = [
-    //         ...defaultOrder.filter(k => allKeys.includes(k)),
-    //         ...allKeys.filter(k => !defaultOrder.includes(k))
-    //     ];
-
-    //     return orderedKeys.map(key => {
-    //         const base: ColumnDef<Engine> = {
-    //             accessorKey: key,
-    //             header: () => <span>{toHeader(key)}</span>,
-    //             // Use alphanumeric sort for strings, basic for numbers
-    //             sortingFn: 'auto',
-    //             cell: info => {
-    //                 const val = info.getValue();
-    //                 return <span>{Array.isArray(val) ? val.join(', ') : String(val)}</span>;
-    //             }
-    //         };
-    //         return base;
-    //     });
-    // }, [allKeys]);
-
-    const table = useReactTable({
-        data: engines,
+    // 4) React Table instanziieren
+    const table = useReactTable<Engine>({
+        data: filteredData,
         columns,
         state: { sorting },
         onSortingChange: setSorting,
         getCoreRowModel: getCoreRowModel(),
         getSortedRowModel: getSortedRowModel(),
-        // debugTable: false,
     });
 
+    // 5) Render
     return (
         <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -103,8 +86,10 @@ export default function EnginesTable({ engines, visibleColumns }: { engines: Eng
                                 className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
                             >
                                 <div className="flex items-center space-x-2">
-                                    {flexRender(header.column.columnDef.header, header.getContext())}
-                                    {/* Sort asc */}
+                                    {flexRender(
+                                        header.column.columnDef.header,
+                                        header.getContext()
+                                    )}
                                     <button
                                         onClick={() => header.column.toggleSorting(false)}
                                         className="text-gray-400 hover:text-gray-600"
@@ -112,7 +97,6 @@ export default function EnginesTable({ engines, visibleColumns }: { engines: Eng
                                     >
                                         ▲
                                     </button>
-                                    {/* Sort desc */}
                                     <button
                                         onClick={() => header.column.toggleSorting(true)}
                                         className="text-gray-400 hover:text-gray-600"
@@ -134,7 +118,10 @@ export default function EnginesTable({ engines, visibleColumns }: { engines: Eng
                                 key={cell.id}
                                 className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
                             >
-                                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                {flexRender(
+                                    cell.column.columnDef.cell,
+                                    cell.getContext()
+                                )}
                             </td>
                         ))}
                     </tr>

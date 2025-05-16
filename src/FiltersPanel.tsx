@@ -3,11 +3,13 @@ import type { Engine, License } from './App';
 import * as Slider from '@radix-ui/react-slider';
 import './FiltersPanel.css';
 
-
 export type Filters = { [key: string]: [number, number] | string };
+
 interface Props {
     engines: Engine[];
     licenses: License[];
+    selectedLicenses: string[];
+    setSelectedLicenses: React.Dispatch<React.SetStateAction<string[]>>;
     filters: Filters;
     setFilters: React.Dispatch<React.SetStateAction<Filters>>;
     allKeys: string[];
@@ -16,41 +18,46 @@ interface Props {
 }
 
 const numericKeys = [
-    'cost',
-    'mass',
-    'outfit space',
-    'engine capacity',
-    'turn',
-    'turning energy',
-    'turning heat',
-    'slowing resistance',
+    'cost', 'mass', 'outfit space', 'engine capacity',
+    'turn', 'turning energy', 'turning heat', 'slowing resistance'
 ];
-const stringKeys = [
-    'name',
-    'licenses',
-];
+const stringKeys = ['name'];
 
-
-export default function FiltersPanel({ engines, licenses, filters, setFilters, allKeys, visibleColumns, setVisibleColumns }: Props) {
+export default function FiltersPanel({
+    engines, licenses,
+    selectedLicenses, setSelectedLicenses,
+    filters, setFilters,
+    allKeys, visibleColumns, setVisibleColumns
+}: Props) {
     const ranges = useMemo(() => {
         const map: Record<string, [number, number]> = {};
-        numericKeys.forEach((key) => {
-            const values = engines
-                .map((e) => (e as any)[key])
-                .filter((v) => typeof v === 'number') as number[];
-            map[key] = values.length
-                ? [Math.min(...values), Math.max(...values)]
+        numericKeys.forEach(key => {
+            const vals = engines.map(e => (e as any)[key])
+                .filter(v => typeof v === 'number') as number[];
+            map[key] = vals.length
+                ? [Math.min(...vals), Math.max(...vals)]
                 : [0, 0];
         });
         return map;
     }, [engines]);
-    const handleNumericChange = (key: string, range: [number, number]) => setFilters(prev => ({ ...prev, [key]: range }));
-    const handleStringChange = (key: string, value: string) => setFilters(prev => ({ ...prev, [key]: value }));
+
+    const handleNumericChange = (key: string, range: [number, number]) =>
+        setFilters(prev => ({ ...prev, [key]: range }));
+    const handleStringChange = (key: string, value: string) =>
+        setFilters(prev => ({ ...prev, [key]: value }));
     const resetFilters = () => setFilters({});
 
-    const toggleColumn = (key: string) => {
+    const toggleColumn = (key: string) =>
         setVisibleColumns(prev =>
             prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
+        );
+
+    const toggleLicense = (name: string) => {
+        console.debug("toggled License: ", name)
+        setSelectedLicenses(prev =>
+            prev.includes(name)
+                ? prev.filter(n => n !== name)
+                : [...prev, name]
         );
     };
 
@@ -82,21 +89,23 @@ export default function FiltersPanel({ engines, licenses, filters, setFilters, a
             <div>
                 <h3 className="text-sm font-semibold mb-2">Licenses</h3>
                 <div className="grid grid-cols-2 gap-2">
-                    {licenses.map(license => (
-                        <label key={license.name} className="inline-flex items-center space-x-2">
-                            <input
-                                type="checkbox"
-                                checked={visibleColumns.includes(license.name)}
-                                // onChange={() => toggleLicense(license.name)}
-                            />
-                            <span className="text-sm">{license.name}</span>
-                        </label>
-                    ))}
+                    {licenses
+                        .slice()
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map((license, index) => (
+                            <label key={`${license.name}-${index}`} className="inline-flex items-center space-x-2">
+                                <input
+                                    type="checkbox"
+                                    checked={selectedLicenses.includes(license.name)}
+                                    onChange={() => toggleLicense(license.name)}
+                                />
+                                <span className="text-sm">{String(license.name)}</span>
+                            </label>
+                        ))}
                 </div>
             </div>
 
-            {/* Numeric Range Filters */}
-            {numericKeys.map((key) => (
+            {numericKeys.map(key => (
                 <div key={key}>
                     <label className="block text-sm font-medium text-gray-700">{key}</label>
                     <Slider.Root
@@ -107,21 +116,11 @@ export default function FiltersPanel({ engines, licenses, filters, setFilters, a
                         step={1}
                         onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
                     >
-                        <Slider.Track
-                            className="SliderTrack"
-                        >
-                            <Slider.Range
-                                className="SliderRange"
-                            />
+                        <Slider.Track className="SliderTrack">
+                            <Slider.Range className="SliderRange" />
                         </Slider.Track>
-                        <Slider.Thumb
-                            className="SliderThumb"
-                            aria-label="Volume"
-                        />
-                        <Slider.Thumb
-                            className="SliderThumb"
-                            aria-label="Volume"
-                        />
+                        <Slider.Thumb className="SliderThumb" aria-label="Min" />
+                        <Slider.Thumb className="SliderThumb" aria-label="Max" />
                     </Slider.Root>
                     <div className="text-xs text-gray-600 mt-1">
                         {(filters[key] as [number, number]) || ranges[key]}
@@ -129,8 +128,7 @@ export default function FiltersPanel({ engines, licenses, filters, setFilters, a
                 </div>
             ))}
 
-            {/* String Filters */}
-            {stringKeys.map((key) => (
+            {stringKeys.map(key => (
                 <div key={key}>
                     <label htmlFor={key} className="block text-sm font-medium text-gray-700">
                         {key}
@@ -139,7 +137,7 @@ export default function FiltersPanel({ engines, licenses, filters, setFilters, a
                         id={key}
                         type="text"
                         value={(filters[key] as string) || ''}
-                        onChange={(e) => handleStringChange(key, e.target.value)}
+                        onChange={e => handleStringChange(key, e.target.value)}
                         placeholder={`Filter by ${key}`}
                         className="mt-1 block w-full border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
                     />
