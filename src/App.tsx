@@ -11,9 +11,12 @@ export interface Engine {
 	'engine capacity'?: number;
 	thrust?: number;
 	turn?: number;
+	'reverse thrust'?: number;
 	'turning energy'?: number;
 	'turning heat'?: number;
 	'thrust per capacity'?: number;
+	'turn per capacity'?: number;
+	'reverse thrust per capacity'?: number;
 }
 
 export interface License {
@@ -37,7 +40,7 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity'>[] {
+function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
@@ -99,7 +102,15 @@ function App() {
 					'thrust per capacity':
 						typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
 							? parseFloat((e.thrust / e['engine capacity']).toFixed(3))
-							: undefined
+							: undefined,
+					'turn per capacity':
+						typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
+							? parseFloat((e.turn / e['engine capacity']).toFixed(3))
+							: undefined,
+					'reverse thrust per capacity':
+						typeof e['reverse thrust'] === 'number' && typeof e['engine capacity'] === 'number'
+							? parseFloat((e['reverse thrust'] / e['engine capacity']).toFixed(3))
+							: undefined,
 				}));
 				setEngines(withComputed);
 
@@ -145,7 +156,7 @@ function App() {
 	useEffect(() => {
 		const defaults = [
 			'name', 'cost', 'mass', 'outfit space', 'engine capacity',
-			'thrust per capacity', 'thrust', 'turn', 'reverse thrust',
+			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity','thrust', 'turn', 'reverse thrust', 'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
 	}, [allKeys]);

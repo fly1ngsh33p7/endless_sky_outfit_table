@@ -28,46 +28,59 @@ export default function EnginesTable({
     visibleColumns,
     selectedLicenses,
 }: EnginesTableProps) {
-    // 1) Erst nach Licenses filtern:
-    const filteredData = useMemo(() => {
-        if (selectedLicenses.length === 0) return engines;
-        return engines.filter(engine => {
-            const lic = engine.licenses;
-            if (Array.isArray(lic)) {
-                return lic.some(l => selectedLicenses.includes(l));
+    //  Dynamisch ermitteln, welche Columns numeric sind:
+    //    Eine Column gilt als numeric, wenn in filteredData mindestens ein Wert an dieser Column eine number ist.
+    const numericColumns = useMemo<Set<string>>(() => {
+        const set = new Set<string>();
+        visibleColumns.forEach(key => {
+            if (engines.some(row => typeof (row as any)[key] === 'number')) {
+                set.add(key);
             }
-            if (typeof lic === 'string') {
-                return selectedLicenses.includes(lic);
-            }
-            return false;
         });
-    }, [engines, selectedLicenses]);
+        return set;
+    }, [visibleColumns, engines]);
 
-    // 2) Spalten-Definitionen
+    //  Spalten-Definitionen: für numeric Columns custom sortingFn, sonst 'auto'
     const columns = useMemo<ColumnDef<Engine>[]>(
         () =>
-            visibleColumns.map(key => ({
-                accessorKey: key,
-                header: () => <span>{toHeader(key)}</span>,
-                sortingFn: 'auto',
-                cell: info => {
-                    const val = info.getValue();
-                    if (val == null) return null;
-                    if (Array.isArray(val)) {
-                        return <span>{val.join(', ')}</span>;
-                    }
-                    return <span>{String(val)}</span>;
-                },
-            })),
-        [visibleColumns]
+            visibleColumns.map(key => {
+                const isNumeric = numericColumns.has(key);
+                return {
+                    accessorKey: key,
+                    header: () => <span>{toHeader(key)}</span>,
+                    sortingFn: isNumeric
+                        ? (rowA, rowB, columnId) => {
+                            const a = rowA.getValue<number>(columnId);
+                            const b = rowB.getValue<number>(columnId);
+                    
+                            // Handle empty values explicitly
+                            if (a == null && b == null) return 0; // Both are empty
+                            if (a == null) return 1; // `a` is empty, place it after `b`
+                            if (b == null) return -1; // `b` is empty, place it after `a`
+                    
+                            return a - b; // Normal numeric comparison
+                        }
+                        : 'auto',
+                    cell: info => {
+                        const val = info.getValue();
+                        if (val == null) return null;
+                        if (Array.isArray(val)) {
+                            return <span>{val.join(', ')}</span>;
+                        }
+                        return <span>{String(val)}</span>;
+                    },
+                    sortUndefined: 'last',
+                } as ColumnDef<Engine>;
+            }),
+        [visibleColumns, numericColumns]
     );
 
-    // 3) Sorting state mit korrektem Typ
+    //  Sorting state
     const [sorting, setSorting] = useState<SortingState>([]);
 
-    // 4) React Table instanziieren
+    // Table-Instanz
     const table = useReactTable<Engine>({
-        data: filteredData,
+        data: engines,
         columns,
         state: { sorting },
         onSortingChange: setSorting,
@@ -75,7 +88,7 @@ export default function EnginesTable({
         getSortedRowModel: getSortedRowModel(),
     });
 
-    // 5) Render
+    // Render
     return (
         <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -125,10 +138,7 @@ export default function EnginesTable({
                                 key={cell.id}
                                 className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
                             >
-                                {flexRender(
-                                    cell.column.columnDef.cell,
-                                    cell.getContext()
-                                )}
+                                {flexRender(cell.column.columnDef.cell, cell.getContext())}
                             </td>
                         ))}
                     </tr>

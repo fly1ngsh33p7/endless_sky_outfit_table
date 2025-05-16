@@ -17,18 +17,25 @@ interface Props {
     setVisibleColumns: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const numericKeys = [
-    'cost', 'mass', 'outfit space', 'engine capacity',
-    'turn', 'turning energy', 'turning heat', 'slowing resistance'
-];
-const stringKeys = ['name'];
-
 export default function FiltersPanel({
     engines, licenses,
     selectedLicenses, setSelectedLicenses,
     filters, setFilters,
     allKeys, visibleColumns, setVisibleColumns
 }: Props) {
+    const numericKeys = useMemo(() => {
+        return engines.length > 0
+            ? Object.keys(engines[0]).filter(key => typeof (engines[0] as any)[key] === 'number')
+            : [];
+    }, [engines]);
+    
+    const stringKeys = useMemo(() => {
+        return engines.length > 0
+            ? Object.keys(engines[0]).filter(key => typeof (engines[0] as any)[key] === 'string')
+            : [];
+    }, [engines]);
+
+
     const ranges = useMemo(() => {
         const map: Record<string, [number, number]> = {};
         numericKeys.forEach(key => {
@@ -39,7 +46,7 @@ export default function FiltersPanel({
                 : [0, 0];
         });
         return map;
-    }, [engines]);
+    }, [engines, numericKeys]);
 
     const handleNumericChange = (key: string, range: [number, number]) =>
         setFilters(prev => ({ ...prev, [key]: range }));
@@ -122,8 +129,36 @@ export default function FiltersPanel({
                         <Slider.Thumb className="SliderThumb" aria-label="Min" />
                         <Slider.Thumb className="SliderThumb" aria-label="Max" />
                     </Slider.Root>
-                    <div className="text-xs text-gray-600 mt-1">
-                        {(filters[key] as [number, number]) || ranges[key]}
+                    <div className="flex space-x-2 mt-1">
+                        <input
+                            type="number"
+                            value={(filters[key] as [number, number])?.[0] || ranges[key][0]}
+                            min={ranges[key][0]}
+                            max={ranges[key][1]}
+                            step={1}
+                            onChange={e =>
+                                handleNumericChange(key, [
+                                    Number(e.target.value),
+                                    (filters[key] as [number, number])?.[1] || ranges[key][1],
+                                ])
+                            }
+                            className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
+                        />
+                        <span className="text-gray-600">to</span>
+                        <input
+                            type="number"
+                            value={(filters[key] as [number, number])?.[1] || ranges[key][1]}
+                            min={ranges[key][0]}
+                            max={ranges[key][1]}
+                            step={1}
+                            onChange={e =>
+                                handleNumericChange(key, [
+                                    (filters[key] as [number, number])?.[0] || ranges[key][0],
+                                    Number(e.target.value),
+                                ])
+                            }
+                            className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
+                        />
                     </div>
                 </div>
             ))}
