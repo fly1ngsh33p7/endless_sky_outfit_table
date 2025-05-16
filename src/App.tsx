@@ -15,7 +15,9 @@ export interface Engine {
 	'turning energy'?: number;
 	'turning heat'?: number;
 	'thrust+turn per capacity'?: number;
+	'energy per combined thrust'?: number;
 	'thrust per capacity'?: number;
+	'thrusting energy'?: number,
 	'turn per capacity'?: number;
 	'reverse thrust per capacity'?: number;
 }
@@ -41,7 +43,7 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity'>[] {
+function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity' | 'energy per combined thrust'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
@@ -113,9 +115,23 @@ function App() {
 							? parseFloat((e['reverse thrust'] / e['engine capacity']).toFixed(3))
 							: undefined,
 					'thrust+turn per capacity':
-						typeof e.thrust === 'number' && typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
-							? parseFloat(((e.turn + e.thrust) / e['engine capacity']).toFixed(3))
-							: undefined,
+						typeof e['engine capacity'] === 'number' &&
+							(e.thrust || e.turn)
+								? parseFloat(
+										(((e.thrust || 0) + (e.turn || 0)) / e['engine capacity']).toFixed(3)
+								)
+								: undefined,
+					'energy per combined thrust':
+						typeof e['engine capacity'] === 'number' &&
+						(e['thrusting energy'] || e['turning energy']) &&
+							(e.thrust || e.turn)
+								? parseFloat(
+										(
+											((e['turning energy'] || 0) + (e['thrusting energy'] || 0)) /
+											((e.thrust || 0) + (e.turn || 0))
+										).toFixed(3)
+								)
+								: undefined,
 				}));
 				setEngines(withComputed);
 
@@ -160,8 +176,12 @@ function App() {
 	// --- Sichtbare Spalten initial füllen ---
 	useEffect(() => {
 		const defaults = [
-			'name', 'cost', 'mass', 'outfit space', 'engine capacity', 'thrust+turn per capacity',
-			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity','thrust', 'turn', 'reverse thrust', 'licenses',
+			'name', 'cost', 'mass', 
+			// 'outfit space', 
+			'engine capacity', 'thrust+turn per capacity',
+			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity',//'thrust', 'turn', 'reverse thrust', 
+			'energy per combined thrust',
+			'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
 	}, [allKeys]);

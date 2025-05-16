@@ -24,17 +24,16 @@ export default function FiltersPanel({
     allKeys, visibleColumns, setVisibleColumns
 }: Props) {
     const numericKeys = useMemo(() => {
-        return engines.length > 0
-            ? Object.keys(engines[0]).filter(key => typeof (engines[0] as any)[key] === 'number')
-            : [];
-    }, [engines]);
-    
-    const stringKeys = useMemo(() => {
-        return engines.length > 0
-            ? Object.keys(engines[0]).filter(key => typeof (engines[0] as any)[key] === 'string')
-            : [];
-    }, [engines]);
+        return allKeys.filter(key => 
+            engines.some(engine => typeof (engine as any)[key] === 'number')
+        );
+    }, [allKeys, engines]);
 
+    const stringKeys = useMemo(() => {
+        return allKeys.filter(key => 
+            engines.some(engine => typeof (engine as any)[key] === 'string')
+        );
+    }, [allKeys, engines]);
 
     const ranges = useMemo(() => {
         const map: Record<string, [number, number]> = {};
@@ -120,70 +119,74 @@ export default function FiltersPanel({
             </div>
 
             {numericKeys.map(key => (
-                <div key={key}>
-                    <label className="block text-sm font-medium text-gray-700">{key}</label>
-                    <Slider.Root
-                        className="SliderRoot"
-                        value={(filters[key] as [number, number]) || ranges[key]}
-                        min={ranges[key][0]}
-                        max={ranges[key][1]}
-                        step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                        onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
-                    >
-                        <Slider.Track className="SliderTrack">
-                            <Slider.Range className="SliderRange" />
-                        </Slider.Track>
-                        <Slider.Thumb className="SliderThumb" aria-label="Min" />
-                        <Slider.Thumb className="SliderThumb" aria-label="Max" />
-                    </Slider.Root>
-                    <div className="flex space-x-2 mt-1">
-                        <input
-                            type="number"
-                            value={(filters[key] as [number, number])?.[0] || ranges[key][0]}
+                visibleColumns.includes(key) && (
+                    <div key={key}>
+                        <label className="block text-sm font-medium text-gray-700">{key}</label>
+                        <Slider.Root
+                            className="SliderRoot"
+                            value={(filters[key] as [number, number]) || ranges[key]}
                             min={ranges[key][0]}
                             max={ranges[key][1]}
                             step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                            onChange={e =>
-                                handleNumericChange(key, [
-                                    Number(e.target.value),
-                                    (filters[key] as [number, number])?.[1] || ranges[key][1],
-                                ])
-                            }
-                            className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
-                        />
-                        <span className="text-gray-600">to</span>
-                        <input
-                            type="number"
-                            value={(filters[key] as [number, number])?.[1] || ranges[key][1]}
-                            min={ranges[key][0]}
-                            max={ranges[key][1]}
-                            step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                            onChange={e =>
-                                handleNumericChange(key, [
-                                    (filters[key] as [number, number])?.[0] || ranges[key][0],
-                                    Number(e.target.value),
-                                ])
-                            }
-                            className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
-                        />
+                            onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
+                        >
+                            <Slider.Track className="SliderTrack">
+                                <Slider.Range className="SliderRange" />
+                            </Slider.Track>
+                            <Slider.Thumb className="SliderThumb" aria-label="Min" />
+                            <Slider.Thumb className="SliderThumb" aria-label="Max" />
+                        </Slider.Root>
+                        <div className="flex space-x-2 mt-1">
+                            <input
+                                type="number"
+                                value={(filters[key] as [number, number])?.[0] || ranges[key][0]}
+                                min={ranges[key][0]}
+                                max={ranges[key][1]}
+                                step={getDynamicStep(ranges[key][0], ranges[key][1])}
+                                onChange={e =>
+                                    handleNumericChange(key, [
+                                        Number(e.target.value),
+                                        (filters[key] as [number, number])?.[1] || ranges[key][1],
+                                    ])
+                                }
+                                className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
+                            />
+                            <span className="text-gray-600">to</span>
+                            <input
+                                type="number"
+                                value={(filters[key] as [number, number])?.[1] || ranges[key][1]}
+                                min={ranges[key][0]}
+                                max={ranges[key][1]}
+                                step={getDynamicStep(ranges[key][0], ranges[key][1])}
+                                onChange={e =>
+                                    handleNumericChange(key, [
+                                        (filters[key] as [number, number])?.[0] || ranges[key][0],
+                                        Number(e.target.value),
+                                    ])
+                                }
+                                className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
+                            />
+                        </div>
                     </div>
-                </div>
+                )
             ))}
 
             {stringKeys.map(key => (
-                <div key={key}>
-                    <label htmlFor={key} className="block text-sm font-medium text-gray-700">
-                        {key}
-                    </label>
-                    <input
-                        id={key}
-                        type="text"
-                        value={(filters[key] as string) || ''}
-                        onChange={e => handleStringChange(key, e.target.value)}
-                        placeholder={`Filter by ${key}`}
-                        className="mt-1 block w-full border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
-                    />
-                </div>
+                visibleColumns.includes(key) && (
+                    <div key={key}>
+                        <label htmlFor={key} className="block text-sm font-medium text-gray-700">
+                            {key}
+                        </label>
+                        <input
+                            id={key}
+                            type="text"
+                            value={(filters[key] as string) || ''}
+                            onChange={e => handleStringChange(key, e.target.value)}
+                            placeholder={`Filter by ${key}`}
+                            className="mt-1 block w-full border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
+                        />
+                    </div>
+                )
             ))}
         </div>
     );
