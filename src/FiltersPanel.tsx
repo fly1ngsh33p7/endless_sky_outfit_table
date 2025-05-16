@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import type { Engine } from './App';
+import type { Engine, License } from './App';
 import * as Slider from '@radix-ui/react-slider';
 import './FiltersPanel.css';
 
@@ -7,6 +7,7 @@ import './FiltersPanel.css';
 export type Filters = { [key: string]: [number, number] | string };
 interface Props {
     engines: Engine[];
+    licenses: License[];
     filters: Filters;
     setFilters: React.Dispatch<React.SetStateAction<Filters>>;
     allKeys: string[];
@@ -30,7 +31,7 @@ const stringKeys = [
 ];
 
 
-export default function FiltersPanel({ engines, filters, setFilters, allKeys, visibleColumns, setVisibleColumns }: Props) {
+export default function FiltersPanel({ engines, licenses, filters, setFilters, allKeys, visibleColumns, setVisibleColumns }: Props) {
     const ranges = useMemo(() => {
         const map: Record<string, [number, number]> = {};
         numericKeys.forEach((key) => {
@@ -78,12 +79,27 @@ export default function FiltersPanel({ engines, filters, setFilters, allKeys, vi
                 </div>
             </div>
 
+            <div>
+                <h3 className="text-sm font-semibold mb-2">Licenses</h3>
+                <div className="grid grid-cols-2 gap-2">
+                    {licenses.map(license => (
+                        <label key={license.name} className="inline-flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                checked={visibleColumns.includes(license.name)}
+                                // onChange={() => toggleLicense(license.name)}
+                            />
+                            <span className="text-sm">{license.name}</span>
+                        </label>
+                    ))}
+                </div>
+            </div>
+
             {/* Numeric Range Filters */}
             {numericKeys.map((key) => (
                 <div key={key}>
                     <label className="block text-sm font-medium text-gray-700">{key}</label>
                     <Slider.Root
-                        // className="relative flex items-center w-full h-6 mt-1"
                         className="SliderRoot"
                         value={(filters[key] as [number, number]) || ranges[key]}
                         min={ranges[key][0]}
@@ -92,21 +108,17 @@ export default function FiltersPanel({ engines, filters, setFilters, allKeys, vi
                         onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
                     >
                         <Slider.Track
-                            // className="relative flex-1 h-2 bg-gray-200 rounded"
                             className="SliderTrack"
                         >
                             <Slider.Range
-                                // className="absolute h-full bg-blue-500 rounded" 
                                 className="SliderRange"
                             />
                         </Slider.Track>
                         <Slider.Thumb
-                            // className="w-s4 h-4 bg-white border border-gray-400 rounded-full shadow" 
                             className="SliderThumb"
                             aria-label="Volume"
                         />
                         <Slider.Thumb
-                            // className="w-4 h-4 bg-white border border-gray-400 rounded-full shadow"
                             className="SliderThumb"
                             aria-label="Volume"
                         />
