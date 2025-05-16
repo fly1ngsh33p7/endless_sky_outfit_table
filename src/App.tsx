@@ -20,15 +20,52 @@ export interface Engine {
     source?: string;
 }
 
+// export interface License {
+//     name: string,
+// }
+
 function App() {
     const [engines, setEngines] = useState<Engine[]>([]);
     const [filters, setFilters] = useState<Filters>({});
     const [visibleColumns, setVisibleColumns] = useState<string[]>([]);
 
+
     useEffect(() => {
-        fetch('/engines.json')
+        fetch('/outfits.json')
             .then(res => res.json())
-            .then((data: Engine[]) => setEngines(data));
+            .then((all: any) => {
+                const raw: any[] = all['Engines'] || [];                  // nur Engines-Block
+                const ignorePatterns = [
+                    'category',
+                    'thumbnail',
+                    '*flare*',
+                    '*flare*effect',
+                    '*afterburner*effect*',
+                    'description'
+                ];
+
+                // Hilfsfunktion: Wandelt ein Pattern mit '*' in einen Regex um und testet den Key
+                const matchesPattern = (key: string, pattern: string) =>
+                    new RegExp(                                         // neues Regex
+                        '^' +
+                        pattern                                         // Pattern escapen
+                            .replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&')    // Regex-Metazeichen escapen
+                            .replace(/\*/g, '.*')                       // '*' → '.*'
+                        + '$'
+                    ).test(key);                                        // Test auf Key
+
+                const cleaned = raw.map(item => {                         // für jedes Engine-Objekt
+                    const copy: any = { ...item };                        // flache Kopie
+                    Object.keys(copy).forEach(key => {                     // alle Keys durchgehen
+                        if (ignorePatterns.some(pat => matchesPattern(key, pat))) {
+                            delete copy[key];                              // löschen, wenn Pattern passt
+                        }
+                    });
+                    return copy;                                           // bereinigtes Objekt zurück
+                });
+
+                setEngines(cleaned as Engine[]);
+            })
     }, []);
 
     // Compute all unique keys from engines
@@ -96,7 +133,7 @@ function App() {
                     engines={engines}
                     filters={filters}
                     setFilters={setFilters}
-                    allKeys={allKeys}
+                    allKeys={allKeys.sort()}
                     visibleColumns={visibleColumns}
                     setVisibleColumns={setVisibleColumns}
                 />
