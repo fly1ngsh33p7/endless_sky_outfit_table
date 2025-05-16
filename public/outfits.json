@@ -22124,44 +22124,6 @@
     },
     {
       "category": "Guns",
-      "licenses": [
-        "Remnant",
-        "Test1",
-        "Test2"
-      ],
-      "cost": 471000,
-      "thumbnail": "outfit/inhibitor cannon",
-      "mass": 16,
-      "outfit space": -16.0,
-      "weapon capacity": -16.0,
-      "gun ports": -1.0,
-      "weapon": {
-        "sprite": {
-          "name": "projectile/inhibitor",
-          "frame rate": 10,
-          "\"no repeat\"": true
-        },
-        "sound": "inhibitor",
-        "\"hit effect\" \"inhibitor impact\" 3": true,
-        "inaccuracy": 0.5,
-        "velocity": 36,
-        "random velocity": 0.5,
-        "lifetime": 24,
-        "reload": 13,
-        "\"cluster\"": true,
-        "firing energy": 26,
-        "firing heat": 45.5,
-        "firing force": 13,
-        "shield damage": 26,
-        "hull damage": 19.5,
-        "hit force": 39,
-        "slowing damage": 0.5
-      },
-      "description": "Celebration Modules have long since become associated with the Coalition's great sporting events; trained Heliarch fightercraft engage in \"spectral dogfights,\" where the bright swathes of colour put on a great spectacle for the crowds during the downtime between athletic competitions.\n\n\tTo reduce potential complications with starlets colliding with ships, the rockets contain a small proximity sensor that forces them to explode a distance away from potential victims.",
-      "name": "Inhibitor Cannon"
-    },
-    {
-      "category": "Guns",
       "cost": 350000,
       "thumbnail": "outfit/overheated plasma cannon",
       "mass": 35,
@@ -66852,58 +66814,6 @@
       "steering flare sound": "atomic small",
       "description": "The Heliarch wanted more effiicent steering for their big ships, so this outfit was born.",
       "name": "Advanced Steering Module"
-    },
-    {
-      "cost": 75000,
-      "category": "Engines",
-      "thumbnail": "outfit/nitrogen afterburnner",
-      "mass": 15,
-      "outfit space": -5.0,
-      "engine capacity": -5.0,
-      "afterburner thrust": 15.8,
-      "afterburner fuel": 0.1,
-      "afterburner heat": 3.2,
-      "afterburner effect": "nitrogen afterburner",
-      "name": "Nitrogen Afterburnner"
-    },
-    {
-      "cost": 35400,
-      "category": "Engines",
-      "thumbnail": "outfit/medium rebels thruster",
-      "mass": 35,
-      "outfit space": -20.0,
-      "engine capacity": -35.0,
-      "thrust": 25.6,
-      "thrusting energy": 6.4,
-      "thrusting heat": 6.4,
-      "flare sprite\" \"effect/nitrogen flare/medium": {
-        "frame rate": 11
-      },
-      "flare sound": "atomic medium",
-      "name": "W-160 Nitrogen Thruster"
-    },
-    {
-      "category": "Engines",
-      "cost": 32648901230,
-      "thumbnail": "outfit/huge korath thruster",
-      "mass": 2120000000.0,
-      "outfit space": -2120000000.0,
-      "engine capacity": -2120000000.0,
-      "thrust": 3534000000.0,
-      "thrusting energy": 1580000.0,
-      "thrusting heat": 4260000.0,
-      "flare sprite\" \"effect/korath flare/huge": {
-        "frame rate": 6
-      },
-      "flare sound": "plasma huge",
-      "turn": 866500000000.0,
-      "turning energy": 820000.0,
-      "turning heat": 2670000.0,
-      "steering flare sprite\" \"effect/korath flare/huge": {
-        "frame rate": 6
-      },
-      "steering flare sound": "plasma huge",
-      "name": "HeVian-9 Engine"
     },
     {
       "plural": "Pug Akcorlo Engines",

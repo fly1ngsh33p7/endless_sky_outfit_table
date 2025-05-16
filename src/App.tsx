@@ -34,7 +34,8 @@ function App() {
         fetch('/outfits.json')
             .then(res => res.json())
             .then((all: any) => {
-                const raw: any[] = all['Engines'] || [];                  // nur Engines-Block
+                const raw: any[] = all['Engines'] || []; // only Engines
+
                 const ignorePatterns = [
                     'category',
                     'thumbnail',
@@ -44,28 +45,51 @@ function App() {
                     'description'
                 ];
 
-                // Hilfsfunktion: Wandelt ein Pattern mit '*' in einen Regex um und testet den Key
+                // 1) Wildcard-Pattern → RegExp (mit "i" für case-insensitive)
                 const matchesPattern = (key: string, pattern: string) =>
-                    new RegExp(                                         // neues Regex
+                    new RegExp(
                         '^' +
-                        pattern                                         // Pattern escapen
-                            .replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&')    // Regex-Metazeichen escapen
-                            .replace(/\*/g, '.*')                       // '*' → '.*'
-                        + '$'
-                    ).test(key);                                        // Test auf Key
+                        pattern
+                            .replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&') // escapen
+                            .replace(/\*/g, '.*')                    // * → .*
+                        + '$',
+                        'i' // <-- hier das i-Flag
+                    ).test(key);
 
-                const cleaned = raw.map(item => {                         // für jedes Engine-Objekt
-                    const copy: any = { ...item };                        // flache Kopie
-                    Object.keys(copy).forEach(key => {                     // alle Keys durchgehen
+                // 2) Feld-Transforms (Schlüssel in Lowercase hinterlegen)
+                const FIELD_TRANSFORMS: Record<string, (v: any) => any> = {
+                    'engine capacity': v => typeof v === 'number' ? -v : v,
+                    'outfit space': v => typeof v === 'number' ? -v : v,
+                };
+
+                const cleaned = raw.map(item => {
+                    const copy: any = { ...item };
+
+                    // a) Ignored keys löschen (case-insensitive)
+                    Object.keys(copy).forEach(key => {
                         if (ignorePatterns.some(pat => matchesPattern(key, pat))) {
-                            delete copy[key];                              // löschen, wenn Pattern passt
+                            delete copy[key];
                         }
                     });
-                    return copy;                                           // bereinigtes Objekt zurück
+
+                    // b) Transforms anwenden (case-insensitive key lookup)
+                    Object.entries(FIELD_TRANSFORMS).forEach(([field, fn]) => {
+                        const actualKey = Object.keys(copy)
+                            .find(k => k.toLowerCase() === field.toLowerCase());
+                        if (actualKey) {
+                            try {
+                                copy[actualKey] = fn(copy[actualKey]);
+                            } catch (err) {
+                                console.warn(`Transform error on ${actualKey}:`, err);
+                            }
+                        }
+                    });
+
+                    return copy;
                 });
 
                 setEngines(cleaned as Engine[]);
-            })
+            });
     }, []);
 
     // Compute all unique keys from engines
