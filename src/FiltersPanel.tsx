@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import type { Engine, License } from './App';
-import NumericFilter from './components/numericFilter/NumericFilter';
-
+import CheckboxFilter from './components/checkboxFilter/CheckboxFilter';
+import NumericFilters from './components/numericFilter/NumericFilters';
 
 export type Filters = { [key: string]: [number, number] | string };
 
@@ -52,7 +52,6 @@ export default function FiltersPanel({
     const handleStringChange = (key: string, value: string) =>
         setFilters(prev => ({ ...prev, [key]: value }));
     const resetFilters = () => setFilters({});
-
     const toggleColumn = (key: string) =>
         setVisibleColumns(prev =>
             prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
@@ -65,7 +64,7 @@ export default function FiltersPanel({
                 ? prev.filter(n => n !== name)
                 : [...prev, name]
         );
-    };
+    }
 
     const getDynamicStep = (min?: number, max?: number) => {
         if (min === undefined || max === undefined) return 1;
@@ -83,59 +82,40 @@ export default function FiltersPanel({
                 Reset Filters
             </button>
             <button
-                // onClick={showAll} //TODO:
                 className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
             >
                 Show All
             </button>
 
-            <div>
-                <h3 className="text-sm font-semibold mb-2">Columns</h3>
-                <div className="grid grid-cols-2 gap-2">
-                    {allKeys.map(key => (
-                        <label key={key} className="inline-flex items-center space-x-2">
-                            <input
-                                type="checkbox"
-                                checked={visibleColumns.includes(key)}
-                                onChange={() => toggleColumn(key)}
-                            />
-                            <span className="text-sm">{key}</span>
-                        </label>
-                    ))}
-                </div>
-            </div>
+            <CheckboxFilter
+                label="Columns"
+                options={allKeys.map(key => ({
+                    value: key,
+                    checked: visibleColumns.includes(key)
+                }))}
+                onToggle={toggleColumn}
+            />
 
-            <div>
-                <h3 className="text-sm font-semibold mb-2">Licenses</h3>
-                <div className="grid grid-cols-2 gap-2">
-                    {licenses
-                        .slice()
-                        .sort((a, b) => a.name.localeCompare(b.name))
-                        .map((license, index) => (
-                            <label key={`${license.name}-${index}`} className="inline-flex items-center space-x-2">
-                                <input
-                                    type="checkbox"
-                                    checked={selectedLicenses.includes(license.name)}
-                                    onChange={() => toggleLicense(license.name)}
-                                />
-                                <span className="text-sm">{String(license.name)}</span>
-                            </label>
-                        ))}
-                </div>
-            </div>
+            <CheckboxFilter
+                label="Licenses"
+                options={licenses
+                    .slice()
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .map(lic => ({
+                        value: lic.name,
+                        checked: selectedLicenses.includes(lic.name)
+                    }))}
+                onToggle={toggleLicense}
+            />
 
-            {numericKeys.map(key => (
-                visibleColumns.includes(key) && (
-                    <NumericFilter
-                        key={"numeric_filter-" + key}
-                        label={key}
-                        range={[ranges[key][0], ranges[key][1]]}
-                        value={(filters[key] as [number, number]) || ranges[key]}
-                        step={getDynamicStep(ranges[key][0], ranges[key][1])}
-                        onChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
-                    />
-                )
-            ))}
+            <NumericFilters
+                numericKeys={numericKeys}
+                visibleColumns={visibleColumns}
+                ranges={ranges}
+                filters={filters}
+                onChange={handleNumericChange}
+                getStep={getDynamicStep}
+            />
 
             {stringKeys.map(key => (
                 visibleColumns.includes(key) && (
