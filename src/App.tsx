@@ -6,13 +6,14 @@ export interface Engine {
 	name: string;
 	licenses?: string[] | string;
 	cost?: number;
-	thumbnail?: string;
 	mass?: number;
 	'outfit space'?: number;
 	'engine capacity'?: number;
+	thrust?: number;
 	turn?: number;
 	'turning energy'?: number;
 	'turning heat'?: number;
+	'thrust per capacity'?: number;
 }
 
 export interface License {
@@ -20,17 +21,15 @@ export interface License {
 	cost?: number;
 }
 
-// --- Hilfs-Konstanten und -Funktionen für das Post-Processing ---
+// --- Hilfs-Konstanten + Post-Processing ---
 const ignorePatterns = [
 	'category', 'thumbnail', '*flare*', '*afterburner*effect*', 'description', 'unplunderable',
 ];
-
 const matchesPattern = (key: string, pattern: string) =>
 	new RegExp(
 		'^' +
 		pattern.replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&').replace(/\*/g, '.*') +
-		'$',
-		'i'
+		'$', 'i'
 	).test(key);
 
 const engineFieldTransforms: Record<string, (v: any) => any> = {
@@ -38,22 +37,17 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Engine[] {
+function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
-		// a) Ignored keys entfernen
 		Object.keys(copy).forEach(k => {
-			if (ignorePatterns.some(p => matchesPattern(k, p))) {
-				delete copy[k];
-			}
+			if (ignorePatterns.some(p => matchesPattern(k, p))) delete copy[k];
 		});
-		// b) Feld-Transforms
 		Object.entries(engineFieldTransforms).forEach(([f, fn]) => {
-			const act = Object.keys(copy)
-				.find(k => k.toLowerCase() === f.toLowerCase());
+			const act = Object.keys(copy).find(k => k.toLowerCase() === f.toLowerCase());
 			if (act) copy[act] = fn(copy[act]);
 		});
-		return copy as Engine;
+		return copy;
 	});
 }
 
@@ -97,11 +91,20 @@ function App() {
 		fetch('/outfits.json')
 			.then(res => res.json())
 			.then((all: any) => {
-				const rawEngines: any[] = all['Engines'] || [];
-				setEngines(processEngines(rawEngines));
+				const rawEng = all['Engines'] || [];
+				// 1) Process engines, 2) compute thrust per capacity, 3) set state
+				const processed = processEngines(rawEng);
+				const withComputed: Engine[] = processed.map(e => ({
+					...e,
+					'thrust per capacity':
+						typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
+							? parseFloat((e.thrust / e['engine capacity']).toFixed(3))
+							: undefined
+				}));
+				setEngines(withComputed);
 
-				const rawLicenses: any[] = all['Licenses'] || [];
-				setLicenses(processLicenses(rawLicenses));
+				const rawLic = all['Licenses'] || [];
+				setLicenses(processLicenses(rawLic));
 			});
 	}, []);
 
@@ -112,28 +115,18 @@ function App() {
 		return Array.from(s);
 	}, [engines]);
 
-	// ---- Filtered Engines (inkl. Lizenz-Filter) ----
 	const filteredEngines = useMemo(() => {
-		return engines.filter(engine => {
-				if (selectedLicenses.length === 0) {
-					return true;
-				}
-				const lic = engine.licenses;
-				if (Array.isArray(lic)) {
-					// falls licenses ein Array ist
-					return lic.some(l => selectedLicenses.includes(l));
-				}
-				if (typeof lic === 'string') {
-					// falls nur ein String
-					return selectedLicenses.includes(lic);
-				}
-				// kein licenses-Feld → ausschließen
+		return engines
+			.filter(e => {
+				if (selectedLicenses.length === 0) return true;
+				const lic = e.licenses;
+				if (Array.isArray(lic)) return lic.some(l => selectedLicenses.includes(l));
+				if (typeof lic === 'string') return selectedLicenses.includes(lic);
 				return false;
 			})
-			// dann alle anderen Filter
-			.filter(engine =>
+			.filter(e =>
 				Object.entries(filters).every(([key, value]) => {
-					const v = (engine as any)[key];
+					const v = (e as any)[key];
 					if (value == null) return true;
 					if (Array.isArray(value) && typeof value[0] === 'number') {
 						if (typeof v !== 'number') return false;
@@ -152,7 +145,7 @@ function App() {
 	useEffect(() => {
 		const defaults = [
 			'name', 'cost', 'mass', 'outfit space', 'engine capacity',
-			'turn', 'turning energy', 'turning heat', 'slowing resistance'
+			'thrust per capacity', 'thrust', 'turn', 'reverse thrust',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
 	}, [allKeys]);

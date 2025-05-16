@@ -8,6 +8,7 @@ import {
     flexRender,
 } from '@tanstack/react-table';
 import type { Engine } from './App';
+import './EnginesTable.css';
 
 export interface EnginesTableProps {
     engines: Engine[];
@@ -91,14 +92,20 @@ export default function EnginesTable({
                                         header.getContext()
                                     )}
                                     <button
-                                        onClick={() => header.column.toggleSorting(false)}
+                                        onClick={() => {
+                                            header.column.toggleSorting(false);
+                                            console.log(`Column: ${header.column.id}, Direction: Ascending`);
+                                        }}
                                         className="text-gray-400 hover:text-gray-600"
                                         aria-label="Sort ascending"
                                     >
                                         ▲
                                     </button>
                                     <button
-                                        onClick={() => header.column.toggleSorting(true)}
+                                        onClick={() => {
+                                            header.column.toggleSorting(true);
+                                            console.log(`Column: ${header.column.id}, Direction: Descending`);
+                                        }}
                                         className="text-gray-400 hover:text-gray-600"
                                         aria-label="Sort descending"
                                     >
