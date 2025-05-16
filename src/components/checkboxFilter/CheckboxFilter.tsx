@@ -1,3 +1,7 @@
+// Datei: src/components/CheckboxFilter/CheckboxFilter.tsx
+import React from 'react';
+import './CheckboxFilter.css';
+
 interface CheckboxFilterProps {
     label: string;
     options: { value: string; checked: boolean }[];
@@ -10,17 +14,17 @@ export default function CheckboxFilter({
     onToggle
 }: CheckboxFilterProps) {
     return (
-        <div>
-            <h3 className="text-sm font-semibold mb-2">{label}</h3>
-            <div className="grid grid-cols-2 gap-2">
+        <div className="CheckboxFilter">
+            <h3 className="CheckboxFilterTitle">{label}</h3>
+            <div className="CheckboxFilterOptionsContainer">
                 {options.map(option => (
-                    <label key={option.value} className="inline-flex items-center space-x-2">
+                    <label className="CheckboxFilterOptionsLabel" key={option.value}>
                         <input
                             type="checkbox"
                             checked={option.checked}
                             onChange={() => onToggle(option.value)}
                         />
-                        <span className="text-sm">{option.value}</span>
+                        <span className="CheckboxFilterOptionsValue">{option.value}</span>
                     </label>
                 ))}
             </div>
