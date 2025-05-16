@@ -68,6 +68,13 @@ export default function FiltersPanel({
         );
     };
 
+    const getDynamicStep = (min?: number, max?: number) => {
+        if (min === undefined || max === undefined) return 1;
+        const range = max - min;
+        const magnitude = Math.pow(10, Math.floor(Math.log10(range)) - 1);
+        return Math.max(1, magnitude);
+    };
+
     return (
         <div className="space-y-6">
             <button
@@ -120,7 +127,7 @@ export default function FiltersPanel({
                         value={(filters[key] as [number, number]) || ranges[key]}
                         min={ranges[key][0]}
                         max={ranges[key][1]}
-                        step={1}
+                        step={getDynamicStep(ranges[key][0], ranges[key][1])}
                         onValueChange={(val: number[]) => handleNumericChange(key, [val[0], val[1]])}
                     >
                         <Slider.Track className="SliderTrack">
@@ -135,7 +142,7 @@ export default function FiltersPanel({
                             value={(filters[key] as [number, number])?.[0] || ranges[key][0]}
                             min={ranges[key][0]}
                             max={ranges[key][1]}
-                            step={1}
+                            step={getDynamicStep(ranges[key][0], ranges[key][1])}
                             onChange={e =>
                                 handleNumericChange(key, [
                                     Number(e.target.value),
@@ -150,7 +157,7 @@ export default function FiltersPanel({
                             value={(filters[key] as [number, number])?.[1] || ranges[key][1]}
                             min={ranges[key][0]}
                             max={ranges[key][1]}
-                            step={1}
+                            step={getDynamicStep(ranges[key][0], ranges[key][1])}
                             onChange={e =>
                                 handleNumericChange(key, [
                                     (filters[key] as [number, number])?.[0] || ranges[key][0],

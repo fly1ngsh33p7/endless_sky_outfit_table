@@ -9,3 +9,7 @@ Lizenzen:
 
 Spalten:
     - je Energie, Heat und so gruppieren statt einzeln für Turn und so (also wenn was mit mehreren ist, dann sonderbehandlung)
+
+
+Vergleich:
+    - checkboxen als erste Spalte, Button zum applien von einem Filter dafür ('name in list' oder so)

@@ -13,7 +13,6 @@ import './EnginesTable.css';
 export interface EnginesTableProps {
     engines: Engine[];
     visibleColumns: string[];
-    selectedLicenses: string[];
 }
 
 // Utility to title-case column headers
@@ -26,7 +25,6 @@ const toHeader = (key: string) =>
 export default function EnginesTable({
     engines,
     visibleColumns,
-    selectedLicenses,
 }: EnginesTableProps) {
     //  Dynamisch ermitteln, welche Columns numeric sind:
     //    Eine Column gilt als numeric, wenn in filteredData mindestens ein Wert an dieser Column eine number ist.

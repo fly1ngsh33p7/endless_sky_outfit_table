@@ -14,6 +14,7 @@ export interface Engine {
 	'reverse thrust'?: number;
 	'turning energy'?: number;
 	'turning heat'?: number;
+	'thrust+turn per capacity'?: number;
 	'thrust per capacity'?: number;
 	'turn per capacity'?: number;
 	'reverse thrust per capacity'?: number;
@@ -40,7 +41,7 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity'>[] {
+function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
@@ -111,6 +112,10 @@ function App() {
 						typeof e['reverse thrust'] === 'number' && typeof e['engine capacity'] === 'number'
 							? parseFloat((e['reverse thrust'] / e['engine capacity']).toFixed(3))
 							: undefined,
+					'thrust+turn per capacity':
+						typeof e.thrust === 'number' && typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
+							? parseFloat(((e.turn + e.thrust) / e['engine capacity']).toFixed(3))
+							: undefined,
 				}));
 				setEngines(withComputed);
 
@@ -155,7 +160,7 @@ function App() {
 	// --- Sichtbare Spalten initial füllen ---
 	useEffect(() => {
 		const defaults = [
-			'name', 'cost', 'mass', 'outfit space', 'engine capacity',
+			'name', 'cost', 'mass', 'outfit space', 'engine capacity', 'thrust+turn per capacity',
 			'thrust per capacity', 'turn per capacity', 'reverse thrust per capacity','thrust', 'turn', 'reverse thrust', 'licenses',
 		];
 		setVisibleColumns(defaults.filter(k => allKeys.includes(k)));
@@ -186,7 +191,6 @@ function App() {
 				<EnginesTable
 					engines={filteredEngines}
 					visibleColumns={visibleColumns}
-					selectedLicenses={selectedLicenses}
 				/>
 			</main>
 		</div>
