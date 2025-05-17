@@ -1,6 +1,6 @@
 import type { Engine } from "../../App";
 import EnginesTable from "../../EnginesTable";
-import './ComparisonPanel.css';
+import Panel from "../panel/Panel";
 
 interface ComparisonPanelProps {
     engines: Engine[];
@@ -12,8 +12,7 @@ export default function ComparisonPanel({
     visibleColumns,
 }: ComparisonPanelProps) {
     return (
-        <div className="panel">
-            ComparisonPanel
+        <Panel heading="Compare">
             { engines.length > 0
                 ?   <EnginesTable
                         engines={engines}
@@ -21,6 +20,6 @@ export default function ComparisonPanel({
                     />
                 : <p>No outfits added to compare</p>
             }
-        </div>
+        </Panel>
     );
 }

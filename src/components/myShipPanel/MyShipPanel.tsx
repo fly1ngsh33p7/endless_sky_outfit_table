@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Engine } from '../../App';
-import './MyShipPanel.css';
 import EnginesTable from '../../EnginesTable';
+import Panel from '../panel/Panel';
 
 interface MyShipPanelProps {
     engines: Engine[];
@@ -37,10 +37,7 @@ export default function MyShipPanel({
     }
 
     return (
-        <div className="panel">
-            MyShipPanel
-
-
+        <Panel heading={"MyShip"}>
             <label className="space-x-2 mt-2 ml-2">
                 <button
                     onClick={resetShip}
@@ -86,6 +83,6 @@ export default function MyShipPanel({
                     className="w-20 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring"
                 />
             </label>
-        </div>
+        </Panel>
     );
 }

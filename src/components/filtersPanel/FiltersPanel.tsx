@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import type { Engine, License } from '../../App';
 import CheckboxFilter from '../checkboxFilter/CheckboxFilter';
 import NumericFilters from '../numericFilter/NumericFilters';
-import './FiltersPanel.css';
+import Panel from '../panel/Panel';
 
 export type Filters = { [key: string]: [number, number] | string };
 
@@ -75,7 +75,7 @@ export default function FiltersPanel({
     };
 
     return (
-        <div className="panel space-y-6">
+        <Panel heading={"Filters"}>
             <button
                 onClick={resetFilters}
                 className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
@@ -136,6 +136,6 @@ export default function FiltersPanel({
                     </div>
                 )
             ))}
-        </div>
+        </Panel>
     );
 }
