@@ -5,14 +5,16 @@ import Panel from "../panel/Panel";
 interface ComparisonPanelProps {
     engines: Engine[];
     visibleColumns: string[];
+    startOpen?: boolean;
 }
 
 export default function ComparisonPanel({
     engines,
     visibleColumns,
+    startOpen,
 }: ComparisonPanelProps) {
     return (
-        <Panel heading="Compare">
+        <Panel heading="Compare" startOpen={startOpen}>
             { engines.length > 0
                 ?   <EnginesTable
                         engines={engines}

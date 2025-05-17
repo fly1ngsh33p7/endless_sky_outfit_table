@@ -3,7 +3,7 @@
 /* Haupt-Table-Styling */
 .EnginesTable {
     width: 100%;
-    min-width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     border: 1px solid lightgray;
     margin: 1em;

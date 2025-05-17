@@ -218,13 +218,15 @@ function App() {
 					allKeys={allKeys.sort()}
 					visibleColumns={visibleColumns}
 					setVisibleColumns={setVisibleColumns}
+					startOpen={false}
 				/>
 
-				<MyShipPanel engines={myShipEngines} setEngines={setMyShipEngines} visibleColumns={visibleColumns} />
+				<MyShipPanel engines={myShipEngines} setEngines={setMyShipEngines} visibleColumns={visibleColumns} startOpen={false} />
 
 				<ComparisonPanel 
 					engines={enginesToCompare}
 					visibleColumns={visibleColumns}
+					startOpen={false}
 				/>
 			</aside>
 			<main className="flex-1 p-4 overflow-auto">

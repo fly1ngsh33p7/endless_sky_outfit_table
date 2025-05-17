@@ -16,13 +16,14 @@ interface Props {
     allKeys: string[];
     visibleColumns: string[];
     setVisibleColumns: React.Dispatch<React.SetStateAction<string[]>>;
+    startOpen?: boolean;
 }
 
 export default function FiltersPanel({
     engines, licenses,
     selectedLicenses, setSelectedLicenses,
     filters, setFilters,
-    allKeys, visibleColumns, setVisibleColumns
+    allKeys, visibleColumns, setVisibleColumns, startOpen
 }: Props) {
     const numericKeys = useMemo(() => {
         return allKeys.filter(key =>
@@ -75,7 +76,7 @@ export default function FiltersPanel({
     };
 
     return (
-        <Panel heading={"Filters"}>
+        <Panel heading={"Filters"} startOpen={startOpen}>
             <button
                 onClick={resetFilters}
                 className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"

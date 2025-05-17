@@ -7,12 +7,14 @@ interface MyShipPanelProps {
     engines: Engine[];
     visibleColumns: string[];
     setEngines: React.Dispatch<React.SetStateAction<Engine[]>>;
+    startOpen?: boolean;
 }
 
 export default function MyShipPanel({
     engines,
     visibleColumns,
     setEngines,
+    startOpen,
 }: MyShipPanelProps) {
     const [otherwiseOccupied, setOtherwiseOccupied] = useState<number>(0);
     const [maxOutfitSpace, setMaxOutfitSpace] = useState<number>(100);
@@ -37,7 +39,7 @@ export default function MyShipPanel({
     }
 
     return (
-        <Panel heading={"MyShip"}>
+        <Panel heading={"MyShip"} startOpen={startOpen}>
             <label className="space-x-2 mt-2 ml-2">
                 <button
                     onClick={resetShip}

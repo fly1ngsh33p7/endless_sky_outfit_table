@@ -4,10 +4,11 @@ import './Panel.css';
 interface PanelProps {
     heading: string;
     children: React.ReactNode;
+    startOpen?: boolean;
 }
 
-export default function Panel({ heading, children }: PanelProps) {
-    const [isOpen, setIsOpen] = useState(true);
+export default function Panel({ heading, children, startOpen = true }: PanelProps) {
+    const [isOpen, setIsOpen] = useState(startOpen);
 
     const togglePanel = () => setIsOpen(!isOpen);
 
