@@ -1,4 +1,3 @@
-// Datei: src/components/CheckboxFilter/CheckboxFilter.tsx
 import './CheckboxFilter.css';
 
 interface CheckboxFilterProps {

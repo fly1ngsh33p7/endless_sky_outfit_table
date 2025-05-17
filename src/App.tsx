@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import FiltersPanel, { type Filters } from './FiltersPanel';
 import EnginesTable from './EnginesTable';
+import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
 
 export interface License {
 	name: string;
@@ -85,6 +86,7 @@ function App() {
 	const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 	const [filters, setFilters] = useState<Filters>({});
 	const [visibleColumns, setVisibleColumns] = useState<string[]>([]);
+	const [enginesToCompare, setEnginesToCompare] = useState<Engine[]>([]);
 
 	// --- Daten laden + in echte License-Objekte umwandeln + in Engines mappen ---
 	useEffect(() => {
@@ -215,11 +217,17 @@ function App() {
 					visibleColumns={visibleColumns}
 					setVisibleColumns={setVisibleColumns}
 				/>
+				<ComparisonPanel 
+					engines={enginesToCompare}
+					visibleColumns={visibleColumns}
+				/>
 			</aside>
 			<main className="flex-1 p-4 overflow-auto">
 				<EnginesTable
 					engines={filteredEngines}
 					visibleColumns={visibleColumns}
+					enginesToCompare={enginesToCompare}
+					setEnginesToCompare={setEnginesToCompare}
 				/>
 			</main>
 		</div>

@@ -13,10 +13,11 @@ import './EnginesTable.css';
 export interface EnginesTableProps {
     engines: Engine[];
     visibleColumns: string[];
+    enginesToCompare?: Engine[];
     setEnginesToCompare?: React.Dispatch<React.SetStateAction<Engine[]>>;
 }
 
-// Utility to title-case column headers
+// Hilfsfunktion: Schlüssel in Titel-Format umwandeln
 const toHeader = (key: string) =>
     key
         .split(/\s+/)
@@ -26,9 +27,10 @@ const toHeader = (key: string) =>
 export default function EnginesTable({
     engines,
     visibleColumns,
+    enginesToCompare,
     setEnginesToCompare,
 }: EnginesTableProps) {
-    // Dynamisch erkennen, welche Columns numeric sind
+    // Ermittelt, welche Spalten numerisch sind
     const numericColumns = useMemo<Set<string>>(() => {
         const set = new Set<string>();
         visibleColumns.forEach(key => {
@@ -39,74 +41,86 @@ export default function EnginesTable({
         return set;
     }, [visibleColumns, engines]);
 
-    // 3) Spalten-Definitionen mit angepasster cell-Renderer
-    const columns = useMemo<ColumnDef<Engine>[]>(
-        () =>
-            visibleColumns.map(key => {
-                const isNumeric = numericColumns.has(key);
-                return {
-                    accessorKey: key,
-                    header: () => <span>{toHeader(key)}</span>,
-                    sortingFn: isNumeric
-                        ? (rowA, rowB, columnId) => {
-                            const a = rowA.getValue<number>(columnId) ?? 0;
-                            const b = rowB.getValue<number>(columnId) ?? 0;
-                            return a - b;
+    // Spalten-Definition inkl. optionaler Select-Spalte
+    const columns = useMemo<ColumnDef<Engine>[]>(() => {
+        // Basis-Spalten
+        const baseCols = visibleColumns.map(key => {
+            const isNumeric = numericColumns.has(key);
+            return {
+                accessorKey: key,
+                header: () => <span>{toHeader(key)}</span>,
+                sortingFn: isNumeric
+                    ? (rowA, rowB, columnId) => {
+                        const a = rowA.getValue<number>(columnId) ?? 0;
+                        const b = rowB.getValue<number>(columnId) ?? 0;
+                        return a - b;
+                    }
+                    : 'auto',
+                cell: info => {
+                    const val = info.getValue();
+                    if (val == null) return null;
+
+                    if (Array.isArray(val)) {
+                        if (
+                            val.length > 0 &&
+                            typeof val[0] === 'object' &&
+                            'name' in (val[0] as License)
+                        ) {
+                            const names = (val as License[]).map(l => l.name);
+                            return <span>{names.join(', ')}</span>;
                         }
-                        : 'auto',
-                    cell: info => {
-                        const val = info.getValue();
-                        if (val == null) return null;
+                        return <span>{val.join(', ')}</span>;
+                    }
 
-                        // Wenn ein Array vorliegt
-                        if (Array.isArray(val)) {
-                            // Array von License-Objekten?
-                            if (val.length > 0 && typeof val[0] === 'object' && 'name' in (val[0] as License)) {
-                                const names = (val as License[]).map(l => l.name);
-                                return <span>{names.join(', ')}</span>;
-                            }
-                            // Sonst Array von Strings oder Zahlen
-                            return <span>{val.join(', ')}</span>;
-                        }
+                    return <span>{String(val)}</span>;
+                },
+                sortUndefined: 'last',
+            } as ColumnDef<Engine>;
+        });
 
-                        // Alle anderen Typen als String ausgeben
-                        return <span>{String(val)}</span>;
-                    },
-                    sortUndefined: 'last',
-                } as ColumnDef<Engine>;
-            });
+        // Wenn Vergleiche aktiviert sind, ganz links eine Sortier-Spalte ergänzen
+        if (setEnginesToCompare) {
+            const selectCol: ColumnDef<Engine> = {
+                id: 'select',
+                header: () => <span></span>, // leerer Header
+                // Rückgabe, ob die Zeile aktuell ausgewählt ist
+                accessorFn: row => enginesToCompare?.includes(row) ?? false,
+                // Sorgt dafür, dass unchecked (false) vor checked (true) stehen
+                sortingFn: (rowA, rowB, columnId) => {
+                    const a = rowA.getValue<boolean>(columnId) ? 1 : 0;
+                    const b = rowB.getValue<boolean>(columnId) ? 1 : 0;
+                    return a - b;
+                },
+                // Checkbox mit Checked-State
+                cell: ({ row }) => (
+                    <input
+                        type="checkbox"
+                        checked={enginesToCompare?.includes(row.original) ?? false}
+                        onChange={() => {
+                            setEnginesToCompare(prev =>
+                                prev.includes(row.original)
+                                    ? prev.filter(e => e !== row.original)
+                                    : [...prev, row.original]
+                            );
+                        }}
+                    />
+                ),
+            };
+            return [selectCol, ...baseCols];
+        }
 
-            // Falls setEnginesToCompare bereitsteht, eine Select-Spalte ergänzen
-            if (setEnginesToCompare) {
-                const selectCol: ColumnDef<Engine> = {
-                    id: 'select',
-                    header: () => <span></span>, // leerer Header
-                    sortingFn: 'auto',
-                    cell: ({ row }) => (
-                        <input
-                            type="checkbox"
-                            onChange={() => {
-                                setEnginesToCompare(prev =>
-                                    prev.includes(row.original)
-                                        ? prev.filter(e => e !== row.original)
-                                        : [...prev, row.original]
-                                );
-                            }}
-                        />
-                    ),
-                };
-                return [selectCol, ...baseCols];
-            }
+        return baseCols;
+    }, [
+        visibleColumns,
+        numericColumns,
+        enginesToCompare,
+        setEnginesToCompare,
+    ]);
 
-            return baseCols;
-        },
-        [visibleColumns, numericColumns, setEnginesToCompare]
-    );
-
-    // 4) Sorting state
+    // Sortier-Zustand
     const [sorting, setSorting] = useState<SortingState>([]);
 
-    // 5) Table-Instanz
+    // Table-Instanz erzeugen
     const table = useReactTable<Engine>({
         data: engines,
         columns,
@@ -116,7 +130,6 @@ export default function EnginesTable({
         getSortedRowModel: getSortedRowModel(),
     });
 
-    // Render
     return (
         <>
             <table className="EnginesTable">
