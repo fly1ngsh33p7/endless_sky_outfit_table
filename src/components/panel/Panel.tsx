@@ -15,6 +15,7 @@ export default function Panel({ heading, children, startOpen = true, trigger, do
     const togglePanel = () => setIsOpen(!isOpen);
 
     useEffect(() => {
+        // FIXME: might disregard startOpen = false
         if (!dontTrigger && trigger !== undefined) {
             setIsOpen(true);
         }

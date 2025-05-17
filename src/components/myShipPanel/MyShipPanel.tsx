@@ -21,6 +21,8 @@ export default function MyShipPanel({
     const [otherwiseOccupied, setOtherwiseOccupied] = useState<number>(0);
     const [maxOutfitSpace, setMaxOutfitSpace] = useState<number>(100);
 
+    const [amounts, setAmounts] = useState<[number,Engine][]>([]);
+
     const currentyOccupiedOutfitSpace = useMemo(() => {
         // sum the engines, add otherwiseOccupied outfit space
         return engines.reduce((total, engine) => total + (engine['outfit space'] || 0), otherwiseOccupied);
@@ -52,7 +54,7 @@ export default function MyShipPanel({
             </label>
 
             {engines.length > 0 
-                ?  <EnginesTable engines={engines} visibleColumns={visibleColumns} />
+                ?  <EnginesTable engines={engines} visibleColumns={visibleColumns} amounts={amounts} setAmounts={setAmounts}/>
                 : <p>No Engines added</p>
             }
 

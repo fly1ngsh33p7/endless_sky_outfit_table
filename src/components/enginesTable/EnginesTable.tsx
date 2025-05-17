@@ -17,6 +17,8 @@ export interface EnginesTableProps {
     myShipEngines?: Engine[];
     setEnginesToCompare?: React.Dispatch<React.SetStateAction<Engine[]>>;
     setMyShipEngines?: React.Dispatch<React.SetStateAction<Engine[]>>;
+    amounts?: [number, Engine][];
+    setAmounts?: React.Dispatch<React.SetStateAction<[number, Engine][]>>;
 }
 
 // Hilfsfunktion: Schlüssel in Titel-Format umwandeln
@@ -33,6 +35,8 @@ export default function EnginesTable({
     myShipEngines,
     setEnginesToCompare,
     setMyShipEngines,
+    amounts,
+    setAmounts,
 }: EnginesTableProps) {
     // Ermittelt, welche Spalten numerisch sind
     const numericColumns = useMemo<Set<string>>(() => {
@@ -45,7 +49,7 @@ export default function EnginesTable({
         return set;
     }, [visibleColumns, engines]);
 
-    // Spalten-Definition inkl. optionaler Select-Spalte
+    // Spalten-Definition inkl. optionaler Select- und Amount-Spalte
     const columns = useMemo<ColumnDef<Engine>[]>(() => {
         // Basis-Spalten
         const baseCols = visibleColumns.map(key => {
@@ -55,15 +59,14 @@ export default function EnginesTable({
                 header: () => <span>{toHeader(key)}</span>,
                 sortingFn: isNumeric
                     ? (rowA, rowB, columnId) => {
-                        const a = rowA.getValue<number>(columnId) ?? 0;
-                        const b = rowB.getValue<number>(columnId) ?? 0;
-                        return a - b;
-                    }
+                            const a = rowA.getValue<number>(columnId) ?? 0;
+                            const b = rowB.getValue<number>(columnId) ?? 0;
+                            return a - b;
+                        }
                     : 'auto',
                 cell: info => {
                     const val = info.getValue();
                     if (val == null) return null;
-
                     if (Array.isArray(val)) {
                         if (
                             val.length > 0 &&
@@ -75,7 +78,6 @@ export default function EnginesTable({
                         }
                         return <span>{val.join(', ')}</span>;
                     }
-
                     return <span>{String(val)}</span>;
                 },
                 sortUndefined: 'last',
@@ -147,6 +149,49 @@ export default function EnginesTable({
             displayCols = [selectCol, ...displayCols];
         }
 
+        if (setAmounts) {
+            const amountCol: ColumnDef<Engine> = {
+                id: 'amount',
+                header: () => <span>Amount</span>,
+                cell: ({ row }) => {
+                    const key = row.original.name;
+                    const entry = amounts?.find(([, eng]) => eng.name === key);
+                    const val = entry?.[0] ?? 0;
+                    return (
+                        <input
+                            key={"amount-" + key}
+                            type="number"
+                            min={0}
+                            value={val}
+                            onChange={e => {
+                                const newVal = Number(e.target.value);
+                                setAmounts(prev => {
+                                    const next = prev ? [...prev] : [];
+                                    const idx = next.findIndex(([, eng]) => eng.name === key);
+                                    if (newVal > 0) {
+                                        if (idx >= 0) next[idx] = [newVal, row.original];
+                                        else next.push([newVal, row.original]);
+                                    } else if (idx >= 0) {
+                                        next.splice(idx, 1);
+                                    }
+                                    return next;
+                                });
+                            }}
+                            className="w-16 px-1 py-0.5 border border-gray-300 rounded"
+                        />
+                    );
+                },
+                sortingFn: (rowA, rowB) => {
+                    const aKey = rowA.original.name;
+                    const bKey = rowB.original.name;
+                    const aVal = amounts?.find(([, engine]) => engine.name === aKey)?.[0] ?? 0;
+                    const bVal = amounts?.find(([, engine]) => engine.name === bKey)?.[0] ?? 0;
+                    return aVal - bVal;
+                },
+            };
+            displayCols = [amountCol, ...displayCols];
+        }
+
         return displayCols;
     }, [
         visibleColumns,
@@ -155,6 +200,8 @@ export default function EnginesTable({
         myShipEngines,
         setEnginesToCompare,
         setMyShipEngines,
+        amounts,
+        setAmounts,
     ]);
 
     // Sortier-Zustand
