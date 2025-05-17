@@ -233,6 +233,8 @@ function App() {
 					visibleColumns={visibleColumns}
 					enginesToCompare={enginesToCompare}
 					setEnginesToCompare={setEnginesToCompare}
+					myShipEngines={myShipEngines}
+					setMyShipEngines={setMyShipEngines}
 				/>
 			</main>
 		</div>

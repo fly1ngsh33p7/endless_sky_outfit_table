@@ -14,7 +14,9 @@ export interface EnginesTableProps {
     engines: Engine[];
     visibleColumns: string[];
     enginesToCompare?: Engine[];
+    myShipEngines?: Engine[];
     setEnginesToCompare?: React.Dispatch<React.SetStateAction<Engine[]>>;
+    setMyShipEngines?: React.Dispatch<React.SetStateAction<Engine[]>>;
 }
 
 // Hilfsfunktion: Schlüssel in Titel-Format umwandeln
@@ -28,7 +30,9 @@ export default function EnginesTable({
     engines,
     visibleColumns,
     enginesToCompare,
+    myShipEngines,
     setEnginesToCompare,
+    setMyShipEngines,
 }: EnginesTableProps) {
     // Ermittelt, welche Spalten numerisch sind
     const numericColumns = useMemo<Set<string>>(() => {
@@ -78,11 +82,44 @@ export default function EnginesTable({
             } as ColumnDef<Engine>;
         });
 
+        let displayCols = baseCols;
+
+        if (setMyShipEngines) {
+            const myShipCol: ColumnDef<Engine> = {
+                id: 'myShipSelect',
+                header: () => <span>Add to MyShip</span>,
+                // Rückgabe, ob die Zeile aktuell ausgewählt ist
+                accessorFn: row => myShipEngines?.includes(row) ?? false,
+                // Sorgt dafür, dass unchecked (false) vor checked (true) stehen
+                sortingFn: (rowA, rowB, columnId) => {
+                    const a = rowA.getValue<boolean>(columnId) ? 1 : 0;
+                    const b = rowB.getValue<boolean>(columnId) ? 1 : 0;
+                    return a - b;
+                },
+                // Checkbox mit Checked-State
+                cell: ({ row }) => (
+                    <input
+                        key={"setMyShipEngines-" + row.id}
+                        type="checkbox"
+                        checked={myShipEngines?.includes(row.original) ?? false}
+                        onChange={() => {
+                            setMyShipEngines(prev =>
+                                prev.includes(row.original)
+                                    ? prev.filter(e => e !== row.original)
+                                    : [...prev, row.original]
+                            );
+                        }}
+                    />
+                ),
+            };
+            displayCols = [myShipCol, ...displayCols];
+        }
+
         // Wenn Vergleiche aktiviert sind, ganz links eine Sortier-Spalte ergänzen
         if (setEnginesToCompare) {
             const selectCol: ColumnDef<Engine> = {
                 id: 'select',
-                header: () => <span></span>, // leerer Header
+                header: () => <span>Compare</span>,
                 // Rückgabe, ob die Zeile aktuell ausgewählt ist
                 accessorFn: row => enginesToCompare?.includes(row) ?? false,
                 // Sorgt dafür, dass unchecked (false) vor checked (true) stehen
@@ -94,6 +131,7 @@ export default function EnginesTable({
                 // Checkbox mit Checked-State
                 cell: ({ row }) => (
                     <input
+                        key={"setEnginesToCompare-" + row.id}
                         type="checkbox"
                         checked={enginesToCompare?.includes(row.original) ?? false}
                         onChange={() => {
@@ -106,15 +144,17 @@ export default function EnginesTable({
                     />
                 ),
             };
-            return [selectCol, ...baseCols];
+            displayCols = [selectCol, ...displayCols];
         }
 
-        return baseCols;
+        return displayCols;
     }, [
         visibleColumns,
         numericColumns,
         enginesToCompare,
+        myShipEngines,
         setEnginesToCompare,
+        setMyShipEngines,
     ]);
 
     // Sortier-Zustand
