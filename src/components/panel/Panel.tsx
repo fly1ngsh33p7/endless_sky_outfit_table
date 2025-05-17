@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Panel.css';
 
 interface PanelProps {
     heading: string;
     children: React.ReactNode;
     startOpen?: boolean;
+    trigger?: unknown;
+    dontTrigger?: boolean;
 }
 
-export default function Panel({ heading, children, startOpen = true }: PanelProps) {
+export default function Panel({ heading, children, startOpen = true, trigger, dontTrigger = true }: PanelProps) {
     const [isOpen, setIsOpen] = useState(startOpen);
 
     const togglePanel = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        if (!dontTrigger && trigger !== undefined) {
+            setIsOpen(true);
+        }
+    }, [trigger]);
 
     return (
         <div className="panel">

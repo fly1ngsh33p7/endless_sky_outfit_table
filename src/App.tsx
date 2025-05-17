@@ -221,7 +221,7 @@ function App() {
 					startOpen={false}
 				/>
 
-				<MyShipPanel engines={myShipEngines} setEngines={setMyShipEngines} visibleColumns={visibleColumns} startOpen={false} />
+				<MyShipPanel engines={myShipEngines} setEngines={setMyShipEngines} visibleColumns={visibleColumns} startOpen={false} dontTrigger/>
 
 				<ComparisonPanel 
 					engines={enginesToCompare}
