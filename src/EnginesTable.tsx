@@ -13,6 +13,7 @@ import './EnginesTable.css';
 export interface EnginesTableProps {
     engines: Engine[];
     visibleColumns: string[];
+    setEnginesToCompare?: React.Dispatch<React.SetStateAction<Engine[]>>;
 }
 
 // Utility to title-case column headers
@@ -25,6 +26,7 @@ const toHeader = (key: string) =>
 export default function EnginesTable({
     engines,
     visibleColumns,
+    setEnginesToCompare,
 }: EnginesTableProps) {
     // Dynamisch erkennen, welche Columns numeric sind
     const numericColumns = useMemo<Set<string>>(() => {
@@ -72,8 +74,33 @@ export default function EnginesTable({
                     },
                     sortUndefined: 'last',
                 } as ColumnDef<Engine>;
-            }),
-        [visibleColumns, numericColumns]
+            });
+
+            // Falls setEnginesToCompare bereitsteht, eine Select-Spalte ergänzen
+            if (setEnginesToCompare) {
+                const selectCol: ColumnDef<Engine> = {
+                    id: 'select',
+                    header: () => <span></span>, // leerer Header
+                    sortingFn: 'auto',
+                    cell: ({ row }) => (
+                        <input
+                            type="checkbox"
+                            onChange={() => {
+                                setEnginesToCompare(prev =>
+                                    prev.includes(row.original)
+                                        ? prev.filter(e => e !== row.original)
+                                        : [...prev, row.original]
+                                );
+                            }}
+                        />
+                    ),
+                };
+                return [selectCol, ...baseCols];
+            }
+
+            return baseCols;
+        },
+        [visibleColumns, numericColumns, setEnginesToCompare]
     );
 
     // 4) Sorting state
