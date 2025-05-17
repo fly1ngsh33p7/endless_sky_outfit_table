@@ -1,4 +1,4 @@
-import type { Filters } from '../../FiltersPanel';
+import type { Filters } from '../filtersPanel/FiltersPanel';
 import NumericFilter from '../numericFilter/NumericFilter';
 
 interface NumericFiltersProps {

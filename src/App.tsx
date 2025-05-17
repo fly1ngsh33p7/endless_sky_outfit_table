@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import FiltersPanel, { type Filters } from './FiltersPanel';
+import FiltersPanel, { type Filters } from './components/filtersPanel/FiltersPanel';
 import EnginesTable from './EnginesTable';
 import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
+import MyShipPanel from './components/myShipPanel/MyShipPanel';
 
 export interface License {
 	name: string;
@@ -81,6 +82,7 @@ function processLicenses(raw: any[]): License[] {
 
 function App() {
 	const [engines, setEngines] = useState<Engine[]>([]);
+	const [myShipEngines, setMyShipEngines] = useState<Engine[]>([]);
 	const [licenses, setLicenses] = useState<License[]>([]);
 	const [relevantLicenses, setRelevantLicenses] = useState<License[]>([]);
 	const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
@@ -204,7 +206,7 @@ function App() {
 	}, [allKeys]);
 
 	return (
-		<div className="flex flex-col md:flex-row h-screen">
+		<div className="app flex flex-col md:flex-row h-screen">
 			<aside className="w-full md:w-1/4 p-4 overflow-auto border-r">
 				<FiltersPanel
 					engines={engines}
@@ -217,6 +219,9 @@ function App() {
 					visibleColumns={visibleColumns}
 					setVisibleColumns={setVisibleColumns}
 				/>
+
+				<MyShipPanel engines={myShipEngines} setEngines={setMyShipEngines} visibleColumns={visibleColumns} />
+
 				<ComparisonPanel 
 					engines={enginesToCompare}
 					visibleColumns={visibleColumns}
