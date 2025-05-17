@@ -7,7 +7,7 @@ import {
     getSortedRowModel,
     flexRender,
 } from '@tanstack/react-table';
-import type { Engine, License } from './App';
+import type { Engine, License } from '../../App';
 import './EnginesTable.css';
 
 export interface EnginesTableProps {

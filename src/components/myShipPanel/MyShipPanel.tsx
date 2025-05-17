@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { Engine } from '../../App';
-import EnginesTable from '../../EnginesTable';
+import EnginesTable from '../enginesTable/EnginesTable';
 import Panel from '../panel/Panel';
 
 interface MyShipPanelProps {

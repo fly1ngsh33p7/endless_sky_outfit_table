@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import FiltersPanel, { type Filters } from './components/filtersPanel/FiltersPanel';
-import EnginesTable from './EnginesTable';
+import EnginesTable from './components/enginesTable/EnginesTable';
 import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
 import MyShipPanel from './components/myShipPanel/MyShipPanel';
 
