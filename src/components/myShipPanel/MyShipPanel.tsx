@@ -40,6 +40,7 @@ export default function MyShipPanel({
         setOtherwiseOccupied(0);
         setMaxOutfitSpace(100);
         setEngines([]);
+        setAmounts([]);
     }
 
     return (

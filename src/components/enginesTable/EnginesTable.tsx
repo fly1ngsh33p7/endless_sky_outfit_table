@@ -35,10 +35,15 @@ export default function EnginesTable({
     myShipEngines,
     setEnginesToCompare,
     setMyShipEngines,
-    amounts,
+    amounts = [],
     setAmounts,
 }: EnginesTableProps) {
-    // Ermittelt, welche Spalten numerisch sind
+    // Find amount for an engine
+    const getAmount = (engine: Engine) => {
+        const entry = amounts.find(([, eng]) => eng === engine);
+        return entry ? entry[0] : 1;
+    };
+
     const numericColumns = useMemo<Set<string>>(() => {
         const set = new Set<string>();
         visibleColumns.forEach(key => {
@@ -51,7 +56,7 @@ export default function EnginesTable({
 
     // Spalten-Definition inkl. optionaler Select- und Amount-Spalte
     const columns = useMemo<ColumnDef<Engine>[]>(() => {
-        // Basis-Spalten
+        // Base columns: multiply numeric values by amount if applicable
         const baseCols = visibleColumns.map(key => {
             const isNumeric = numericColumns.has(key);
             return {
@@ -59,13 +64,15 @@ export default function EnginesTable({
                 header: () => <span>{toHeader(key)}</span>,
                 sortingFn: isNumeric
                     ? (rowA, rowB, columnId) => {
-                            const a = rowA.getValue<number>(columnId) ?? 0;
-                            const b = rowB.getValue<number>(columnId) ?? 0;
-                            return a - b;
+                            const valA = rowA.getValue<number>(columnId) ?? 0;
+                            const valB = rowB.getValue<number>(columnId) ?? 0;
+                            const aAmt = getAmount(rowA.original);
+                            const bAmt = getAmount(rowB.original);
+                            return (valA * aAmt) - (valB * bAmt);
                         }
                     : 'auto',
                 cell: info => {
-                    const val = info.getValue();
+                    const val = info.getValue<unknown>();
                     if (val == null) return null;
                     if (Array.isArray(val)) {
                         if (
@@ -73,10 +80,14 @@ export default function EnginesTable({
                             typeof val[0] === 'object' &&
                             'name' in (val[0] as License)
                         ) {
-                            const names = (val as License[]).map(l => l.name);
-                            return <span>{names.join(', ')}</span>;
+                            return <span>{(val as License[]).map(l => l.name).join(', ')}</span>;
                         }
                         return <span>{val.join(', ')}</span>;
+                    }
+                    // Numeric multiplication
+                    if (isNumeric && typeof val === 'number') {
+                        const amt = getAmount(info.row.original);
+                        return <span>{val * amt}</span>;
                     }
                     return <span>{String(val)}</span>;
                 },
@@ -90,7 +101,6 @@ export default function EnginesTable({
             const myShipCol: ColumnDef<Engine> = {
                 id: 'myShipSelect',
                 header: () => <span>Add to MyShip</span>,
-                // Rückgabe, ob die Zeile aktuell ausgewählt ist
                 accessorFn: row => myShipEngines?.includes(row) ?? false,
                 // Sorgt dafür, dass unchecked (false) vor checked (true) stehen
                 sortingFn: (rowA, rowB, columnId) => {
@@ -117,12 +127,10 @@ export default function EnginesTable({
             displayCols = [myShipCol, ...displayCols];
         }
 
-        // Wenn Vergleiche aktiviert sind, ganz links eine Sortier-Spalte ergänzen
         if (setEnginesToCompare) {
-            const selectCol: ColumnDef<Engine> = {
-                id: 'select',
+            const compareCol: ColumnDef<Engine> = {
+                id: 'compare',
                 header: () => <span>Compare</span>,
-                // Rückgabe, ob die Zeile aktuell ausgewählt ist
                 accessorFn: row => enginesToCompare?.includes(row) ?? false,
                 // Sorgt dafür, dass unchecked (false) vor checked (true) stehen
                 sortingFn: (rowA, rowB, columnId) => {
@@ -133,7 +141,7 @@ export default function EnginesTable({
                 // Checkbox mit Checked-State
                 cell: ({ row }) => (
                     <input
-                        key={"setEnginesToCompare-" + row.id}
+                        key={`compare-${row.id}`}
                         type="checkbox"
                         checked={enginesToCompare?.includes(row.original) ?? false}
                         onChange={() => {
@@ -146,7 +154,7 @@ export default function EnginesTable({
                     />
                 ),
             };
-            displayCols = [selectCol, ...displayCols];
+            displayCols = [compareCol, ...displayCols];
         }
 
         if (setAmounts) {
@@ -154,26 +162,19 @@ export default function EnginesTable({
                 id: 'amount',
                 header: () => <span>Amount</span>,
                 cell: ({ row }) => {
-                    const key = row.original.name;
-                    const entry = amounts?.find(([, eng]) => eng.name === key);
-                    const val = entry?.[0] ?? 0;
+                    const engine = row.original;
+                    const val = getAmount(engine);
                     return (
                         <input
-                            key={"amount-" + key}
+                            key={`amount-${engine.name}`}
                             type="number"
                             min={0}
                             value={val}
                             onChange={e => {
                                 const newVal = Number(e.target.value);
                                 setAmounts(prev => {
-                                    const next = prev ? [...prev] : [];
-                                    const idx = next.findIndex(([, eng]) => eng.name === key);
-                                    if (newVal > 0) {
-                                        if (idx >= 0) next[idx] = [newVal, row.original];
-                                        else next.push([newVal, row.original]);
-                                    } else if (idx >= 0) {
-                                        next.splice(idx, 1);
-                                    }
+                                    const next = [...prev.filter(([, eng]) => eng !== engine)];
+                                    if (newVal > 0) next.push([newVal, engine]);
                                     return next;
                                 });
                             }}
@@ -181,13 +182,7 @@ export default function EnginesTable({
                         />
                     );
                 },
-                sortingFn: (rowA, rowB) => {
-                    const aKey = rowA.original.name;
-                    const bKey = rowB.original.name;
-                    const aVal = amounts?.find(([, engine]) => engine.name === aKey)?.[0] ?? 0;
-                    const bVal = amounts?.find(([, engine]) => engine.name === bKey)?.[0] ?? 0;
-                    return aVal - bVal;
-                },
+                sortingFn: (rowA, rowB) => getAmount(rowA.original) - getAmount(rowB.original),
             };
             displayCols = [amountCol, ...displayCols];
         }
@@ -207,7 +202,39 @@ export default function EnginesTable({
     // Sortier-Zustand
     const [sorting, setSorting] = useState<SortingState>([]);
 
-    // Table-Instanz erzeugen
+    const totals = useMemo<Record<string, number>>(() => {
+        const sums: Record<string, number> = {};
+        if (setAmounts) {
+            // Sum of multiplied values
+            visibleColumns.forEach(key => {
+                if (numericColumns.has(key)) {
+                    sums[key] = engines.reduce((acc, engine) => {
+                        const val = (engine as any)[key] ?? 0;
+                        
+                        console.log("val in totals: ", val)
+                        console.log("getAmount(engine)", getAmount(engine))
+
+                        const result = acc + (typeof val === 'number' ? val * getAmount(engine) : 0);
+
+                        return result;
+                    }, 0);
+                }
+            });
+            // Sum of amounts
+            sums['amount'] = amounts.reduce((acc, [amt]) => acc + amt, 0);
+        } else {
+            visibleColumns.forEach(key => {
+                if (numericColumns.has(key)) {
+                    sums[key] = engines.reduce(
+                        (acc, engine) => acc + ((engine as any)[key] as number ?? 0),
+                        0
+                    );
+                }
+            });
+        }
+        return sums;
+    }, [engines, amounts, visibleColumns, numericColumns, setAmounts]);
+
     const table = useReactTable<Engine>({
         data: engines,
         columns,
@@ -273,6 +300,25 @@ export default function EnginesTable({
                         </tr>
                     ))}
                 </tbody>
+                { setAmounts && (
+                    <tfoot className="EnginesTableFooter">
+                        <tr>
+                            {table._getColumnDefs().map((colDef, idx) => {
+                                const id = colDef.id ?? (colDef as any).accessorKey;
+                                const isFirst = idx === 0;
+                                return (
+                                    <td key={id}>
+                                        {isFirst
+                                            ? 'Total'
+                                            : totals[id] !== undefined
+                                            ? totals[id]
+                                            : ''}
+                                    </td>
+                                );
+                            })}
+                        </tr>
+                    </tfoot>
+                )}
             </table>
             <div className="EnginesTableRowCount">
                 Total rows: {table.getRowModel().rows.length}
