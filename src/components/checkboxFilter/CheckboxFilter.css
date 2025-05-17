@@ -1,4 +1,6 @@
 .CheckboxFilter {
+    margin: 1em;
+
     .CheckboxFilterTitle {
         font-size: '0.875rem';      /* text-sm */
         font-weight: 600;           /* font-semibold */

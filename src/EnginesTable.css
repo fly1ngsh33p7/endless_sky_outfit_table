@@ -6,13 +6,13 @@
     min-width: 100%;
     border-collapse: collapse;
     border: 1px solid lightgray;
+    margin: 1em;
     
     th {
         text-align: left;
         font-size: 0.75rem; /* Tailwind text-xs */
         font-weight: 500; /* Tailwind font-medium */
         color: white;
-        text-transform: uppercase;
         border-bottom: 1px solid darkslategray; /* aus globalem th */
         border-right: 1px solid darkslategray; /* aus globalem th */
         padding: 2px 4px; /* aus globalem th */
@@ -22,15 +22,18 @@
     }
 
     .EnginesTableBody {
-        background-color: gray;
+        background-color: #363636;
     }
 
     tbody {
-        border-bottom: 1px solid lightgray; /* aus globalem tbody */
+        border-bottom: 1px solid slategray; /* aus globalem tbody */
     }
 
     tr {
         border-bottom: 1px solid #e5e7eb; /* Tailwind divide-y divide-gray-200 */
+        &:hover {
+            background-color: #606060;
+        }
     }
 
     td {
@@ -83,9 +86,7 @@
     color: white; /* Tailwind hover:text-gray-600 */
 }
 
-/* Footer mit Gesamtzahl */
 .EnginesTableRowCount {
-    margin-top: 1rem; /* Tailwind mt-4 */
-    font-size: 0.875rem; /* Tailwind text-sm */
-    color: #6b7280; /* Tailwind text-gray-500 */
+    margin: 1rem 0em 1em 1em;
+    color: white;
 }

@@ -19,7 +19,7 @@ export default function NumericFilter({
     onChange,
 }: NumericFilterProps) {
     return (
-        <div>
+        <div className="numericFilterContainer">
             <label className="block text-sm font-medium text-gray-700">
                 {label}
             </label>
@@ -39,7 +39,7 @@ export default function NumericFilter({
                     <Slider.Thumb className="SliderThumb" aria-label="Max" />
                 </Slider.Root>
             }
-            <div className="flex space-x-2 mt-1">
+            <div className="directInput flex space-x-2 mt-1">
                 <input
                     type="number"
                     value={value[0]}

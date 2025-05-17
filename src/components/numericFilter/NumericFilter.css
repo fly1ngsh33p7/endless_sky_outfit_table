@@ -38,3 +38,14 @@
 	outline: none;
 	box-shadow: 0 0 0 5px var(--black-a8);
 }
+
+
+.directInput {
+	input {
+		margin: 1em 0.5em;
+	}
+}
+
+.numericFilterContainer {
+	margin: 0.5em;
+}
