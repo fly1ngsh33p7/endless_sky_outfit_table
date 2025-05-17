@@ -6,6 +6,7 @@ interface NumericFiltersProps {
     visibleColumns: string[];
     ranges: Record<string, [number, number]>;
     filters: Filters;
+    showSliders: boolean;
     onChange: (key: string, range: [number, number]) => void;
     getStep: (min: number, max: number) => number;
 }
@@ -15,14 +16,16 @@ export default function NumericFilters({
     visibleColumns,
     ranges,
     filters,
+    showSliders,
     onChange,
-    getStep
+    getStep,
 }: NumericFiltersProps) {
     return (
         <>
             {numericKeys.map(key => (
                 visibleColumns.includes(key) && (
                     <NumericFilter
+                        showSlider={showSliders}
                         key={`numeric_filter-${key}`}
                         label={key}
                         range={[ranges[key][0], ranges[key][1]]}

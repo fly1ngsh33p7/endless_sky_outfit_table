@@ -92,54 +92,54 @@ export default function EnginesTable({
     // Render
     return (
         <>
-            <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+            <table className="EnginesTable">
+                <thead className="EnginesTableHead">
                     {table.getHeaderGroups().map(headerGroup => (
                         <tr key={headerGroup.id}>
                             {headerGroup.headers.map(header => (
-                                <th
-                                    key={header.id}
-                                    className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
-                                >
-                                    <div className="flex items-center space-x-2">
+                                <th key={header.id}>
+                                    <div className="th-content">
                                         {flexRender(
                                             header.column.columnDef.header,
                                             header.getContext()
                                         )}
-                                        <button
-                                            onClick={() => {
-                                                header.column.toggleSorting(false);
-                                                console.log(`Column: ${header.column.id}, Direction: Ascending`);
-                                            }}
-                                            className="text-gray-400 hover:text-gray-600"
-                                            aria-label="Sort ascending"
-                                        >
-                                            ▲
-                                        </button>
-                                        <button
-                                            onClick={() => {
-                                                header.column.toggleSorting(true);
-                                                console.log(`Column: ${header.column.id}, Direction: Descending`);
-                                            }}
-                                            className="text-gray-400 hover:text-gray-600"
-                                            aria-label="Sort descending"
-                                        >
-                                            ▼
-                                        </button>
+                                        <div className="sort-buttons">
+                                            <button
+                                                onClick={() => {
+                                                    header.column.toggleSorting(false);
+                                                    console.log(
+                                                        `Column: ${header.column.id}, Direction: Ascending`
+                                                    );
+                                                }}
+                                                className="sort-button"
+                                                aria-label="Sort ascending"
+                                            >
+                                                ▲
+                                            </button>
+                                            <button
+                                                onClick={() => {
+                                                    header.column.toggleSorting(true);
+                                                    console.log(
+                                                        `Column: ${header.column.id}, Direction: Descending`
+                                                    );
+                                                }}
+                                                className="sort-button"
+                                                aria-label="Sort descending"
+                                            >
+                                                ▼
+                                            </button>
+                                        </div>
                                     </div>
                                 </th>
                             ))}
                         </tr>
                     ))}
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="EnginesTableBody">
                     {table.getRowModel().rows.map(row => (
                         <tr key={row.id}>
                             {row.getVisibleCells().map(cell => (
-                                <td
-                                    key={cell.id}
-                                    className="px-4 py-2 whitespace-nowrap text-sm text-gray-700"
-                                >
+                                <td key={cell.id}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                 </td>
                             ))}
@@ -147,7 +147,7 @@ export default function EnginesTable({
                     ))}
                 </tbody>
             </table>
-            <div className="mt-4 text-sm text-gray-500">
+            <div className="EnginesTableRowCount">
                 Total rows: {table.getRowModel().rows.length}
             </div>
         </>

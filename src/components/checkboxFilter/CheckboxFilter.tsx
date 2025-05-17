@@ -1,5 +1,4 @@
 // Datei: src/components/CheckboxFilter/CheckboxFilter.tsx
-import React from 'react';
 import './CheckboxFilter.css';
 
 interface CheckboxFilterProps {
@@ -18,7 +17,7 @@ export default function CheckboxFilter({
             <h3 className="CheckboxFilterTitle">{label}</h3>
             <div className="CheckboxFilterOptionsContainer">
                 {options.map(option => (
-                    <label className="CheckboxFilterOptionsLabel" key={option.value}>
+                    <label key={option.value}>
                         <input
                             type="checkbox"
                             checked={option.checked}

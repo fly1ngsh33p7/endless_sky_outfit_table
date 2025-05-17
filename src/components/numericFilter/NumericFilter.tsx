@@ -6,6 +6,7 @@ interface NumericFilterProps {
     range: [number, number];
     value: [number, number];
     step: number;
+    showSlider: boolean;
     onChange: (newRange: [number, number]) => void;
 }
 
@@ -14,27 +15,30 @@ export default function NumericFilter({
     range,
     value,
     step,
-    onChange
+    showSlider,
+    onChange,
 }: NumericFilterProps) {
     return (
         <div>
             <label className="block text-sm font-medium text-gray-700">
                 {label}
             </label>
-            <Slider.Root
-                className="SliderRoot"
-                value={value}
-                min={range[0]}
-                max={range[1]}
-                step={step}
-                onValueChange={(val: number[]) => onChange([val[0], val[1]])}
-            >
-                <Slider.Track className="SliderTrack">
-                    <Slider.Range className="SliderRange" />
-                </Slider.Track>
-                <Slider.Thumb className="SliderThumb" aria-label="Min" />
-                <Slider.Thumb className="SliderThumb" aria-label="Max" />
-            </Slider.Root>
+            { showSlider &&
+                <Slider.Root
+                    className="SliderRoot"
+                    value={value}
+                    min={range[0]}
+                    max={range[1]}
+                    step={step}
+                    onValueChange={(val: number[]) => onChange([val[0], val[1]])}
+                >
+                    <Slider.Track className="SliderTrack">
+                        <Slider.Range className="SliderRange" />
+                    </Slider.Track>
+                    <Slider.Thumb className="SliderThumb" aria-label="Min" />
+                    <Slider.Thumb className="SliderThumb" aria-label="Max" />
+                </Slider.Root>
+            }
             <div className="flex space-x-2 mt-1">
                 <input
                     type="number"

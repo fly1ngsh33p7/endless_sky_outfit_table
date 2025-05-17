@@ -109,6 +109,7 @@ export default function FiltersPanel({
             />
 
             <NumericFilters
+                showSliders={false}
                 numericKeys={numericKeys}
                 visibleColumns={visibleColumns}
                 ranges={ranges}

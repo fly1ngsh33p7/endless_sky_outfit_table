@@ -7,12 +7,10 @@
     .CheckboxFilterOptionsContainer {
         display: 'grid';
         grid-template-columns: 'repeat(2, minmax(0, 1fr))'; /* grid-cols-2  */
-        gap: '0.5rem';               /* gap-2  */
         
-        .CheckboxFilterOptionsLabel {
+        label {
             display: 'inline-flex';     /* inline-flex */
             align-items: 'center';       /* items-center */
-            gap: '0.5rem';               /* space-x-2  */
         }
         .CheckboxFilterOptionsValue {
             font-size: '0.875rem';        /* text-sm */
