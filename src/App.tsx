@@ -3,6 +3,7 @@ import FiltersPanel, { type Filters } from './components/filtersPanel/FiltersPan
 import EnginesTable from './components/enginesTable/EnginesTable';
 import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
 import MyShipPanel from './components/myShipPanel/MyShipPanel';
+import TabbedPanel from './components/panel/TabbedPanel';
 
 export interface License {
 	name: string;
@@ -207,6 +208,14 @@ function App() {
 
 	return (
 		<div className="app flex flex-col md:flex-row h-screen">
+			<TabbedPanel initialTabIndex={1}
+				tabs={[
+					{heading: "Engines", content: <>Engines Content</>},
+					{heading: "Other Outfits", content: <>Other Outfits COntent</>},
+					{heading: "Other Other Outfits", content: <>Other Other Outfits Content</>},
+				]}
+			
+			/>
 			<aside className="w-full md:w-1/4 p-4 overflow-auto border-r">
 				<FiltersPanel
 					engines={engines}

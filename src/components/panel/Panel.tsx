@@ -2,17 +2,29 @@ import React, { useEffect, useState } from 'react';
 import './Panel.css';
 
 interface PanelProps {
-    heading: string;
+    heading?: string;
     children: React.ReactNode;
+    className?: PanelClassNames;
     startOpen?: boolean;
     trigger?: unknown;
     dontTrigger?: boolean;
+    alwaysOpen?: boolean;
 }
 
-export default function Panel({ heading, children, startOpen = true, trigger, dontTrigger = true }: PanelProps) {
-    const [isOpen, setIsOpen] = useState(startOpen);
+export interface PanelClassNames {
+    panel?: string;
+    panelHeading?: string;
+    panelTitle?: string;
+    panelContent?: string;
+}
 
-    const togglePanel = () => setIsOpen(!isOpen);
+export default function Panel({ heading, children, startOpen = true, trigger, dontTrigger = true, className, alwaysOpen = false }: PanelProps) {
+    const [isOpen, setIsOpen] = useState(startOpen || alwaysOpen);
+
+    const togglePanel = () => {
+        console.log("toggledPanel to " + (!isOpen ? 'open' : 'closed'))
+        setIsOpen(!isOpen);
+    }
 
     useEffect(() => {
         // FIXME: might disregard startOpen = false
@@ -22,12 +34,16 @@ export default function Panel({ heading, children, startOpen = true, trigger, do
     }, [trigger]);
 
     return (
-        <div className="panel">
-            <div className="panel-heading" onClick={togglePanel} title={isOpen ? 'Einklappen' : 'Ausklappen'}>
-                <span className={`panel-toggle chevron ${isOpen ? 'chevron-up' : 'chevron-down'}`} />
-                <h3 className="panel-title">{heading}</h3>
-            </div>
-            {isOpen && <div className="panel-content">{children}</div>}
+        <div className={className?.panel ?? "panel"}>
+            {heading &&
+                <div className={className?.panelHeading ?? "panel-heading"} onClick={alwaysOpen ? () => {} : togglePanel} title={(isOpen && !alwaysOpen) ? 'Einklappen' : 'Ausklappen'}>
+                    {!alwaysOpen &&
+                        <span className={`panel-toggle chevron ${isOpen ? 'chevron-up' : 'chevron-down'}`} />
+                    }
+                    <h3 className={className?.panelTitle ?? "panel-title"}>{heading}</h3>
+                </div>
+            }
+            {isOpen && <div className={className?.panelContent ?? "panel-content"}>{children}</div>}
         </div>
     );
 }
