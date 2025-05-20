@@ -28,3 +28,7 @@ TODO: next steps:
         - könnte vllt ne "pinned" Zeile sein? https://tanstack.com/table/v8/docs/framework/react/examples/row-pinning 
 - Ergebnis automatisch in weaponSpace, engineSpace, outfitSpace einrechnen
 - add to Compare für MyShip, dann kann man sehr fix einzelne Engines vergleichen/verbessern
+
+- Compare:
+    - Amount Spalte
+    - Entfernen Spalte
