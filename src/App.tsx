@@ -4,31 +4,9 @@ import EnginesTable from './components/enginesTable/EnginesTable';
 import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
 import MyShipPanel from './components/myShipPanel/MyShipPanel';
 import TabbedPanel from './components/panel/TabbedPanel';
+import BetterTable from './components/betterTable/BetterTable';
+import * as dataTypes from './DataTypes';
 
-export interface License {
-	name: string;
-	cost?: number;
-}
-
-export interface Engine {
-	name: string;
-	licenses: License[];
-	cost?: number;
-	mass?: number;
-	'outfit space'?: number;
-	'engine capacity'?: number;
-	thrust?: number;
-	turn?: number;
-	'reverse thrust'?: number;
-	'turning energy'?: number;
-	'turning heat'?: number;
-	'thrust+turn per capacity'?: number;
-	'energy per combined thrust'?: number;
-	'thrust per capacity'?: number;
-	'thrusting energy'?: number,
-	'turn per capacity'?: number;
-	'reverse thrust per capacity'?: number;
-}
 
 // --- Hilfs-Konstanten + Post-Processing ---
 const ignorePatterns = [
@@ -48,7 +26,7 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity' | 'energy per combined thrust'>[] {
+function processEngines(raw: any[]): Omit<dataTypes.Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity' | 'energy per combined thrust'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
@@ -63,11 +41,11 @@ function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn 
 }
 
 const licenseFieldTransforms: Record<string, (v: any) => any> = {
-	name: v => (typeof v === 'string' ? v.replace(/ License$/, '') : v),
+	name: v => (typeof v === 'string' ? v.replace(/ dataTypes.License$/, '') : v),
 };
 
-function processLicenses(raw: any[]): License[] {
-	return raw.reduce((acc: License[], item) => {
+function processLicenses(raw: any[]): dataTypes.License[] {
+	return raw.reduce((acc: dataTypes.License[], item) => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
 			if (ignorePatterns.some(p => matchesPattern(k, p))) delete copy[k];
@@ -76,20 +54,20 @@ function processLicenses(raw: any[]): License[] {
 			const act = Object.keys(copy).find(k => k.toLowerCase() === f.toLowerCase());
 			if (act) copy[act] = fn(copy[act]);
 		});
-		if (!acc.some(l => l.name === copy.name)) acc.push(copy as License);
+		if (!acc.some(l => l.name === copy.name)) acc.push(copy as dataTypes.License);
 		return acc;
 	}, []);
 }
 
 function App() {
-	const [engines, setEngines] = useState<Engine[]>([]);
-	const [myShipEngines, setMyShipEngines] = useState<Engine[]>([]);
-	const [licenses, setLicenses] = useState<License[]>([]);
-	const [relevantLicenses, setRelevantLicenses] = useState<License[]>([]);
+	const [engines, setEngines] = useState<dataTypes.Engine[]>([]);
+	const [myShipEngines, setMyShipEngines] = useState<dataTypes.Engine[]>([]);
+	const [licenses, setLicenses] = useState<dataTypes.License[]>([]);
+	const [relevantLicenses, setRelevantLicenses] = useState<dataTypes.License[]>([]);
 	const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 	const [filters, setFilters] = useState<Filters>({});
 	const [visibleColumns, setVisibleColumns] = useState<string[]>([]);
-	const [enginesToCompare, setEnginesToCompare] = useState<Engine[]>([]);
+	const [enginesToCompare, setEnginesToCompare] = useState<dataTypes.Engine[]>([]);
 
 	// --- Daten laden + in echte License-Objekte umwandeln + in Engines mappen ---
 	useEffect(() => {
@@ -106,7 +84,7 @@ function App() {
 				const processed = processEngines(rawEng);
 
 				// 3) Lizenz-Namen → echte Objekte
-				const mapped: Engine[] = processed.map((e: any) => {
+				const mapped: dataTypes.Engine[] = processed.map((e: any) => {
 					const names: string[] = Array.isArray(e.licenses)
 						? e.licenses.map((lic: any) => (typeof lic === 'string' ? lic : lic.name))
 						: typeof e.licenses === 'string'
@@ -210,9 +188,9 @@ function App() {
 		<div className="app flex flex-col md:flex-row h-screen">
 			<TabbedPanel initialTabIndex={1}
 				tabs={[
-					{heading: "Engines", content: <>Engines Content</>},
-					{heading: "Other Outfits", content: <>Other Outfits COntent</>},
-					{heading: "Other Other Outfits", content: <>Other Other Outfits Content</>},
+					{heading: "Engines", content: <BetterTable data={[]} />},
+					{heading: "Energy Capacity", content: <>Energy Capacity Table</>},
+					{heading: "Energy Generation", content: <>Energy Generation Table</>},
 				]}
 			
 			/>
