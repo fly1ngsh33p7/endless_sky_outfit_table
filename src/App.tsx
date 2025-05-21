@@ -60,7 +60,7 @@ function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn 
 }
 
 const licenseFieldTransforms: Record<string, (v: any) => any> = {
-	name: v => (typeof v === 'string' ? v.replace(/ dataTypes.License$/, '') : v),
+	name: v => (typeof v === 'string' ? v.replace(/ License$/, '') : v),
 };
 
 function processLicenses(raw: any[]): dataTypes.License[] {
