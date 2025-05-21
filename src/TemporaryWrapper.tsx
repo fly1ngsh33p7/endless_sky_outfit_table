@@ -99,6 +99,73 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
         return matchingOutfits;
     };
 
+    const getAllFieldNamesOfDataStoreWithMinOutfitCount = (excludeFields: string[] = [], minOutfits?: number = 0): string[] => {
+        const fieldCount: Record<string, number> = {};
+    
+        // Check if dataStore is empty
+        if (!dataStore || Object.keys(dataStore).length === 0) {
+            return []; // Return an empty array if dataStore is not yet populated
+        }
+    
+        // Iterate over all categories in dataStore
+        Object.values(dataStore).forEach((outfits) => {
+            // Iterate over each outfit in the category
+            outfits.forEach((outfit) => {
+                // Count occurrences of each field
+                Object.keys(outfit).forEach((key) => {
+                    fieldCount[key] = (fieldCount[key] || 0) + 1;
+                });
+            });
+        });
+    
+        // Filter fields based on the excludeFields and minOutfits parameters
+        if (minOutfits) {
+            return Object.entries(fieldCount)
+            .filter(([field, count]) => !excludeFields.includes(field) && count >= minOutfits)
+            .map(([field]) => field);
+        } else {
+            // Return all fields that are not in the excludeFields list
+            return Object.keys(fieldCount).filter((field) => !excludeFields.includes(field));
+        }
+    };
+
+    const getAllFieldNamesWithWildcardAndMinCountSupport = (excludeFields: string[] = [], minOutfits: number = 0): string[] => {
+        const fieldCount: Record<string, number> = {};
+    
+        // Check if dataStore is empty
+        if (!dataStore || Object.keys(dataStore).length === 0) {
+            return []; // Return an empty array if dataStore is not yet populated
+        }
+    
+        // Convert wildcard patterns in excludeFields to regular expressions
+        const excludePatterns = excludeFields.map((pattern) =>
+            new RegExp(
+                '^' +
+                pattern.replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&').replace(/\*/g, '.*') +
+                '$',
+                'i' // Case-insensitive matching
+            )
+        );
+    
+        // Iterate over all categories in dataStore
+        Object.values(dataStore).forEach((outfits) => {
+            // Iterate over each outfit in the category
+            outfits.forEach((outfit) => {
+                // Count occurrences of each field
+                Object.keys(outfit).forEach((key) => {
+                    fieldCount[key] = (fieldCount[key] || 0) + 1;
+                });
+            });
+        });
+    
+        // Filter fields based on the excludePatterns and minOutfits parameters
+        return Object.entries(fieldCount)
+            .filter(([field, count]) =>
+                !excludePatterns.some((regex) => regex.test(field)) && count >= minOutfits
+            )
+            .map(([field]) => field);
+    };
+
     const getAllFieldNamesOfDataStore = (excludeFields: string[] = []): string[] => {
         const fieldSet = new Set<string>();
     
@@ -152,8 +219,9 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
             });
     }, []);
 
-    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "description", "cost", "thumbnail", "mass", "outfit space", ];
-    const field_names = getAllFieldNamesOfDataStore(excluded_fields_that_would_be_unnecessary_tables);
+    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "series", "description", "cost", "licenses", "*thumbnail*", "mass", "outfit space", ];
+    const field_names = getAllFieldNamesWithWildcardAndMinCountSupport(excluded_fields_that_would_be_unnecessary_tables, 5);
+
 
     return (
         <>
