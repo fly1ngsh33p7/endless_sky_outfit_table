@@ -42,7 +42,7 @@ export default function TabbedPanel({
             </div>
             <div className="TabbedPanelBody">
                 <Panel className={{panel: "", panelContent: "", panelHeading: "", panelTitle: undefined}} alwaysOpen>
-                    {tabs[currentTabIndex].content}
+                    {tabs[currentTabIndex]?.content}
                 </Panel>
             </div>
         </Panel>

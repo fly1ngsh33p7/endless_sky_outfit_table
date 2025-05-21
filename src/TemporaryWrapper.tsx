@@ -99,6 +99,27 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
         return matchingOutfits;
     };
 
+    const getAllFieldNamesOfDataStore = (excludeFields: string[] = []): string[] => {
+        const fieldSet = new Set<string>();
+    
+        // Check if dataStore is empty
+        if (!dataStore || Object.keys(dataStore).length === 0) {
+            return []; // Return an empty array if dataStore is not yet populated
+        }
+    
+        // Iterate over all categories in dataStore
+        Object.values(dataStore).forEach((outfits) => {
+            // Iterate over each outfit in the category
+            outfits.forEach((outfit) => {
+                // Add all keys (field names) of the outfit to the set
+                Object.keys(outfit).forEach((key) => fieldSet.add(key));
+            });
+        });
+    
+        // Convert the set to an array and filter out excluded fields
+        return Array.from(fieldSet).filter((field) => !excludeFields.includes(field));
+    };
+
     useEffect(() => {
         fetch('/outfits.json')
             .then(res => res.json())
@@ -131,7 +152,8 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
             });
     }, []);
 
-    const field_names = ["Thrust"];
+    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "description", "cost", "thumbnail", "mass", "outfit space", ];
+    const field_names = getAllFieldNamesOfDataStore(excluded_fields_that_would_be_unnecessary_tables);
 
     return (
         <>
