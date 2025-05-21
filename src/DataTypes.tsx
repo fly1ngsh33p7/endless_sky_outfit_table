@@ -1,21 +1,20 @@
-/*
-        "Secondary Weapons"
-        "Guns"
-        "Turrets"
-        "Systems"
-        "Engines"
-        "Hand to Hand"
-        "Power"
-        "Ammunition"
-        "Licenses"
-        "Special"
-        "Unique"
-        "Powers"
-        "Minerals"
-        "Production"
-        "Hidden"
-    */
-
+export type DataStore = {
+    "Secondary Weapons": SecondaryWeapon[];
+    "Guns": Gun[];
+    "Turrets": Turret[];
+    "Systems": System[];
+    "Engines": Engine[];
+    "Hand to Hand": HandToHand[];
+    "Power": Power[];
+    "Ammunition": Ammunition[];
+    "Licenses": License[];
+    "Special": Special[];
+    "Unique": Unique[];
+    "Powers": Power[];
+    "Minerals": Mineral[];
+    "Production": Production[];
+    "Hidden": Hidden[];
+};
 
 export interface SecondaryWeapon {
     name: string;

@@ -1,0 +1,89 @@
+.BetterTable {
+    width: 99%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid lightgray;
+    margin: 1em;
+    
+    th {
+        text-align: left;
+        font-size: 0.75rem; /* Tailwind text-xs */
+        font-weight: 500; /* Tailwind font-medium */
+        color: white;
+        border-bottom: 1px solid darkslategray; /* aus globalem th */
+        border-right: 1px solid darkslategray; /* aus globalem th */
+        padding: 2px 4px; /* aus globalem th */
+    }
+    .BetterTableHead {
+        background-color: darkslategray;
+    }
+
+    .BetterTableBody {
+        background-color: #363636;
+    }
+
+    tbody {
+        border-bottom: 1px solid slategray; /* aus globalem tbody */
+    }
+
+    tr {
+        border-bottom: 1px solid #e5e7eb; /* Tailwind divide-y divide-gray-200 */
+        &:hover {
+            background-color: #606060;
+        }
+    }
+
+    td {
+        white-space: nowrap;
+        font-size: 0.875rem; /* Tailwind text-sm */
+        color: white;
+        border-bottom: 1px solid darkslategray; /* aus globalem td */
+        border-left: 1px solid darkslategray; /* aus globalem td */
+        padding: 2px 4px; /* aus globalem td */
+    }
+
+    tfoot {
+        color: darkslategray; /* aus globalem tfoot */
+    }
+
+    tfoot {
+        th {
+            font-weight: normal;
+        }
+    }
+}
+
+/* Container für Header-Text und Buttons */
+.th-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Sort-Buttons in zweiter Zeile, zentriert */
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /* Tailwind space-x-2 */
+    margin-top: 0.25rem; /* Tailwind mt-1 */
+}
+
+/* Einzelner Sort-Button */
+.sort-button {
+    padding: 1px; /* Tailwind p-px */
+    font-size: 0.875rem;/* Tailwind text-sm */
+    background: none;
+    border: none;
+    color: gray;/* Tailwind text-gray-400 */
+    cursor: pointer;
+}
+
+.sort-button:hover {
+    color: white; /* Tailwind hover:text-gray-600 */
+}
+
+.BetterTableRowCount {
+    margin: 1rem 0em 1em 1em;
+    color: white;
+}
