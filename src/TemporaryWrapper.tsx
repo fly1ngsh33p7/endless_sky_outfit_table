@@ -61,7 +61,7 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
                 So if categoryToSearchFor is supplied (can only be of type "key of dataTypes.DataStore)
                 then the key of the array ("Secondary Weapons", ...) is relevant: only "use" outfits of the correct category 
             */
-            if (categoryToSearchFor && key !== categoryToSearchFor) return;
+            if (categoryToSearchFor && key.toLowerCase() !== categoryToSearchFor.toLowerCase()) return;
 
             // filter outfits of this category
             const filteredItems = outfits.filter((item) =>
@@ -77,83 +77,71 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
         return results;
     };
 
+    /*
+        filter the outfits dataStore by presence of field(s)
+    */
+    const searchOutfitsByFields = (fields: string[]) => {
+        // Collect all matching outfits across all categories
+        const matchingOutfits: any[] = [];
+    
+        Object.values(dataStore).forEach((outfits) => {
+            // Filter outfits that have all the specified fields (case-insensitive)
+            const filteredItems = outfits.filter((item) =>
+                fields.every((fieldKey) =>
+                    Object.keys(item).some((key) => key.toLowerCase() === fieldKey.toLowerCase())
+                )
+            );
+    
+            // Add the matching outfits to the result
+            matchingOutfits.push(...filteredItems);
+        });
+    
+        return matchingOutfits;
+    };
+
     useEffect(() => {
         fetch('/outfits.json')
             .then(res => res.json())
-            .then((all: any) => {
-                // 1) Licenses erzeugen und in State
-                const rawLic = all['Licenses'] || [];
-                const licObjs = processLicenses(rawLic);
-                setLicenses(licObjs);
+            .then((data: dataTypes.DataStore) => {
+                // Directly set the dataStore state with the fetched data
+                setDataStore(data);
 
-                // 2) Engines parsen
-                const rawEng = all['Engines'] || [];
-                const processed = processEngines(rawEng);
-
-                // 3) Lizenz-Namen → echte Objekte
-                const mapped: Engine[] = processed.map((e: any) => {
-                    const names: string[] = Array.isArray(e.licenses)
-                        ? e.licenses.map((lic: any) => (typeof lic === 'string' ? lic : lic.name))
-                        : typeof e.licenses === 'string'
-                            ? [e.licenses]
-                            : [];
-
-                    const licArray = names
-                        .flatMap(n => licObjs.filter(l => l.name === n));
-
-                    return { ...e, licenses: licArray };
-                });
-
-                // 4) berechnete Felder ergänzen
-                const withComputed = mapped.map(e => ({
-                    ...e,
-                    'thrust per capacity':
-                        typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
-                            ? parseFloat((e.thrust / e['engine capacity']).toFixed(3))
-                            : undefined,
-                    'turn per capacity':
-                        typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
-                            ? parseFloat((e.turn / e['engine capacity']).toFixed(3))
-                            : undefined,
-                    'reverse thrust per capacity':
-                        typeof e['reverse thrust'] === 'number' && typeof e['engine capacity'] === 'number'
-                            ? parseFloat((e['reverse thrust'] / e['engine capacity']).toFixed(3))
-                            : undefined,
-                    'thrust+turn per capacity':
-                        typeof e['engine capacity'] === 'number'
-                            ? parseFloat(
-                                (
-                                    ((e.thrust || 0) + (e.turn || 0)) /
-                                    e['engine capacity']
-                                ).toFixed(3)
-                            )
-                            : undefined,
-                    'energy per combined thrust':
-                        typeof e['engine capacity'] === 'number'
-                            ? parseFloat(
-                                (
-                                    ((e['turning energy'] || 0) + (e['thrusting energy'] || 0)) /
-                                    ((e.thrust || 0) + (e.turn || 0) || 1)
-                                ).toFixed(6)
-                            )
-                            : undefined,
-                }));
-
-                setEngines(withComputed);
-
+                // if necessary: (suggested by Copilot)
+                // // Post-process the "Engines" category 
+                // const processedEngines = data["Engines"].map((e: any) => ({
+                //     ...e,
+                //     'thrust per capacity':
+                //         typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
+                //             ? parseFloat((e.thrust / e['engine capacity']).toFixed(3))
+                //             : undefined,
+                //     'turn per capacity':
+                //         typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
+                //             ? parseFloat((e.turn / e['engine capacity']).toFixed(3))
+                //             : undefined,
+                //     // Add other computed fields here
+                // }));
+                // // Update the "Engines" category in the dataStore
+                // setDataStore(prev => ({
+                //     ...prev,
+                //     "Engines": processedEngines,
+                // }));
+            })
+            .catch(err => {
+                console.error("Failed to fetch outfits.json:", err);
             });
     }, []);
 
+    const field_names = ["Thrust"];
 
     return (
         <>
             TemporaryWrapper
-            <TabbedPanel initialTabIndex={1}
-                tabs={[
-                    {heading: "Engines", content: <BetterTable data={[]} />},
-                    {heading: "Energy Capacity", content: <>Energy Capacity Table</>},
-                    {heading: "Energy Generation", content: <>Energy Generation Table</>},
-                ]}
+            <TabbedPanel 
+                initialTabIndex={1}
+                tabs={field_names.map(tab_name => ({
+                    heading: tab_name,
+                    content: <BetterTable data={searchOutfitsByFields([tab_name])} />
+                }))}
             />
         </>
     );
