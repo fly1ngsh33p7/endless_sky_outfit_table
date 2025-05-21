@@ -17,31 +17,6 @@
     */
 
 
-export interface License {
-	name: string;
-	cost?: number;
-}
-
-export interface Engine {
-	name: string;
-	licenses: License[];
-	cost?: number;
-	mass?: number;
-	'outfit space'?: number;
-	'engine capacity'?: number;
-	thrust?: number;
-	turn?: number;
-	'reverse thrust'?: number;
-	'turning energy'?: number;
-	'turning heat'?: number;
-	'thrust+turn per capacity'?: number;
-	'energy per combined thrust'?: number;
-	'thrust per capacity'?: number;
-	'thrusting energy'?: number,
-	'turn per capacity'?: number;
-	'reverse thrust per capacity'?: number;
-}
-
 export interface SecondaryWeapon {
     name: string;
     [key: string]: any; // Allow additional fields
@@ -84,7 +59,7 @@ export interface Ammunition {
 
 export interface License {
     name: string;
-    [key: string]: any; // Allow additional fields
+    cost?: number;
 }
 
 export interface Special {

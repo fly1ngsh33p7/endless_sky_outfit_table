@@ -3,10 +3,29 @@ import FiltersPanel, { type Filters } from './components/filtersPanel/FiltersPan
 import EnginesTable from './components/enginesTable/EnginesTable';
 import ComparisonPanel from './components/comparisonPanel/ComparisonPanel';
 import MyShipPanel from './components/myShipPanel/MyShipPanel';
-import TabbedPanel from './components/panel/TabbedPanel';
-import BetterTable from './components/betterTable/BetterTable';
 import * as dataTypes from './DataTypes';
+import TemporaryWrapper from './TemporaryWrapper';
 
+
+export interface Engine {
+	name: string;
+	licenses: dataTypes.License[];
+	cost?: number;
+	mass?: number;
+	'outfit space'?: number;
+	'engine capacity'?: number;
+	thrust?: number;
+	turn?: number;
+	'reverse thrust'?: number;
+	'turning energy'?: number;
+	'turning heat'?: number;
+	'thrust+turn per capacity'?: number;
+	'energy per combined thrust'?: number;
+	'thrust per capacity'?: number;
+	'thrusting energy'?: number,
+	'turn per capacity'?: number;
+	'reverse thrust per capacity'?: number;
+}
 
 // --- Hilfs-Konstanten + Post-Processing ---
 const ignorePatterns = [
@@ -26,7 +45,7 @@ const engineFieldTransforms: Record<string, (v: any) => any> = {
 	'outfit space': v => typeof v === 'number' ? -v : v,
 };
 
-function processEngines(raw: any[]): Omit<dataTypes.Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity' | 'energy per combined thrust'>[] {
+function processEngines(raw: any[]): Omit<Engine, 'thrust per capacity' | 'turn per capacity' | 'reverse thrust per capacity' | 'thrust+turn per capacity' | 'energy per combined thrust'>[] {
 	return raw.map(item => {
 		const copy: any = { ...item };
 		Object.keys(copy).forEach(k => {
@@ -60,14 +79,14 @@ function processLicenses(raw: any[]): dataTypes.License[] {
 }
 
 function App() {
-	const [engines, setEngines] = useState<dataTypes.Engine[]>([]);
-	const [myShipEngines, setMyShipEngines] = useState<dataTypes.Engine[]>([]);
+	const [engines, setEngines] = useState<Engine[]>([]);
+	const [myShipEngines, setMyShipEngines] = useState<Engine[]>([]);
 	const [licenses, setLicenses] = useState<dataTypes.License[]>([]);
 	const [relevantLicenses, setRelevantLicenses] = useState<dataTypes.License[]>([]);
 	const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 	const [filters, setFilters] = useState<Filters>({});
 	const [visibleColumns, setVisibleColumns] = useState<string[]>([]);
-	const [enginesToCompare, setEnginesToCompare] = useState<dataTypes.Engine[]>([]);
+	const [enginesToCompare, setEnginesToCompare] = useState<Engine[]>([]);
 
 	// --- Daten laden + in echte License-Objekte umwandeln + in Engines mappen ---
 	useEffect(() => {
@@ -84,7 +103,7 @@ function App() {
 				const processed = processEngines(rawEng);
 
 				// 3) Lizenz-Namen → echte Objekte
-				const mapped: dataTypes.Engine[] = processed.map((e: any) => {
+				const mapped: Engine[] = processed.map((e: any) => {
 					const names: string[] = Array.isArray(e.licenses)
 						? e.licenses.map((lic: any) => (typeof lic === 'string' ? lic : lic.name))
 						: typeof e.licenses === 'string'
@@ -186,14 +205,7 @@ function App() {
 
 	return (
 		<div className="app flex flex-col md:flex-row h-screen">
-			<TabbedPanel initialTabIndex={1}
-				tabs={[
-					{heading: "Engines", content: <BetterTable data={[]} />},
-					{heading: "Energy Capacity", content: <>Energy Capacity Table</>},
-					{heading: "Energy Generation", content: <>Energy Generation Table</>},
-				]}
-			
-			/>
+			<TemporaryWrapper /> {/* wrap everything for the new BetterTable to not mix states */}
 			<aside className="w-full md:w-1/4 p-4 overflow-auto border-r">
 				<FiltersPanel
 					engines={engines}
