@@ -47,14 +47,6 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
     const [filterText, setFilterText] = useState('');
     const [minOutfitsPerField, setMinOutfitsPerField] = useState<number>(1);
 
-    // FIXME: is this necessary?
-    // const addItemToCategory = (category: keyof dataTypes.DataStore, newItem: any) => {
-    //     setDataStore((previousState) => ({
-    //         ...previousState,
-    //         [category]: [...previousState[category], newItem],
-    //     }));
-    // };
-
     const searchOutfits = (query: string, categoryToSearchFor?: keyof dataTypes.DataStore) => {
         const results: { category: keyof dataTypes.DataStore; outfits: any[] }[] = [];
     
