@@ -1,4 +1,5 @@
 import './CheckboxFilter.css';
+import { useState } from 'react';
 
 interface CheckboxFilterProps {
     label: string;
@@ -11,11 +12,28 @@ export default function CheckboxFilter({
     options,
     onToggle
 }: CheckboxFilterProps) {
+    const [filterText, setFilterText] = useState('');
+
+    const filteredOptions = options.filter(option =>
+        option.value.toLowerCase().includes(filterText.toLowerCase())
+    );
+
     return (
         <div className="CheckboxFilter">
             <h3 className="CheckboxFilterTitle">{label}</h3>
+            <div className="CheckboxFilterInputContainer">
+                <label>
+                    Filter: {" "}
+                    <input
+                        type="text"
+                        value={filterText}
+                        onChange={e => setFilterText(e.target.value)}
+                        className="CheckboxFilterInput"
+                    />
+                </label>
+            </div>
             <div className="CheckboxFilterOptionsContainer">
-                {options.map(option => (
+                {filteredOptions.map(option => (
                     <label key={option.value}>
                         <input
                             type="checkbox"
