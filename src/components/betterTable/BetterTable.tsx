@@ -10,6 +10,8 @@ export default function BetterTable({
     data = [],
 }: BetterTableProps) {
 
+    const [maxColumns, setMaxColumns] = useState<number>(10);
+
     const [columns, setColumns] = useState<ColumnDef<any, any>[]>([]);
 
     const getAllFieldNamesOfData = (excludeFields: string[] = []): string[] => {
@@ -62,13 +64,13 @@ export default function BetterTable({
 
     // generate Columns when data changes
     useEffect(() => {
-        console.log("getAllFieldNamesOfData() in BetterTable", getAllFieldNamesOfData().slice(0, 10))
-
         const ignorePatterns = [
             '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name',
         ];
+        
+        console.log("getAllFieldNamesOfData() in BetterTable", getAllFieldNamesOfData(ignorePatterns).slice(0, maxColumns))
 
-        const generatedColumns = getAllFieldNamesOfData(ignorePatterns).slice(0, 10).map(key => {
+        const generatedColumns = getAllFieldNamesOfData(ignorePatterns).slice(0, maxColumns).map(key => {
             const isNumeric = numericColumns.has(key);
 
             // Helper: format key to heading
@@ -105,7 +107,7 @@ export default function BetterTable({
         });
 
         setColumns(generatedColumns);
-    }, [data, numericColumns]);
+    }, [data, numericColumns, maxColumns]);
 
     const table = useReactTable<any>({
         data: data,
@@ -116,6 +118,17 @@ export default function BetterTable({
 
     return (
         <>
+            <label>
+                {" "}max columns:{" "}
+                <input
+                    type="number"
+                    min={1}
+                    value={maxColumns}
+                    onChange={(e) => setMaxColumns(Number(e.target.value))}
+                    placeholder="max columns"
+                />
+                <button onClick={() => setMaxColumns(10)}>reset column count</button>
+            </label>
             <table className="BetterTable">
                 <thead className="BetterTableHead">
                     {table.getHeaderGroups().map(headerGroup => (
