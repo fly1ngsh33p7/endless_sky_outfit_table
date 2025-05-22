@@ -137,36 +137,31 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
             .then(res => res.json())
             .then((data: dataTypes.DataStore) => {
                 // Directly set the dataStore state with the fetched data
-                setDataStore(data);
+                let postProcessedData = data;
 
-                // if necessary: (suggested by Copilot)
-                // // Post-process the "Engines" category 
-                // const processedEngines = data["Engines"].map((e: any) => ({
-                //     ...e,
-                //     'thrust per capacity':
-                //         typeof e.thrust === 'number' && typeof e['engine capacity'] === 'number'
-                //             ? parseFloat((e.thrust / e['engine capacity']).toFixed(3))
-                //             : undefined,
-                //     'turn per capacity':
-                //         typeof e.turn === 'number' && typeof e['engine capacity'] === 'number'
-                //             ? parseFloat((e.turn / e['engine capacity']).toFixed(3))
-                //             : undefined,
-                //     // Add other computed fields here
-                // }));
-                // // Update the "Engines" category in the dataStore
-                // setDataStore(prev => ({
-                //     ...prev,
-                //     "Engines": processedEngines,
-                // }));
+                // post-process "Hand to Hand" catgory
+                const processedHandToHand: dataTypes.HandToHand[] = postProcessedData["Hand to Hand"].map(outfit => {
+                    if (!outfit.hasOwnProperty("outfit space")) {
+                        outfit["outfit space"] = 0;
+                    }
+                    return outfit;
+                });
+                postProcessedData = {
+                    ...postProcessedData,
+                    "Hand to Hand": processedHandToHand
+                };
+
+
+                setDataStore(postProcessedData);
             })
             .catch(err => {
                 console.error("Failed to fetch outfits.json:", err);
             });
     }, []);
 
-    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "display name", "series", "*description*", "cost", "licenses", "*thumbnail*", "*sprite*", "mass", "outfit space", "plural", "afterburner effect*", "*sound*", ];
+    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "display name", "series", "*description*", "cost", "licenses", "*thumbnail*", "*sprite*", "mass", "outfit space", "plural", "afterburner effect*", "*sound*", 'energy consumption', '*thrusting*', '*turning*', 'shield heat', 'shield energy', 'cloaking energy', 'cloaking heat', 'afterburner energy', 'afterburner heat', 'jump fuel', 'jump speed', 'jump effect', 'hull repair energy', 'hull repair heat', ]; // FIXME: split into "attributes of another column" and "irrelevant data"
     // TODO: hide by default: "* capacity" (except std capacities), 
-    let field_names = getAllFieldNamesWithWildcardAndMinCountSupport(excluded_fields_that_would_be_unnecessary_tables, minOutfitsPerField);
+    let field_names = getAllFieldNamesWithWildcardAndMinCountSupport(excluded_fields_that_would_be_unnecessary_tables, minOutfitsPerField); //FIXME: make a sorted CheckboxFilter out of this
     field_names = field_names.filter(field =>
         field.toLowerCase().includes(filterText.toLowerCase())
     );

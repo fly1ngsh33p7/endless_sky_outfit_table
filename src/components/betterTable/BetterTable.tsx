@@ -65,7 +65,7 @@ export default function BetterTable({
     // generate Columns when data changes
     useEffect(() => {
         const ignorePatterns = [
-            '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name',
+            '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name', 
         ];
         
         console.log("getAllFieldNamesOfData() in BetterTable", getAllFieldNamesOfData(ignorePatterns).slice(0, maxColumns))
@@ -102,7 +102,7 @@ export default function BetterTable({
                     }
                     return <span>{String(val)}</span>;
                 },
-                sortUndefined: 'last',
+                sortUndefined: 'last', // FIXME: sometimes undefined should be treated as 0 (see outfit space with hand to hand) -> this could be fixed when loading outfits.json....
             } as ColumnDef<any>;
         });
 
