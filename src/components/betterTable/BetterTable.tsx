@@ -68,8 +68,6 @@ export default function BetterTable({
             '*thumbnail*', '*flare*', '*afterburner*effect*', '*description*', 'unplunderable', 'display name', 
         ];
         
-        console.log("getAllFieldNamesOfData() in BetterTable", getAllFieldNamesOfData(ignorePatterns).slice(0, maxColumns))
-
         const generatedColumns = getAllFieldNamesOfData(ignorePatterns).slice(0, maxColumns).map(key => {
             const isNumeric = numericColumns.has(key);
 

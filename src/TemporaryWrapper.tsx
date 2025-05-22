@@ -144,6 +144,9 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
                     if (!outfit.hasOwnProperty("outfit space")) {
                         outfit["outfit space"] = 0;
                     }
+                    if (!outfit.hasOwnProperty("mass")) {
+                        outfit["mass"] = 0;
+                    }
                     return outfit;
                 });
                 postProcessedData = {
