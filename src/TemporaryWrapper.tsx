@@ -44,6 +44,9 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
         "Hidden": [],
     });
 
+    const [filterText, setFilterText] = useState('');
+    const [minOutfitsPerField, setMinOutfitsPerField] = useState<number>(5);
+
     // FIXME: is this necessary?
     // const addItemToCategory = (category: keyof dataTypes.DataStore, newItem: any) => {
     //     setDataStore((previousState) => ({
@@ -99,36 +102,6 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
         return matchingOutfits;
     };
 
-    const getAllFieldNamesOfDataStoreWithMinOutfitCount = (excludeFields: string[] = [], minOutfits?: number = 0): string[] => {
-        const fieldCount: Record<string, number> = {};
-    
-        // Check if dataStore is empty
-        if (!dataStore || Object.keys(dataStore).length === 0) {
-            return []; // Return an empty array if dataStore is not yet populated
-        }
-    
-        // Iterate over all categories in dataStore
-        Object.values(dataStore).forEach((outfits) => {
-            // Iterate over each outfit in the category
-            outfits.forEach((outfit) => {
-                // Count occurrences of each field
-                Object.keys(outfit).forEach((key) => {
-                    fieldCount[key] = (fieldCount[key] || 0) + 1;
-                });
-            });
-        });
-    
-        // Filter fields based on the excludeFields and minOutfits parameters
-        if (minOutfits) {
-            return Object.entries(fieldCount)
-            .filter(([field, count]) => !excludeFields.includes(field) && count >= minOutfits)
-            .map(([field]) => field);
-        } else {
-            // Return all fields that are not in the excludeFields list
-            return Object.keys(fieldCount).filter((field) => !excludeFields.includes(field));
-        }
-    };
-
     const getAllFieldNamesWithWildcardAndMinCountSupport = (excludeFields: string[] = [], minOutfits: number = 0): string[] => {
         const fieldCount: Record<string, number> = {};
     
@@ -153,7 +126,8 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
             outfits.forEach((outfit) => {
                 // Count occurrences of each field
                 Object.keys(outfit).forEach((key) => {
-                    fieldCount[key] = (fieldCount[key] || 0) + 1;
+                    const strippedKey = key.trim(); // Strip whitespace from field names
+                    fieldCount[strippedKey] = (fieldCount[strippedKey] || 0) + 1;
                 });
             });
         });
@@ -164,27 +138,6 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
                 !excludePatterns.some((regex) => regex.test(field)) && count >= minOutfits
             )
             .map(([field]) => field);
-    };
-
-    const getAllFieldNamesOfDataStore = (excludeFields: string[] = []): string[] => {
-        const fieldSet = new Set<string>();
-    
-        // Check if dataStore is empty
-        if (!dataStore || Object.keys(dataStore).length === 0) {
-            return []; // Return an empty array if dataStore is not yet populated
-        }
-    
-        // Iterate over all categories in dataStore
-        Object.values(dataStore).forEach((outfits) => {
-            // Iterate over each outfit in the category
-            outfits.forEach((outfit) => {
-                // Add all keys (field names) of the outfit to the set
-                Object.keys(outfit).forEach((key) => fieldSet.add(key));
-            });
-        });
-    
-        // Convert the set to an array and filter out excluded fields
-        return Array.from(fieldSet).filter((field) => !excludeFields.includes(field));
     };
 
     useEffect(() => {
@@ -219,13 +172,38 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
             });
     }, []);
 
-    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "series", "description", "cost", "licenses", "*thumbnail*", "mass", "outfit space", ];
-    const field_names = getAllFieldNamesWithWildcardAndMinCountSupport(excluded_fields_that_would_be_unnecessary_tables, 5);
-
+    const excluded_fields_that_would_be_unnecessary_tables = ["category", "name", "display name", "series", "*description*", "cost", "licenses", "*thumbnail*", "*sprite*", "mass", "outfit space", "plural", "afterburner effect*", "*sound*", ];
+    // TODO: hide by default: "* capacity" (except std capacities), 
+    let field_names = getAllFieldNamesWithWildcardAndMinCountSupport(excluded_fields_that_would_be_unnecessary_tables, minOutfitsPerField);
+    field_names = field_names.filter(field =>
+        field.toLowerCase().includes(filterText.toLowerCase())
+    );
 
     return (
         <>
             TemporaryWrapper
+
+            <label>
+                Min outfits per field:
+                <input
+                    type="number"
+                    min={1}
+                    value={minOutfitsPerField}
+                    onChange={(e) => setMinOutfitsPerField(Number(e.target.value))}
+                    placeholder="Min outfits per field"
+                />
+            </label>
+
+            <label>
+                Filter: {" "}
+                <input
+                    type="text"
+                    value={filterText}
+                    onChange={e => setFilterText(e.target.value)}
+                    className="CheckboxFilterInput"
+                />
+            </label>
+
             <TabbedPanel 
                 initialTabIndex={1}
                 tabs={field_names.map(tab_name => ({
