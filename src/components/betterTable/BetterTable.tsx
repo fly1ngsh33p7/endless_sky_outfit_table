@@ -1,6 +1,6 @@
 import { flexRender, getCoreRowModel, getSortedRowModel, useReactTable, type ColumnDef, } from "@tanstack/react-table";
 import './BetterTable.css';
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type JSX } from "react";
 
 export interface BetterTableProps {
     data?: any[];
@@ -48,6 +48,41 @@ export default function BetterTable({
             .map((field) => field);
     };
 
+
+    const renderCell = (val: unknown, isNumeric: boolean, row: any): JSX.Element | null => {
+        if (val == null) return null; // Handle null or undefined values
+    
+        // Helper function to render objects recursively
+        const renderObject = (obj: Record<string, any>): JSX.Element => (
+            <ul>
+                {Object.entries(obj).map(([key, value], index) => (
+                    <li key={index}>
+                        <strong>{key}:</strong>{" "}
+                        {typeof value === "object" && value !== null ? (
+                            renderObject(value) // Recursively render nested objects
+                        ) : (
+                            String(value) // Render primitive values
+                        )}
+                    </li>
+                ))}
+            </ul>
+        );
+    
+        // Check if the value is an object
+        if (typeof val === "object" && val !== null) {
+            return renderObject(val); // Render the object recursively
+        }
+    
+        // Numeric multiplication
+        if (isNumeric && typeof val === "number") {
+            const amt = 1; // Placeholder for getAmount(row.original);
+            return <span>{val * amt}</span>;
+        }
+    
+        // Default rendering for other types
+        return <span>{String(val)}</span>;
+    };
+
     const numericColumns = useMemo(() => {
         const set = new Set<string>();
         if (data && data.length > 0) {
@@ -92,13 +127,8 @@ export default function BetterTable({
                     : 'auto',
                 cell: info => {
                     const val = info.getValue<unknown>();
-                    if (val == null) return null;
-                    // Numeric multiplication
-                    if (isNumeric && typeof val === 'number') {
-                        const amt = 1; //getAmount(info.row.original);
-                        return <span>{val * amt}</span>;
-                    }
-                    return <span>{String(val)}</span>;
+                    const isNumeric = numericColumns.has(info.column.id);
+                    return renderCell(val, isNumeric, info.row);
                 },
                 sortUndefined: 'last', // FIXME: sometimes undefined should be treated as 0 (see outfit space with hand to hand) -> this could be fixed when loading outfits.json....
             } as ColumnDef<any>;
