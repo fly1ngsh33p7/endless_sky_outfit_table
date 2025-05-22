@@ -45,7 +45,7 @@ export default function TemporaryWrapper({}: TemporaryWrapperProps) {
     });
 
     const [filterText, setFilterText] = useState('');
-    const [minOutfitsPerField, setMinOutfitsPerField] = useState<number>(5);
+    const [minOutfitsPerField, setMinOutfitsPerField] = useState<number>(1);
 
     // FIXME: is this necessary?
     // const addItemToCategory = (category: keyof dataTypes.DataStore, newItem: any) => {
